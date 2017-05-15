@@ -13,26 +13,26 @@ import javafx.scene.image.Image;
  */
 public class Item
 {
-    private int id;
-    private String name;
-    private Image art;
-    private int cost;
-    private String type;
-    private int health;
-    private int mana;
-    private int physicalProtection;
-    private int magicalProtection;
-    private int power;
-    private double attackSpeed;
-    private double percentPenetration;
-    private int flatPenetration;
-    private double criticalChance;
-    private int cooldownReduction;
-    private double lifesteal;
-    private boolean passive;
-    private double HP5;
-    private double MP5;
-    private int crowdControlReduction;
+    private int mId;
+    private String mName;
+    private Image mArt;
+    private int mCost;
+    private String mType;
+    private int mHealth;
+    private int mMana;
+    private int mPhysicalProtection;
+    private int mMagicalProtection;
+    private int mPower;
+    private double mAttackSpeed;
+    private double mPercentPenetration;
+    private int mFlatPenetration;
+    private double mCriticalChance;
+    private int mCooldownReduction;
+    private double mLifesteal;
+    private boolean mPassive;
+    private double mHP5;
+    private double mMP5;
+    private int mCrowdControlReduction;
 
     /**
      * No Arg-constructor for item
@@ -84,26 +84,26 @@ public class Item
                 int crowdControlReduction
             )
     {
-        this.id = id;
-        this.name = name;
-        this.art = art;
-        this.cost = cost;
-        this.type = type;
-        this.health = health;
-        this.mana = mana;
-        this.physicalProtection = physicalProtection;
-        this.magicalProtection = magicalProtection;
-        this.power = power;
-        this.attackSpeed = attackSpeed;
-        this.percentPenetration = percentPenetration;
-        this.flatPenetration = flatPenetration;
-        this.criticalChance = criticalChance;
-        this.cooldownReduction = cooldownReduction;
-        this.lifesteal = lifesteal;
-        this.passive = passive;
-        this.HP5 = HP5;
-        this.MP5 = MP5;
-        this.crowdControlReduction = crowdControlReduction;
+        this.mId = id;
+        this.mName = name;
+        this.mArt = art;
+        this.mCost = cost;
+        this.mType = type;
+        this.mHealth = health;
+        this.mMana = mana;
+        this.mPhysicalProtection = physicalProtection;
+        this.mMagicalProtection = magicalProtection;
+        this.mPower = power;
+        this.mAttackSpeed = attackSpeed;
+        this.mPercentPenetration = percentPenetration;
+        this.mFlatPenetration = flatPenetration;
+        this.mCriticalChance = criticalChance;
+        this.mCooldownReduction = cooldownReduction;
+        this.mLifesteal = lifesteal;
+        this.mPassive = passive;
+        this.mHP5 = HP5;
+        this.mMP5 = MP5;
+        this.mCrowdControlReduction = crowdControlReduction;
     }
 
     /**
@@ -112,7 +112,7 @@ public class Item
      */
     public int getId()
     {
-        return id;
+        return mId;
     }
 
     /**
@@ -121,7 +121,7 @@ public class Item
      */
     public void setId(int id)
     {
-        this.id = id;
+        this.mId = id;
     }
 
     /**
@@ -130,7 +130,7 @@ public class Item
      */
     public String getName()
     {
-        return name;
+        return mName;
     }
 
     /**
@@ -139,7 +139,7 @@ public class Item
      */
     public void setName(String name)
     {
-        this.name = name;
+        this.mName = name;
     }
 
     /**
@@ -148,7 +148,7 @@ public class Item
      */
     public int getCost()
     {
-        return cost;
+        return mCost;
     }
 
     /**
@@ -157,7 +157,7 @@ public class Item
      */
     public void setCost(int cost)
     {
-        this.cost = cost;
+        this.mCost = cost;
     }
 
     /**
@@ -166,7 +166,7 @@ public class Item
      */
     public String getType()
     {
-        return type;
+        return mType;
     }
 
     /**
@@ -175,7 +175,7 @@ public class Item
      */
     public void setType(String type)
     {
-        this.type = type;
+        this.mType = type;
     }
 
     /**
@@ -184,7 +184,7 @@ public class Item
      */
     public int getHealth()
     {
-        return health;
+        return mHealth;
     }
 
     /**
@@ -193,7 +193,7 @@ public class Item
      */
     public void setHealth(int health)
     {
-        this.health = health;
+        this.mHealth = health;
     }
 
     /**
@@ -202,7 +202,7 @@ public class Item
      */
     public int getMana()
     {
-        return mana;
+        return mMana;
     }
 
     /**
@@ -211,7 +211,7 @@ public class Item
      */
     public void setMana(int mana)
     {
-        this.mana = mana;
+        this.mMana = mana;
     }
 
     /**
@@ -220,7 +220,7 @@ public class Item
      */
     public int getPhysicalProtection()
     {
-        return physicalProtection;
+        return mPhysicalProtection;
     }
 
     /**
@@ -229,7 +229,7 @@ public class Item
      */
     public void setPhysicalProtection(int physicalProtection)
     {
-        this.physicalProtection = physicalProtection;
+        this.mPhysicalProtection = physicalProtection;
     }
 
     /**
@@ -238,7 +238,7 @@ public class Item
      */
     public int getMagicalProtection()
     {
-        return magicalProtection;
+        return mMagicalProtection;
     }
 
     /**
@@ -247,7 +247,7 @@ public class Item
      */
     public void setMagicalProtection(int magicalProtection)
     {
-        this.magicalProtection = magicalProtection;
+        this.mMagicalProtection = magicalProtection;
     }
 
     /**
@@ -256,7 +256,7 @@ public class Item
      */
     public int getPower()
     {
-        return power;
+        return mPower;
     }
 
     /**
@@ -265,7 +265,7 @@ public class Item
      */
     public void setPower(int power)
     {
-        this.power = power;
+        this.mPower = power;
     }
 
     /**
@@ -274,7 +274,7 @@ public class Item
      */
     public double getAttackSpeed()
     {
-        return attackSpeed;
+        return mAttackSpeed;
     }
 
     /**
@@ -283,7 +283,7 @@ public class Item
      */
     public void setAttackSpeed(double attackSpeed)
     {
-        this.attackSpeed = attackSpeed;
+        this.mAttackSpeed = attackSpeed;
     }
 
     /**
@@ -292,7 +292,7 @@ public class Item
      */
     public double getPercentPenetration()
     {
-        return percentPenetration;
+        return mPercentPenetration;
     }
 
     /**
@@ -301,7 +301,7 @@ public class Item
      */
     public void setPercentPenetration(double percentPenetration)
     {
-        this.percentPenetration = percentPenetration;
+        this.mPercentPenetration = percentPenetration;
     }
 
     /**
@@ -310,7 +310,7 @@ public class Item
      */
     public int getFlatPenetration()
     {
-        return flatPenetration;
+        return mFlatPenetration;
     }
 
     /**
@@ -319,7 +319,7 @@ public class Item
      */
     public void setFlatPenetration(int flatPenetration)
     {
-        this.flatPenetration = flatPenetration;
+        this.mFlatPenetration = flatPenetration;
     }
 
     /**
@@ -328,7 +328,7 @@ public class Item
      */
     public double getCriticalChance()
     {
-        return criticalChance;
+        return mCriticalChance;
     }
 
     /**
@@ -337,7 +337,7 @@ public class Item
      */
     public void setCriticalChance(double criticalChance)
     {
-        this.criticalChance = criticalChance;
+        this.mCriticalChance = criticalChance;
     }
 
     /**
@@ -346,7 +346,7 @@ public class Item
      */
     public int getCooldownReduction()
     {
-        return cooldownReduction;
+        return mCooldownReduction;
     }
 
     /**
@@ -355,7 +355,7 @@ public class Item
      */
     public void setCooldownReduction(int cooldownReduction)
     {
-        this.cooldownReduction = cooldownReduction;
+        this.mCooldownReduction = cooldownReduction;
     }
 
     /**
@@ -364,7 +364,7 @@ public class Item
      */
     public double getLifesteal()
     {
-        return lifesteal;
+        return mLifesteal;
     }
 
     /**
@@ -373,7 +373,7 @@ public class Item
      */
     public void setLifesteal(double lifesteal)
     {
-        this.lifesteal = lifesteal;
+        this.mLifesteal = lifesteal;
     }
 
     /**
@@ -382,7 +382,7 @@ public class Item
      */
     public boolean isPassive()
     {
-        return passive;
+        return mPassive;
     }
 
     /**
@@ -391,7 +391,7 @@ public class Item
      */
     public void setPassive(boolean passive)
     {
-        this.passive = passive;
+        this.mPassive = passive;
     }
 
     /**
@@ -400,7 +400,7 @@ public class Item
      */
     public double getHP5()
     {
-        return HP5;
+        return mHP5;
     }
 
     /**
@@ -409,7 +409,7 @@ public class Item
      */
     public void setHP5(double hP5)
     {
-        HP5 = hP5;
+        mHP5 = hP5;
     }
 
     /**
@@ -418,7 +418,7 @@ public class Item
      */
     public double getMP5()
     {
-        return MP5;
+        return mMP5;
     }
 
     /**
@@ -427,7 +427,7 @@ public class Item
      */
     public void setMP5(double mP5)
     {
-        MP5 = mP5;
+        mMP5 = mP5;
     }
 
     /**
@@ -436,7 +436,7 @@ public class Item
      */
     public int getCrowdControlReduction()
     {
-        return crowdControlReduction;
+        return mCrowdControlReduction;
     }
 
     /**
@@ -445,7 +445,7 @@ public class Item
      */
     public void setCrowdControlReduction(int crowdControlReduction)
     {
-        this.crowdControlReduction = crowdControlReduction;
+        this.mCrowdControlReduction = crowdControlReduction;
     }
 
     /* (non-Javadoc)
@@ -457,31 +457,31 @@ public class Item
         final int prime = 31;
         int result = 1;
         long temp;
-        temp = Double.doubleToLongBits(HP5);
+        temp = Double.doubleToLongBits(mHP5);
         result = prime * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(MP5);
+        temp = Double.doubleToLongBits(mMP5);
         result = prime * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(attackSpeed);
+        temp = Double.doubleToLongBits(mAttackSpeed);
         result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + cooldownReduction;
-        result = prime * result + cost;
-        temp = Double.doubleToLongBits(criticalChance);
+        result = prime * result + mCooldownReduction;
+        result = prime * result + mCost;
+        temp = Double.doubleToLongBits(mCriticalChance);
         result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + crowdControlReduction;
-        result = prime * result + flatPenetration;
-        result = prime * result + health;
-        result = prime * result + id;
-        temp = Double.doubleToLongBits(lifesteal);
+        result = prime * result + mCrowdControlReduction;
+        result = prime * result + mFlatPenetration;
+        result = prime * result + mHealth;
+        result = prime * result + mId;
+        temp = Double.doubleToLongBits(mLifesteal);
         result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + magicalProtection;
-        result = prime * result + mana;
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
-        result = prime * result + (passive ? 1231 : 1237);
-        temp = Double.doubleToLongBits(percentPenetration);
+        result = prime * result + mMagicalProtection;
+        result = prime * result + mMana;
+        result = prime * result + ((mName == null) ? 0 : mName.hashCode());
+        result = prime * result + (mPassive ? 1231 : 1237);
+        temp = Double.doubleToLongBits(mPercentPenetration);
         result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + physicalProtection;
-        result = prime * result + power;
-        result = prime * result + ((type == null) ? 0 : type.hashCode());
+        result = prime * result + mPhysicalProtection;
+        result = prime * result + mPower;
+        result = prime * result + ((mType == null) ? 0 : mType.hashCode());
         return result;
     }
 
@@ -495,34 +495,34 @@ public class Item
         if (obj == null) return false;
         if (getClass() != obj.getClass()) return false;
         Item other = (Item) obj;
-        if (Double.doubleToLongBits(HP5) != Double.doubleToLongBits(other.HP5)) return false;
-        if (Double.doubleToLongBits(MP5) != Double.doubleToLongBits(other.MP5)) return false;
-        if (Double.doubleToLongBits(attackSpeed) != Double.doubleToLongBits(other.attackSpeed)) return false;
-        if (cooldownReduction != other.cooldownReduction) return false;
-        if (cost != other.cost) return false;
-        if (Double.doubleToLongBits(criticalChance) != Double.doubleToLongBits(other.criticalChance)) return false;
-        if (crowdControlReduction != other.crowdControlReduction) return false;
-        if (flatPenetration != other.flatPenetration) return false;
-        if (health != other.health) return false;
-        if (id != other.id) return false;
-        if (Double.doubleToLongBits(lifesteal) != Double.doubleToLongBits(other.lifesteal)) return false;
-        if (magicalProtection != other.magicalProtection) return false;
-        if (mana != other.mana) return false;
-        if (name == null)
+        if (Double.doubleToLongBits(mHP5) != Double.doubleToLongBits(other.mHP5)) return false;
+        if (Double.doubleToLongBits(mMP5) != Double.doubleToLongBits(other.mMP5)) return false;
+        if (Double.doubleToLongBits(mAttackSpeed) != Double.doubleToLongBits(other.mAttackSpeed)) return false;
+        if (mCooldownReduction != other.mCooldownReduction) return false;
+        if (mCost != other.mCost) return false;
+        if (Double.doubleToLongBits(mCriticalChance) != Double.doubleToLongBits(other.mCriticalChance)) return false;
+        if (mCrowdControlReduction != other.mCrowdControlReduction) return false;
+        if (mFlatPenetration != other.mFlatPenetration) return false;
+        if (mHealth != other.mHealth) return false;
+        if (mId != other.mId) return false;
+        if (Double.doubleToLongBits(mLifesteal) != Double.doubleToLongBits(other.mLifesteal)) return false;
+        if (mMagicalProtection != other.mMagicalProtection) return false;
+        if (mMana != other.mMana) return false;
+        if (mName == null)
         {
-            if (other.name != null) return false;
+            if (other.mName != null) return false;
         }
-        else if (!name.equals(other.name)) return false;
-        if (passive != other.passive) return false;
-        if (Double.doubleToLongBits(percentPenetration) != Double.doubleToLongBits(other.percentPenetration))
+        else if (!mName.equals(other.mName)) return false;
+        if (mPassive != other.mPassive) return false;
+        if (Double.doubleToLongBits(mPercentPenetration) != Double.doubleToLongBits(other.mPercentPenetration))
             return false;
-        if (physicalProtection != other.physicalProtection) return false;
-        if (power != other.power) return false;
-        if (type == null)
+        if (mPhysicalProtection != other.mPhysicalProtection) return false;
+        if (mPower != other.mPower) return false;
+        if (mType == null)
         {
-            if (other.type != null) return false;
+            if (other.mType != null) return false;
         }
-        else if (!type.equals(other.type)) return false;
+        else if (!mType.equals(other.mType)) return false;
         return true;
     }
 
@@ -532,12 +532,12 @@ public class Item
     @Override
     public String toString()
     {
-        return "Item [id=" + id + ", name=" + name + ", cost=" + cost + ", type=" + type + ", health=" + health
-                + ", mana=" + mana + ", physicalProtection=" + physicalProtection + ", magicalProtection="
-                + magicalProtection + ", power=" + power + ", attackSpeed=" + attackSpeed + ", percentPenetration="
-                + percentPenetration + ", flatPenetration=" + flatPenetration + ", criticalChance=" + criticalChance
-                + ", cooldownReduction=" + cooldownReduction + ", lifesteal=" + lifesteal + ", passive=" + passive
-                + ", HP5=" + HP5 + ", MP5=" + MP5 + ", crowdControlReduction=" + crowdControlReduction + "]";
+        return "Item [id=" + mId + ", name=" + mName + ", cost=" + mCost + ", type=" + mType + ", health=" + mHealth
+                + ", mana=" + mMana + ", physicalProtection=" + mPhysicalProtection + ", magicalProtection="
+                + mMagicalProtection + ", power=" + mPower + ", attackSpeed=" + mAttackSpeed + ", percentPenetration="
+                + mPercentPenetration + ", flatPenetration=" + mFlatPenetration + ", criticalChance=" + mCriticalChance
+                + ", cooldownReduction=" + mCooldownReduction + ", lifesteal=" + mLifesteal + ", passive=" + mPassive
+                + ", HP5=" + mHP5 + ", MP5=" + mMP5 + ", crowdControlReduction=" + mCrowdControlReduction + "]";
     }
 
 }
