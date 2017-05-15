@@ -12,6 +12,7 @@ import javafx.scene.image.Image;
  */
 public class God
 {
+    private int mId;
     private String mName;
     private String mGodClass;
     private String mType;
@@ -38,7 +39,8 @@ public class God
     /**
      * Arg constructor for God
      *
-     * @param name
+     * @param id                - id
+     * @param name              - name
      * @param godClass          - class ex: mage/hunter/guardian/assassin
      * @param type              - physical/magical
      * @param art               - picture of god
@@ -56,7 +58,8 @@ public class God
      * @param damageScaling             - damage scaling
      * @param pantheon                  - race/ethnicity
      */
-    public God(String name,
+    public God(int id,
+               String name,
                String godClass,
                String type,
                Image art,
@@ -75,6 +78,7 @@ public class God
                String pantheon
             )
     {
+        this.mId = id;
         this.mName = name;
         this.mGodClass = godClass;
         this.mType = type;
@@ -94,6 +98,23 @@ public class God
         this.mPantheon = pantheon;
     }
 
+    /**
+     * Get id of god
+     * @return the id
+     */
+    public int getId()
+    {
+        return mId;
+    }
+
+    /**
+     * Set id of god
+     * @param the id to set
+     */
+    public void setId(int id)
+    {
+        this.mId = id;
+    }
     /**
      * Get name of God
      * @return the name
