@@ -7,16 +7,16 @@ public class MainView extends Application
 {
 
 	@Override
-	public void start(Stage arg0) throws Exception
+	public void start(Stage primaryStage) throws Exception
 	{
 		// TODO Auto-generated method stub
-
+		ViewNavigator.setStage(primaryStage);
+		ViewNavigator.loadScene("All Items Scene", ViewNavigator.ALL_ITEMS_SCENE);
 	}
 
 	public static void main(String[] args)
 	{
-		// TODO Auto-generated method stub
-
+		launch(args);
 	}
 
 }

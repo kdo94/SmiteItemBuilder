@@ -16,7 +16,6 @@ public class Relic
 {
     private int mId;
     private String mName;
-    private Image mArt;
     private String mAbility;
     private boolean mUpgraded;
 
@@ -35,13 +34,11 @@ public class Relic
      */
     public Relic(int id,
                  String name,
-                 Image art,
                  String ability,
                  boolean upgraded)
     {
         this.mId = id;
         this.mName = name;
-        this.mArt = art;
         this.mAbility = ability;
         this.mUpgraded = upgraded;
     }

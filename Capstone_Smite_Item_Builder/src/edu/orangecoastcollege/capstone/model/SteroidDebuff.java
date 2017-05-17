@@ -14,7 +14,6 @@ import javafx.scene.image.Image;
 public class SteroidDebuff
 {
     private int mId;
-    private Image mArt;
     private double mDuration;
     private int mPower;
     private double mMovementSpeed;
@@ -32,7 +31,6 @@ public class SteroidDebuff
     /**
      * arg constructor for steroiddebuff
      * @param id            - id
-     * @param art           - image
      * @param duration      - duraction in sec
      * @param power         - power inc
      * @param movementSpeed - movement inc
@@ -43,7 +41,6 @@ public class SteroidDebuff
      * @param penetration   - penetration
      */
     public SteroidDebuff(int id,
-                         Image art,
                          double duration,
                          int power,
                          double movementSpeed,
@@ -54,7 +51,6 @@ public class SteroidDebuff
                          int penetration)
     {
         this.mId = id;
-        this.mArt = art;
         this.mDuration = duration;
         this.mPower = power;
         this.mMovementSpeed = movementSpeed;

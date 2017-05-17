@@ -16,7 +16,6 @@ public class God
     private String mName;
     private String mGodClass;
     private String mType;
-    private Image mArt;
     private int mBaseHealth;
     private int mBasePProtection;
     private int mBaseMProtection;
@@ -43,7 +42,6 @@ public class God
      * @param name              - name
      * @param godClass          - class ex: mage/hunter/guardian/assassin
      * @param type              - physical/magical
-     * @param art               - picture of god
      * @param baseHealth        - base health
      * @param basePProtection   - base physical protection
      * @param baseMProtection   - base magical protection
@@ -62,7 +60,6 @@ public class God
                String name,
                String godClass,
                String type,
-               Image art,
                int baseHealth,
                int basePProtection,
                int baseMProtection,
@@ -82,7 +79,6 @@ public class God
         this.mName = name;
         this.mGodClass = godClass;
         this.mType = type;
-        this.mArt = art;
         this.mBaseHealth = baseHealth;
         this.mBasePProtection = basePProtection;
         this.mBaseMProtection = baseMProtection;
@@ -167,24 +163,6 @@ public class God
     public void setType(String type)
     {
         this.mType = type;
-    }
-
-    /**
-     * Get image of god
-     * @return the art
-     */
-    public Image getArt()
-    {
-        return mArt;
-    }
-
-    /**
-     * Set image of god
-     * @param art the art to set
-     */
-    public void setArt(Image art)
-    {
-        this.mArt = art;
     }
 
     /**

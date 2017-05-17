@@ -15,7 +15,6 @@ public class Item
 {
     private int mId;
     private String mName;
-    private Image mArt;
     private int mCost;
     private String mType;
     private int mHealth;
@@ -43,7 +42,6 @@ public class Item
      * Arg constructor for item
      * @param id                    - id
      * @param name                  - name
-     * @param art                   - image
      * @param cost                  - cost
      * @param type                  - type phys/mag
      * @param health                - health inc
@@ -64,7 +62,6 @@ public class Item
      */
     public Item(int id,
                 String name,
-                Image art,
                 int cost,
                 String type,
                 int health,
@@ -86,7 +83,6 @@ public class Item
     {
         this.mId = id;
         this.mName = name;
-        this.mArt = art;
         this.mCost = cost;
         this.mType = type;
         this.mHealth = health;
