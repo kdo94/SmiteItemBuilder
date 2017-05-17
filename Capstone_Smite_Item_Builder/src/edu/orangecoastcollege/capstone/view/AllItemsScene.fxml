@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.controlsfx.control.GridView?>
 
-<fx:root prefHeight="480.0" prefWidth="720.0" type="BorderPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.capstone.view.AllItemsScene">
+<BorderPane prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.capstone.view.AllItemsScene">
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -60,15 +60,15 @@
       <GridView BorderPane.alignment="CENTER" />
    </center>
    <top>
-      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <TextField id="descSearchTF" fx:id="descTF" promptText="Enter Item Description..." />
-            <Button id="clearButton" fx:id="clearButton" mnemonicParsing="false" text="Clear" />
+            <Button id="clearButton" fx:id="clearButton" mnemonicParsing="false" onAction="#clear" text="Clear" />
          </children>
       </HBox>
    </top>
    <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -130,7 +130,7 @@
                   <TextField id="costTF" fx:id="costTF" promptText="Cost" />
                   <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button id="sellButton" fx:id="sellButton" mnemonicParsing="false" text="Sell" />
+                        <Button id="sellButton" fx:id="sellButton" mnemonicParsing="false" onAction="#sellItem" text="Sell" />
                         <Button id="purchaseButton" fx:id="purchaseButton" mnemonicParsing="false" text="Purchase" />
                      </children>
                   </HBox>
@@ -139,4 +139,4 @@
          </children>
       </VBox>
    </right>
-</fx:root>
+</BorderPane>
