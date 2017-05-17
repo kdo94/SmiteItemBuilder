@@ -29,6 +29,7 @@ public class God
     private int mBaseDamage;
     private double mDamageScaling;
     private String mPantheon;
+    private String mLore;
 
     /**
      * Default no-arg constructor
@@ -397,6 +398,23 @@ public class God
     public void setPantheon(String pantheon)
     {
         this.mPantheon = pantheon;
+    }
+
+
+    /**
+     * @return the lore
+     */
+    public String getLore()
+    {
+        return mLore;
+    }
+
+    /**
+     * @param lore the lore to set
+     */
+    public void setLore(String lore)
+    {
+        this.mLore = lore;
     }
 
     /* (non-Javadoc)
