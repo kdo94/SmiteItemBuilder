@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  * <code>DBModel</code> represents the database model for a table containing one primary key 
@@ -21,8 +22,6 @@ public class DBModel {
 	private String mTableName;
 	private String[] mFieldNames;
 	private String[] mFieldTypes;
-	private Connection mConnection;
-	private Statement mStmt;
 
 	/**
 	 * Instantiates a new <code>DBModel</code> given the required parameters, such as the database name,
@@ -44,9 +43,9 @@ public class DBModel {
 		mFieldTypes = fieldTypes;
 		if (mFieldNames == null || mFieldTypes == null || mFieldNames.length == 0 || mFieldNames.length != mFieldTypes.length)
 			throw new SQLException("Database field names and types must exist and have the same number of elements.");
-		mConnection = connectToDB();
-		mStmt = mConnection.createStatement();
-		mStmt.setQueryTimeout(30);
+		//connection = connectToDB();
+		//stmt = connection.createStatement();
+		//stmt.setQueryTimeout(30);
 		createTable();
 	}
 	
@@ -58,11 +57,15 @@ public class DBModel {
 	 */
 	private void createTable() throws SQLException
 	{
-		StringBuilder createSQL = new StringBuilder("CREATE TABLE IF NOT EXISTS ");
-		createSQL.append(mTableName).append("(");
-		for (int i = 0; i < mFieldNames.length; i++)
-			createSQL.append(mFieldNames[i]).append(" ").append(mFieldTypes[i]).append((i < mFieldNames.length -1) ? "," : ")");
-		mStmt.executeUpdate(createSQL.toString());
+		try(Connection connection = connectToDB();
+				Statement stmt = connection.createStatement())
+		{
+			StringBuilder createSQL = new StringBuilder("CREATE TABLE IF NOT EXISTS ");
+			createSQL.append(mTableName).append("(");
+			for (int i = 0; i < mFieldNames.length; i++)
+				createSQL.append(mFieldNames[i]).append(" ").append(mFieldTypes[i]).append((i < mFieldNames.length -1) ? "," : ")");
+			stmt.executeUpdate(createSQL.toString());
+		}
 	}
 	
 	/**
@@ -72,8 +75,22 @@ public class DBModel {
 	 * @throws SQLException If a database access error occurs, this method is called on a closed Statement, 
 	 * or the given SQL statement produces anything other than a single ResultSet object.
 	 */
-	public ResultSet getAllRecords() throws SQLException {		
-		return mStmt.executeQuery("SELECT * FROM " + mTableName);
+	public ArrayList<ArrayList<String>> getAllRecords() throws SQLException 
+	{
+		try(Connection connection = connectToDB();
+				Statement stmt = connection.createStatement();
+				ResultSet rs = stmt.executeQuery("SELECT * FROM " + mTableName))
+		{
+			ArrayList<ArrayList<String>> resultsList = new ArrayList<>();
+			while(rs.next())
+			{
+				ArrayList<String> values = new ArrayList<>(mFieldNames.length);
+				for(String fieldName : mFieldNames)
+					values.add(rs.getString(fieldName));
+				resultsList.add(values);
+			}
+			return resultsList;
+		}
 	}
 		
 	/**
@@ -84,10 +101,22 @@ public class DBModel {
 	 * @throws SQLException If a database access error occurs, this method is called on a closed Statement, 
 	 * or the given SQL statement produces anything other than a single ResultSet object.
 	 */
-	public ResultSet getRecord(String key) throws SQLException
+	public ArrayList<ArrayList<String>> getRecord(String key) throws SQLException
 	{
-		String selectSQL = "SELECT * FROM " + mTableName + " WHERE " + mFieldNames[0] + " = " + key;
-		return mStmt.executeQuery(selectSQL);
+		try(Connection connection = connectToDB();
+				Statement stmt = connection.createStatement();
+				ResultSet rs = stmt.executeQuery("SELECT * FROM " + mTableName + " WHERE " + mFieldNames[0] + " = " + key))
+		{
+			ArrayList<ArrayList<String>> resultsList = new ArrayList<>();
+			while(rs.next())
+			{
+				ArrayList<String> values = new ArrayList<>(mFieldNames.length);
+				for(String fieldName : mFieldNames)
+					values.add(rs.getString(fieldName));
+				resultsList.add(values);
+			}
+			return resultsList;
+		}
 	}
 	
 	/**
@@ -97,12 +126,9 @@ public class DBModel {
 	 * @throws SQLException If a database access error occurs, this method is called on a closed Statement, 
 	 * or the given SQL statement produces anything other than a single ResultSet object.
 	 */
-	public int getRecordCount() throws SQLException {
-		int count = 0;		
-		ResultSet rs = getAllRecords();
-		while (rs.next())
-			count++;
-		return count;
+	public int getRecordCount() throws SQLException 
+	{	
+		return getAllRecords().size();
 	}
 
 	/**
@@ -127,9 +153,13 @@ public class DBModel {
 		for(int i = 0; i < values.length; i++)
 			insertSQL.append(convertToSQLText(fields[i], values[i])).append((i < values.length - 1) ? "," : ")");
 		
-		System.out.println(insertSQL);
-		mStmt.executeUpdate(insertSQL.toString());
-		return mStmt.getGeneratedKeys().getInt(1);
+		try(Connection connection = connectToDB();
+				Statement stmt = connection.createStatement())
+		{
+			//System.out.println(insertSQL);
+			stmt.executeUpdate(insertSQL.toString());	 
+			return stmt.getGeneratedKeys().getInt(1);
+		}
 	}
 	
 	/**
@@ -152,8 +182,12 @@ public class DBModel {
 			updateSQL.append(fields[i]).append("=").append(convertToSQLText(fields[i], values[i])).append((i < fields.length - 1) ? ", " : " ");
 		
 		updateSQL.append("WHERE ").append(mFieldNames[0]).append("=").append(key);
-		mStmt.executeUpdate(updateSQL.toString());
-		return true;
+		try(Connection connection = connectToDB();
+				Statement stmt = connection.createStatement())
+		{
+			stmt.executeUpdate(updateSQL.toString());
+			return true;
+		}
 	}
 
 	/**
@@ -163,7 +197,11 @@ public class DBModel {
 	 * or the given SQL statement produces anything other than a single ResultSet object.
 	 */
 	public void deleteAllRecords() throws SQLException {
-		mStmt.executeUpdate("DELETE FROM " + mTableName);		
+		try(Connection connection = connectToDB();
+				Statement stmt = connection.createStatement())
+		{
+			stmt.executeUpdate("DELETE FROM " + mTableName);
+		}		
 	}
 	
 	/**
@@ -175,7 +213,11 @@ public class DBModel {
 	 */
 	public void deleteRecord(String key) throws SQLException
 	{
-		mStmt.executeUpdate("DELETE FROM " + mTableName + " WHERE " + mFieldNames[0] + " = " + key);
+		try(Connection connection = connectToDB();
+				Statement stmt = connection.createStatement())
+		{
+			stmt.executeUpdate("DELETE FROM " + mTableName + " WHERE " + mFieldNames[0] + " = " + key);
+		}
 	}
 
 	/**
@@ -216,6 +258,4 @@ public class DBModel {
 		Connection connection = DriverManager.getConnection("jdbc:sqlite:" + mDBName);	
 		return connection;
 	}
-	
-
 }

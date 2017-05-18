@@ -17,12 +17,13 @@ public class God
     private String mGodClass;
     private String mType;
     private int mBaseHealth;
+    private int mHealthScaling;
     private int mBasePProtection;
     private int mBaseMProtection;
     private int mBaseMana;
     private double mBaseAttackSpeed;
-    private double mBaseHP5;
-    private double mBaseMP5;
+    private int mBaseHP5;
+    private int mBaseMP5;
     private double mPhysicalProtectScaling;
     private double mMagicalProtectScaling;
     private int mBaseMovementSpeed;
@@ -44,6 +45,7 @@ public class God
      * @param godClass          - class ex: mage/hunter/guardian/assassin
      * @param type              - physical/magical
      * @param baseHealth        - base health
+     * @param healthScaling
      * @param basePProtection   - base physical protection
      * @param baseMProtection   - base magical protection
      * @param baseMana          - base mana
@@ -62,18 +64,20 @@ public class God
                String godClass,
                String type,
                int baseHealth,
+               int healthScaling,
                int basePProtection,
                int baseMProtection,
                int baseMana,
                double baseAttackSpeed,
-               double baseHP5,
-               double baseMP5,
+               int baseHP5,
+               int baseMP5,
                double physicalProtectScaling,
                double magicalProtectScaling,
                int baseMovementSpeed,
                int baseDamage,
                double damageScaling,
-               String pantheon
+               String pantheon,
+               String lore
             )
     {
         this.mId = id;
@@ -81,6 +85,7 @@ public class God
         this.mGodClass = godClass;
         this.mType = type;
         this.mBaseHealth = baseHealth;
+        this.mHealthScaling = healthScaling;
         this.mBasePProtection = basePProtection;
         this.mBaseMProtection = baseMProtection;
         this.mBaseMana = baseMana;
@@ -93,6 +98,7 @@ public class God
         this.mBaseDamage = baseDamage;
         this.mDamageScaling = damageScaling;
         this.mPantheon = pantheon;
+        this.mLore = lore;
     }
 
     /**
@@ -183,6 +189,24 @@ public class God
     {
         this.mBaseHealth = baseHealth;
     }
+    
+    /**
+     * Get base health of god
+     * @return the baseHealth
+     */
+    public int getHealthScaling()
+    {
+        return mHealthScaling;
+    }
+
+    /**
+     * Set base health of god
+     * @param baseHealth the baseHealth to set
+     */
+    public void setHealthScaling(int healthScaling)
+    {
+        this.mHealthScaling = healthScaling;
+    }
 
     /**
      * Get base physical protection of god
@@ -260,7 +284,7 @@ public class God
      * Get base health regen
      * @return the baseHP5
      */
-    public double getBaseHP5()
+    public int getBaseHP5()
     {
         return mBaseHP5;
     }
@@ -269,7 +293,7 @@ public class God
      * Set base health regen
      * @param baseHP5 the baseHP5 to set
      */
-    public void setBaseHP5(double baseHP5)
+    public void setBaseHP5(int baseHP5)
     {
         this.mBaseHP5 = baseHP5;
     }
@@ -278,7 +302,7 @@ public class God
      * Get base mana regen
      * @return the baseMP5
      */
-    public double getBaseMP5()
+    public int getBaseMP5()
     {
         return mBaseMP5;
     }
@@ -287,7 +311,7 @@ public class God
      * Set base mana regen
      * @param baseMP5 the baseMP5 to set
      */
-    public void setBaseMP5(double baseMP5)
+    public void setBaseMP5(int baseMP5)
     {
         this.mBaseMP5 = baseMP5;
     }

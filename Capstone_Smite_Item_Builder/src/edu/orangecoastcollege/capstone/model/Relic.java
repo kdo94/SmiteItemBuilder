@@ -1,7 +1,6 @@
 
 package edu.orangecoastcollege.capstone.model;
 
-import javafx.scene.image.Image;
 
 /**
  * Relic class is an entity class that represents

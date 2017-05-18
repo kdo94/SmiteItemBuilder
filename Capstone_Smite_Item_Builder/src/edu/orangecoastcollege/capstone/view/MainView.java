@@ -11,7 +11,7 @@ public class MainView extends Application
 	{
 		// TODO Auto-generated method stub
 		ViewNavigator.setStage(primaryStage);
-		ViewNavigator.loadScene("All Items Scene", ViewNavigator.ALL_ITEMS_SCENE);
+		ViewNavigator.loadScene("All Items Scene", ViewNavigator.MAIN_SCENE);
 	}
 
 	public static void main(String[] args)

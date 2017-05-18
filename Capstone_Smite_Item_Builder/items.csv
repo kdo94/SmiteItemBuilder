@@ -1,86 +1,86 @@
-Item,Cost,Type,Health,Phys Prot,Mag prot,Power,Attack Speed,Percent Pen,Flat pen,Crit Chance,Cooldown Reduction,Lifesteal,Mana,Passive,Hp5,MoveSpeed,0,0,0,
-Ancile,2250,Physical,0,0,40,25,0,0,0,0,15,0,0,Ancile,0,0,0,0,0,
-Asi,1780,Physical,0,0,0,0,20,0,15,0,0,15,0,Asi,0,0,0,0,0,
-Bancroft's Talon,2400,Magical,0,0,0,100,0,0,0,0,0,12,0,Bancroft's Talon,0,0,0,0,0,
-Bloodforge,2265,Physical,0,0,0,55,0,0,0,0,0,24,0,Bloodforge,0,0,0,0,0,
-Bluestone Pendant,800,Physical,0,0,0,20,0,0,0,0,0,0,100,Bluestone Pendant,0,0,0,0,0,
-Book of Thoth,2650,Magical,0,0,0,134.65,0,0,0,0,0,0,125,Book of Thoth,0,0,0,0,0,
-Brawler's Beatstick,2400,Physical,0,0,0,40,0,0,20,0,0,0,0,Brawler's Beatstick,0,0,0,0,0,
-Breastplate of Valor,1950,Both,0,75,0,0,0,0,0,0,25,0,300,None,0,0,0,0,0,
-Bulwark of Hope,2525,Both,450,0,60,0,0,0,0,0,0,0,0,Bulwark of Hope,0,0,0,0,0,
-Celestial Legion Helm,2350,Magical,0,50,0,60,0,0,0,0,0,0,0,Celestial Legion Helm,0,0,0,0,0,
-Chronos Pendant,2400,Magical,0,0,0,75,0,0,0,0,25,0,0,None,0,0,0,0,0,
-Death's Toll,800,Physical,90,0,0,15,0,0,0,0,0,0,0,Deaths Toll,0,0,0,0,0,
-Deathbringer,3150,Physical,0,0,0,50,0,0,0,20,0,0,0,Deathbringer,0,0,0,0,0,
-Demonic Grip,2280,Magical,0,0,0,60,25,0,0,0,0,0,0,Demonic Grip,0,0,0,0,0,
-Devourer's Gauntlet,2050,Physical,0,0,0,25,0,0,0,0,0,10,0,Devourer's Gauntlet,0,0,0,0,0,
-Divine Ruin,1820,Magical,0,0,0,50,0,0,0,0,0,15,150,Divine Ruin,0,0,0,0,0,
-Doom Orb,1790,Magical,0,0,0,140,0,0,0,0,0,0,200,Doom Orb,0,0,0,0,0,
-Dynasty Plate Helm,1750,Magical,0,30,0,30,0,0,15,0,0,0,0,None,0,0,0,0,0,
-Empty,0,Both,0,0,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,
-Ethereal Staff,2700,Magical,600,0,0,73.6,0,0,0,0,0,0,300,Ethereal Staff,0,0,0,0,0,
-Frostbound Hammer,2300,Physical,325,0,0,25,0,0,0,0,0,0,0,Frostbound Hammer,0,0,0,0,0,
-Gem of Isolation,2850,Magical,250,0,0,70,0,0,0,0,0,0,250,Gem of Isolation,0,0,0,0,0,
-Golden Bow,2330,Physical,0,0,0,35,0,0,0,10,0,0,0,Golden Bow,0,5,0,0,0,
-Hastened Fatalis,2140,Both,0,0,0,0,30,0,0,0,0,0,0,Hastened Fatalis,0,10,0,0,0,
-Heartseeker,1890,Physical,0,0,0,20,0,0,0,0,0,0,0,Heartseeker,0,8,0,0,0,
-Heartward Amulet,2100,Both,300,20,50,0,0,0,0,0,0,0,0,Heartward Amulet,0,0,0,0,0,
-Hide of the Nemean Lion,2250,Both,200,80,0,0,0,0,0,0,0,0,0,Hide of the Nemean Lion,0,0,0,0,0,
-Hide of the Urchin,2400,Both,250,45,45,0,0,0,0,0,0,0,250,Hide of the Urchin,0,0,0,0,0,
-Hydra's Lament,2150,Physical,0,0,0,30,0,0,0,0,15,0,0,Hydra's Lament,0,0,0,0,0,
-Ichaival,1700,Physical,0,0,0,0,30,0,10,0,0,0,0,Ichaival,0,0,0,0,0,
-Jotunn's Wrath,2440,Physical,0,0,0,40,0,0,11,0,25,0,150,None,0,0,0,0,0,
-Lotus Crown,2100,Magical,0,30,0,40,0,0,0,0,0,0,0,Lotus Crown,0,0,0,0,0,
-Magi's Blessing,2350,Both,350,15,15,0,0,0,0,0,0,0,0,Magi's Blessing,0,0,0,0,0,
-Mail of Renewal,2415,Both,300,40,0,0,0,0,0,0,15,0,0,Mail of Renewal,0,0,0,0,0,
-Malice,2900,Physical,0,0,0,50,0,0,0,20,0,0,0,Malice,0,0,0,0,0,
-Mark of the Vanguard,800,Both,150,5,5,0,0,0,0,0,0,0,0,Mark of the Vanguard,0,0,0,0,0,
-Midas Boots,1700,Both,100,0,0,0,0,0,0,0,0,0,100,None,0,0,0,0,0,
-Midgardian Mail,2250,Both,350,60,0,0,0,0,0,0,0,0,0,Midgardian Mail,0,0,0,0,0,
-Mystical Mail,2850,Both,220,60,0,0,0,0,0,0,0,0,0,Mystical Mail,0,0,0,0,0,
-Ninja Tabi,1500,Physical,0,0,0,20,15,0,0,0,0,0,0,None,0,18,0,0,0,
-Obsidian Shard,2050,Magical,0,0,0,70,0,33,0,0,0,0,0,None,0,0,0,0,0,
-Ody Bow ST,2450,Physical,0,0,0,0,40,0,0,0,0,0,0,Ody Bow ST,0,0,0,0,0,
-Odysseus' Bow,2450,Physical,0,0,0,0,40,0,0,0,0,0,0,Odysseus' Bow,0,0,0,0,0,
-Opal Acorn,2200,Physical,0,0,0,50,0,0,0,0,25,0,0,None,0,0,0,0,0,
-Pestilence,2150,Both,300,0,65,0,0,0,0,0,0,0,0,Pestilence,0,0,0,0,0,
-Polynomicon,2300,Magical,0,0,0,75,0,0,0,0,0,10,300,Polynomicon,0,0,0,0,0,
-Pythagorem's Piece,2600,Magical,0,0,0,70,0,0,0,0,10,15,0,Pythagorem's Piece,0,0,0,0,0,
-Qin's Sais,2850,Physical,0,0,0,30,15,0,0,0,0,0,0,Qin's Sais,0,0,0,0,0,
-Rage,2755,Physical,0,0,0,30,0,0,0,30,0,0,0,Rage,0,0,0,0,0,
-Reinforced Greaves,1400,Physical,150,0,0,15,0,0,0,0,0,0,0,Reinforced Greaves,0,18,0,0,0,
-Reinforced Shoes,1450,Magical,150,0,0,20,0,0,0,0,0,0,0,Reinforced Shoes,0,18,0,0,0,
-Rod of Asclepius,2660,Magical,200,0,0,75,0,0,0,0,0,0,0,Rod of Asclepius,0,0,0,0,0,
-Rod of Tahuti,3320,Magical,0,0,0,125,0,0,0,0,0,0,0,Rod of Tahuti,0,0,0,0,0,
-Runeforged Hammer,2050,Physical,350,55,0,11.7,0,0,0,0,0,0,0,Runeforged Hammer,0,0,0,0,0,
-Runic Shield,2300,Physical,0,0,50,25,0,0,0,0,0,0,0,Runic Shield,0,0,0,0,0,
-Sapphire Acorn,2200,Physical,0,0,0,50,0,0,10,0,0,0,0,0,0,0,0,0,0,
-Shield of Regrowth,1800,Physical,0,30,0,20,0,0,0,0,10,0,0,Shield of Regrowth,0,0,0,0,0,
-Shifter's Shield,2700,Physical,0,15,15,40,0,0,0,0,0,0,0,Shifters Shield,0,0,0,0,0,
-Shoes of Focus,1500,Magical,0,0,0,30,0,0,0,0,15,0,250,None,0,18,0,0,0,
-Shoes of the Magi,1600,Magical,0,0,0,45,0,0,10,0,0,0,0,None,0,18,0,0,0,
-Short Sword,1500,Physical,0,0,0,20,0,0,0,10,0,0,0,None,0,0,0,0,0,
-Soul Eater,2000,Physical,300,10,0,15,15,0,0,0,0,20,0,Soul Eater,0,0,0,0,0,
-Soul Reaver,2940,Magical,0,0,0,100,0,0,0,0,0,0,300,Soul Reaver,0,0,0,0,0,
-Soulstone,800,Magical,0,0,0,20,0,0,0,0,0,0,100,Soulstone,0,0,0,0,0,
-Sovereignty,2100,Both,200,50,20,0,0,0,0,0,0,0,0,Sovereignty,25,0,0,0,0,
-Spear of the Magus,2150,Magical,0,0,0,40,0,0,15,0,0,0,0,Spear of the Magus,0,0,0,0,0,
-Spirit Robe,2460,Both,0,40,40,0,0,0,0,0,10,0,0,Spirit Robe,0,0,0,0,0,
-Stone of Gaia,2250,Both,100,0,70,0,0,0,0,0,0,0,0,Stone of Gaia,25,0,0,0,0,
-Talaria,1500,Physical,0,0,0,10,0,0,0,0,0,0,0,Talaria,0,32,0,0,0,
-Telkhines Ring,2125,Magical,100,0,0,45,10,0,0,0,0,0,0,Telkhines Ring,0,0,0,0,0,
-The Crusher,2300,Physical,0,0,0,40,0,0,20,0,0,0,0,The Crusher,0,0,0,0,0,
-The Executioner,2250,Physical,0,0,0,30,20,0,0,0,0,0,0,The Executioner,0,0,0,0,0,
-Titan's Bane,2050,Physical,0,0,0,30,0,33,0,0,0,0,0,None,0,0,0,0,0,
-Transcendence,2600,Physical,0,0,0,35,0,0,0,0,0,0,300,Transcendence,0,0,0,0,0,
-Travelers Shoes,1400,Magical,0,0,0,20,0,0,0,0,0,0,0,Travelers Shoes,0,32,0,0,0,
-Vampiric Shroud,800,Magical,100,0,0,20,0,0,0,0,0,0,0,Vampiric Shroud,0,0,0,0,0,
-Void Shield,2600,Physical,0,50,0,25,0,0,0,0,0,0,0,Void Shield,0,0,0,0,0,
-Void Stone,2350,magical,0,0,50,40,0,0,0,0,0,0,0,Void Stone,0,0,0,0,0,
-Warlock's Sash,2650,Magical,300,0,0,110,0,0,0,0,0,0,400,Warlock Sash,0,10,0,0,0,
-Warrior Tabi,1550,Physical,0,0,0,40,0,0,0,0,0,0,0,None,0,0,0,0,0,
-Watcher's Gift,800,Both,100,0,0,0,0,0,0,0,0,0,0,Watcher's Gift,0,0,0,0,0,
-Winged blade,1850,Both,300,0,0,0,10,0,0,0,10,0,0,Winged Blade,0,0,0,0,0,
-Witchblade,2200,Both,0,45,0,0,15,0,0,0,0,0,0,Witchblade,0,0,0,0,0,
-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-,0,0,0,0,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,
+Type,Tree,Item Name,0,%Pen,AS%,Phys Pw,PhysLS%,Crit%,Mag Pw,MagLS%,Pen,Phys Prot,Mag Prot,Health,HP5,CCR%,MS%,CDR%,Mana,MP5,Cost,Passive
+T3 Phys,Acorn,Acorn of Yggdrasil,0,0,0,50,0,0,0,0,0,0,0,0,0,0,20,0,0,0,1600,Any time Ratatoskr uses an ability that successfully hits any target? he is healed
+0,Boots,Warrior Tabi,0,0,0,40,0,0,0,0,0,0,0,0,0,0,18,0,0,0,1550,None
+0,Boots,Ninja Tabi,0,0,20,20,0,0,0,0,0,0,0,0,0,0,18,0,100,0,1500,None
+0,Boots,Reinforced Greaves,0,0,0,10,0,0,0,0,0,0,0,75,0,20,18,0,0,0,1400,Every time you are damaged by a god you gain a stack that provides 3 Physical and Magical Protections. Stacks up to 6 times? Lasts 6s
+0,Boots,Talaria Boots,0,0,0,15,0,0,0,0,0,0,0,0,0,0,18,0,0,0,1400,You gain +14% additional Movement Speed and +25 HP5 while out of combat. Each time you damage an enemy god you earn +30 Gold. This cannot occur on the same god more than once every 90s.
+0,MorgingS,Transcendece,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,300,6,2700,You permanently gain 15 Mana per Stack? and receive 5 Stacks for a god kill? and 1 Stack for a minion kill (max. 50 stacks). Additionally? 3% of your Mana is converted to Physical Power
+0,MorgingS,Hydras Lament,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,10,0,0,2150,For 8s after using an ability? your next Basic Attack will deal an additional 30% damage ; grants 2.5 MP5 per 10% of your missing Mana
+0,Light B,The executioner,0,0,25,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2250,Basic Attacks against an enemy reduce your targets Physical Protection by 12% for 3 seconds (max. 3 Stacks)
+0,Light B,Qins Sais,0,0,15,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2700,On Basic Attack hits? deal Physical Damage equal to 4% of the targets maximum Health. This only affects gods
+0,Gauntlet,Devourers Gauntlet,0,0,0,25,10,0,0,0,0,0,0,0,0,0,0,0,0,0,2050,You permanently gain +.4 Physical Power and +.20% Physical Lifesteal per Stack? and receive 5 Stacks per god kill and 1 Stack per minion kill. (Max. 75 Stacks)
+0,Gauntlet,Bloodforge,0,0,0,75,15,0,0,0,0,0,0,0,0,0,0,0,0,0,2850,Killing an enemy god forges a shield from their blood with Health equal to 200 + 10 per Player Level for 20s. While the Blood Shield is active you gain +10% movement speed
+0,Gauntlet,Soul Eater,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,200,0,2200,Successfully hitting an Enemy god with a Basic Attack restores 2% of your maximum health per hit
+0,Cudgel,Frostbound Hammer,0,0,0,25,0,0,0,0,0,0,0,300,0,0,0,0,0,0,2300,Enemies hit by your Basic Attacks have their Movement Speed reduced by 30% and have their Attack Speed reduced 15% for 1.25 seconds.
+0,Cudgel,Runeforged Hammer,0,0,0,40,0,0,0,0,0,0,0,200,0,0,0,0,0,0,2000,Enemies take 10% Bonus damage from you if they are affected by Crowd Control. Does not include Knockbacks? Blinds? or Grabs
+0,Cudgel,Blackthorn Hammer,0,0,0,30,0,0,0,0,0,0,0,200,0,0,0,0,200,0,2300,If you are reduced to below 30% HP then 3s are substracted from all abilities currently on cooldown and all of your abilities cost 0 Mana to cast for the next 5s. This effect can only be activated once every 60s.
+0,Buckler,Runic Shield,0,0,0,35,0,0,0,0,0,0,50,0,0,0,0,0,0,0,2150,All enemies within 55 units have their Magical Power reduced by 50.
+0,Buckler,Ancile,0,0,0,25,0,0,0,0,0,0,60,0,0,0,0,10,0,0,2000,Whenever you take Magical Damage from an enemy ability you unleash a shockwave that Silences all enemies within a range of 30 units for 1s. This effect cannot trigger more than once every 30s.
+0,Mace,Brawlers Beatstick,0,0,0,40,0,0,0,0,15,0,0,0,0,0,0,0,0,0,2200,Enemies hit by your Abilities have 40% reduced healing and regeneration for 8 seconds
+0,Mace,Jotunns Wrath,0,0,0,40,0,0,0,0,10,0,0,0,0,20,0,0,150,0,2450,None
+0,Mace,The Crusher,0,0,15,30,0,0,0,0,15,0,0,0,0,0,0,0,0,0,2300,Successfully hitting an enemy god with a basic attack will subtract 1s from all your abilities currently on cooldown. This effect can only occur once every 5s.
+0,Mace,Titans Bane,0,0.33,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2300,You gain +33% Physical Penetration.
+0,Shield,Shifters Shield,0,0,0,40,0,0,0,0,0,20,20,0,0,0,0,0,0,0,2400,While over 50% Health? you gain +20 Physical Power. While under 50% Health? you gain +20 Protections
+0,Shield,Void Shield,0,0,0,30,0,0,0,0,0,40,0,0,0,0,0,0,0,0,2700,Reduces the Physical Protection of enemies within 55 units by 20.
+0,Bow,Odysseus Bow,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2100,Every fourth Basic Attack triggers a chain lightning? damaging the target and up to 4 nearby enemies for 30 damage +50% of your total Basic Attack Power
+0,Shuriken,Wind Demon,0,0,10,30,0,20,0,0,0,0,0,0,0,0,0,0,0,0,2800,Your Critical Hits increase your Attack Speed and Movement Speed by 20% for 5s.
+0,Shuriken,Poisoned Star,0,0,15,20,0,15,0,0,0,0,0,0,0,0,0,0,0,0,2200,Critical hits on enemy gods afflict them with poison for 2s. This poison slows them by 20% and reduces their damage output by 20%
+0,Dagger,Deathbringer,0,0,0,50,0,20,0,0,0,0,0,0,0,0,0,0,0,0,3200,Critical Strike damage is increased by 40%.
+0,Dagger,Rage,0,0,0,30,0,20,0,0,0,0,0,0,0,0,0,0,0,0,2200,Earning a kill or assist fills you with rage? increasing your Critical Strike Chance by 20%. This buff can stack up to 3 times and lasts 8s.
+0,Dagger,Malice,0,0,0,50,0,20,0,0,0,0,0,0,0,0,0,0,0,0,3000,When you deal a Critical Strike? you deal an additional +75% of your total Physical Power as Physical Damage over the next 3s. Additional crits refresh this effect.
+0,Katana,Stonecutting Sword,0,0,0,50,0,0,0,0,0,0,0,0,0,0,10,0,0,0,2600,Melee Basic Attacks decreases enemy Physical protections by 10? and increase your physical protection by 10 for 3s (max. 3 Stacks)
+0,Katana,Masamune,0,0,0,50,0,0,0,0,0,0,0,100,0,0,10,0,0,0,2500,For each enemy god within 55 units of you? you gain a stacking buff that provides 5 Magical Protection and 5 Physical Protection. Stacks up to 5 times.
+0,Katana,Heartseeker,0,0,0,25,0,0,0,0,10,0,0,0,0,0,10,0,0,0,2100,Every successful basic attack gives you 1 stack. At 5 stacks? your next ability deals bonus damage equal to 100% of your physical power to the first enemy god hit.
+T3 Mag,Shoes,Shoes of the Magi,0,0,0,0,0,0,45,0,10,0,0,0,0,0,18,0,0,0,1600,None
+0,Shoes,Shoes of Focus,0,0,0,0,0,0,40,0,0,0,0,0,0,0,18,10,250,0,1500,None
+0,Shoes,Reinforced Shoes,0,0,0,0,0,0,20,0,0,0,0,75,0,20,18,0,0,0,1400,Every time you are damaged by a god you gain a stack that provides 3 Physical and Magical Protections. Stacks up to 6 times? Lasts 6s
+0,Shoes,Travelers Shoes,0,0,0,0,0,0,20,0,0,0,0,0,0,0,18,0,0,0,1400,You gain +14% additional Movement Speed and +25 HP5 while out of combat. Each time you damage an enemy god you earn +30 Gold. This cannot occur on the same god more than once every 90s.
+0,Trinket,Pythagorems Piece,0,0,0,0,0,0,40,12,0,0,0,0,0,0,0,10,200,0,2300,AURA - Adds 12% Magical Lifesteal and 30 Magical Power or 10% Physical Lifesteal and 20 Physical Power to all allies within 70 units.
+0,Trinket,Polynomicon,0,0,0,0,0,0,75,12,0,0,0,0,0,0,0,0,300,0,2300,Using an ability gives your next Basic Attack within the next 8 seconds +75% of your Magical Power as additional Magical Damage. The effect can only apply once every 3 seconds.
+0,Trinket,Bancrofts Talon,0,0,0,0,0,0,100,15,0,0,0,0,0,0,0,0,0,0,2300,You gain additional Magical Power and Lifesteal scaled from missing Health. This caps at 100 power and 15% Lifesteal at 25% Health.
+0,Trinket,Book of the Dead,0,0,0,0,0,0,100,15,0,0,0,200,0,0,0,0,0,0,3000,Healing from Magical Lifesteal can continue to affect you at max Health and is converted to a Health Shield. This Shield caps at 20% of your current HP. This shield has no duration.
+0,Helmet,Celestial Legion Helm,0,0,0,0,0,0,60,0,0,30,0,0,0,0,0,0,0,20,2050,Any god affected by your ability heals gains 20 Increased Physical and Magical Power for 5 seconds.
+0,Helmet,Lotus Crown,0,0,0,0,0,0,30,0,0,60,0,0,0,0,0,0,0,20,2050,Any god affected by your ability heals gains 20 increased Physical and Magical Protection for 5 seconds. Cannot activate on the same target again for 10s.
+0,Helmet,Jade Emperors Crown,0,0,0,0,0,0,20,0,0,60,0,100,0,0,0,0,0,0,2150,Enemies within 55 units of you have their Physical Power reduced by 30.
+0,Artifact,Rod of Tahuti,0,0,0,0,0,0,125,0,0,0,0,0,0,0,0,0,0,30,3300,Increases Magical Power by 25%.
+0,Artifact,Chronos Pendant,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,20,0,25,2900,Every 10s the Pendant activates? subtracting 1s from all of your abilities currently on Cooldown. The initial countdown will not start until you leave the fountain
+0,Ring,Demonic Grip,0,0,20,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,2300,Your Basic Attacks reduce your targets Magical Protection by 12% for 3s (max 3 Stacks).
+0,Ring,Telkhines Ring,0,0,20,0,0,0,80,0,0,0,0,0,0,0,0,0,0,0,2800,Successfully hitting enemies or structures with basic attacks gives you a stacking Magical Power buff of 10 per stack. Stacks up to 5 times? Stacks last 5s.
+0,Ring,Shamans Ringe,0,0,30,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,2400,Each basic attack that hits an enemy god heals you for 2% of your maximum Health and Mana per hit
+0,Focus,Divine Ruin,0,0,0,0,0,0,80,0,10,0,0,0,0,0,0,0,0,0,2400,Enemies hit by your abilities have 40% reduced healing and regeneration for 8 seconds.
+0,Focus,Spear of Magus,0,0,0,0,0,0,50,0,15,0,0,0,0,0,0,0,0,0,2150,Your abilities reduce your targets Magical Protection by 10 for 5 seconds (max. 3 Stacks).
+0,Focus,Spear of Desolation,0,0,0,0,0,0,80,0,20,0,0,0,0,10,0,0,0,0,2800,If you receive a kill or assist on an Enemy God all of your cooldowns are reduced by 1 second.
+0,Focus,Obsidian Shard,0,0.33,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,2300,You gain +33% Magical Penetration.
+0,Reliquary,Book of Toth,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,125,15,2650,You permanently gain 10 Mana per Stack? and receive 5 Stacks for a god kill and 1 Stack for a minion kill (max. 75 Stacks). Additionally? 3% of your Mana is converted to Magical Power.
+0,Reliquary,Soul Reaver,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,300,0,2950,When a god takes damage from your abilities? they take 10% of their maximum Health in additional True damage. If multiple gods are hit? the damage is applied to the one with the greatest maximum Health. This can only occur once every 40 seconds.
+0,Sash,Gem of Isolation,0,0,0,0,0,0,90,0,0,0,0,250,0,10,0,0,0,0,2700,Enemies hit by your damaging abilities will move 25% Slower for 2 seconds.
+0,Sash,Ethereal Staff,0,0,0,0,0,0,90,0,0,0,0,200,0,20,0,0,0,0,2700,Your abilities deal bonus Magical damage to enemy gods equal to 5% of their max Health. This effect can only happen once every 10s.
+0,Sash,Rod of Asclepius,0,0,0,0,0,0,75,0,0,0,0,250,0,0,10,0,0,0,2600,AURA - The Healing of allies within 70 units is increased by 10%. If you are in combat? Healing of allies within 70 units is increased by an additional 20%
+0,Sash,Warlocks Sash,0,0,0,0,0,0,50,0,0,0,0,300,0,0,0,0,400,0,2650,You permanently gain +3 Health and +.6 Magical Power per Stack? and receive 5 Stacks for a god kill and 1 Stack per minion kill. (Max. 100 Stacks)
+0,Stone,Void Stone,0,0,0,0,0,0,40,0,0,0,70,0,0,0,0,0,0,0,2150,Reduces the Magical Protection of enemies within 55 units by 20.
+0,Stone,Stone of Fal,0,0,0,0,0,0,70,0,0,0,40,0,0,0,0,10,0,0,2900,Anytime you would be dealt more than 30% of your Max Health by a single Magical ability? that damage is instead reduced to deal exactly 30% of your max Health. This effect can only occur once every 60s.
+T3 Def,Breastplat,Hide of the Nemean Lion,0,0,0,0,0,0,0,0,0,80,0,0,0,0,0,0,200,20,2200,Reflects 25% of all Basic Attack damage back to the attacker as Physical Damage
+0,Breastplat,Breastplate of Valor,0,0,0,0,0,0,0,0,0,65,0,0,0,0,0,10,300,10,2300,None
+0,Breastplat,Spectral Armor,0,0,0,0,0,0,0,0,0,70,0,0,0,10,0,0,300,10,2100,Anytime you receive Physical damage from a god? enemies within 30 units of you become feared for 1s. This effect cannot happen more than once every 90s
+0,Ancient B,Winged Blade,0,0,10,0,0,0,0,0,0,0,0,300,0,20,10,0,0,0,1850,When hit by a Slow? you are immune to Slows and your movement speed is increased by 20% for 4s. Only occurs once every 30 seconds.
+0,Ancient B,Relic Dagger,0,0,10,0,0,0,0,0,0,0,0,200,0,0,10,10,0,0,1850,Your relics receive 20% Cooldown Reduction.
+0,Ancient B,Hastened Fatalis,0,0,20,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,2150,When a Basic Attack hits a target? the attacking movement speed Debuff is removed from you for 1s.
+0,Ancient B,Witchblade,0,0,15,0,0,0,0,0,0,0,0,200,0,0,10,0,0,0,2050,"Enemies hit by your basic attacks are cursed? receiving 15% Reduced healing? stacking up to 3 times and lasting 5s. AURA - All enemies within 55 units have their Attack Speed reduced by 20%."
+0,Emerald,Shield of Regrowth,0,0,0,0,0,0,0,0,0,0,0,200,10,0,0,20,0,10,2100,After healing yourself from an ability? you gain +40% movement speed for 4 seconds. This cannot occur more than once every 10 seconds.
+0,Emerald,Mail of Renewal,0,0,0,0,0,0,0,0,0,0,0,400,10,0,0,10,0,0,2250,You gain 15% of your maximum Health and Mana over the next 5 seconds when you get a kill or assist against an enemy god or Objective.
+0,Emerald,Gauntlet of Thebes,0,0,0,0,0,0,0,0,0,0,0,400,15,0,0,0,0,0,2150,Increases the Magical and Physical Protections of allies within 70 units by 20.
+0,Emerald,Stone of Gaia,0,0,0,0,0,0,0,0,0,0,0,400,25,0,0,0,0,15,2000,If you are hit by a Knockup? Knockback? Pull? or Grab you are instead enveloped by the Earth? becoming CC immune for 1s. Can only occur once every 90s; Regenerates 2% of your max. Health every 5 seconds.
+0,Cloak,Spirit Robe,0,0,0,0,0,0,0,0,0,40,40,0,0,20,0,10,0,0,2500,You gain an additional 15% Damage Mitigation for 3s whenever you are hit with a hard Crowd Control Effect. This can only occur once every 15 seconds.
+0,Cloak,Mantle of Discord,0,0,0,0,0,0,0,0,0,60,60,0,0,0,0,15,0,0,3100,If you take damage below 30% health you unleash a shockwave that stuns all enemies within a range of 20 units for 1s and gain CC immunity for 1s. This effect cannot trigger more than once every 90s
+0,Cloak,Magis Blessing,0,0,0,0,0,0,0,0,0,15,15,350,0,0,0,0,0,0,2050,Absorbs a single hard Crowd Control effect or Root once every 70 seconds. When this occurs? the owner also receives 1s of Crowd Control immunity.
+0,Cloak,Hide of the Urchin,0,0,0,0,0,0,0,0,0,35,35,250,0,0,0,0,250,0,2350,You gain +3 Magical Protection and +3 Physical Protection for each god kill or assist (max. 10 Stacks)
+0,Kusari,Genjis Guard,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,10,0,20,2200,When you take Magical Damage from Abilities your cooldowns are reduced by 2s. This can only occur once every 30s.
+0,Kusari,Oni Hunters Garb,0,0,0,0,0,0,0,0,0,0,60,0,0,20,0,0,0,20,1900,When you deal damage to an enemy god? if at least 2 other enemy gods are within 55 units of you? you gain 15% damage mitigation for 5s. Can only occur every 90s
+0,Kusari,Shoguns Kusari,0,0,0,0,0,0,0,0,0,0,60,0,0,20,0,10,0,20,2400,Allied gods within 70 units of you gain bonus 15% Attack Speed
+0,Mail,Sovereignty,0,0,0,0,0,0,0,0,0,30,0,200,0,0,0,0,0,0,2100,All allies within 70 units gain +30 Physical Protections and +25 HP5.
+0,Mail,Mystical Mail,0,0,0,0,0,0,0,0,0,40,0,300,0,0,0,0,0,0,2700,Deals 40 Magical Damage per second to enemies within 25 units.
+0,Mail,Midgardian Mail,0,0,0,0,0,0,0,0,0,30,0,350,0,0,0,0,0,0,2250,When hit by a Basic Attack? there is a 30% chance to slow your enemys Movement Speed and Attack Speeds by 30% for 2 seconds.
+0,Mail,Emperors Armor,0,0,0,0,0,0,0,0,0,30,0,250,0,0,0,0,0,0,2000,Damageable enemy structures within 55 units have their Attack Speed decreased by 30%. Damageable allied structures within 55 units have their Attack Speed increased by 30%.
+0,Talisman,Bulwark of Hope,0,0,0,0,0,0,0,0,0,0,60,200,0,20,0,0,0,0,2550,When you take damage and are below 30% Health? you gain a Shield with health equal to 150 +10 Per Player Level for 20s. Can only occur once every 60s.
+0,Talisman,Pestilence,0,0,0,0,0,0,0,0,0,0,80,200,0,0,0,0,0,0,2150,AURA - The healing and regeneration of enemies within 55 units is reduced by 25%.
+0,Talisman,Heartward Amulet,0,0,0,0,0,0,0,0,0,0,45,200,0,0,0,0,0,0,2100,AURA - All allies within 70 units gain +20 Magical Protections and +20 MP5.

@@ -1,7 +1,6 @@
 
 package edu.orangecoastcollege.capstone.model;
 
-import javafx.scene.image.Image;
 
 /**
  * Item class is an entity class representing an item in
@@ -16,21 +15,22 @@ public class Item
     private int mId;
     private String mName;
     private int mCost;
-    private String mType;
     private int mHealth;
     private int mMana;
     private int mPhysicalProtection;
     private int mMagicalProtection;
-    private int mPower;
+    private int mPhysicalPower;
+    private int mMagicalPower;
     private double mAttackSpeed;
     private double mPercentPenetration;
     private int mFlatPenetration;
     private double mCriticalChance;
     private int mCooldownReduction;
-    private double mLifesteal;
-    private boolean mPassive;
-    private double mHP5;
-    private double mMP5;
+    private double mPhysicalLifesteal;
+    private double mMagicalLifesteal;
+    private String mPassive;
+    private int mHP5;
+    private int mMP5;
     private int mCrowdControlReduction;
 
     /**
@@ -54,48 +54,51 @@ public class Item
      * @param flatPenetration       - absolute negate armor
      * @param criticalChance        - extra damage
      * @param cooldownReduction     - ability cooldown
-     * @param lifesteal             - leech life
+     * @param physcialLifesteal     - physical leech life
+     * @param magicalLifesteam		- magical leech life
      * @param passive               - passive/active click
      * @param HP5                   - health regen
      * @param MP5                   - mana regen
-     * @param crowdControlReduction - diminishing return?
+     * @param crowdControlReduction - crowd control cooldown
      */
     public Item(int id,
                 String name,
                 int cost,
-                String type,
                 int health,
                 int mana,
                 int physicalProtection,
                 int magicalProtection,
-                int power,
+                int physicalPower,
+                int magicalPower,
                 double attackSpeed,
                 double percentPenetration,
                 int flatPenetration,
                 double criticalChance,
                 int cooldownReduction,
-                double lifesteal,
-                boolean passive,
-                double HP5,
-                double MP5,
+                double physicalLifesteal,
+                double magicalLifesteal,
+                String passive,
+                int HP5,
+                int MP5,
                 int crowdControlReduction
             )
     {
         this.mId = id;
         this.mName = name;
         this.mCost = cost;
-        this.mType = type;
         this.mHealth = health;
         this.mMana = mana;
         this.mPhysicalProtection = physicalProtection;
         this.mMagicalProtection = magicalProtection;
-        this.mPower = power;
+        this.mPhysicalPower = physicalPower;
+        this.mMagicalPower = magicalPower;
         this.mAttackSpeed = attackSpeed;
         this.mPercentPenetration = percentPenetration;
         this.mFlatPenetration = flatPenetration;
         this.mCriticalChance = criticalChance;
         this.mCooldownReduction = cooldownReduction;
-        this.mLifesteal = lifesteal;
+        this.mPhysicalLifesteal = physicalLifesteal;
+        this.mMagicalLifesteal = magicalLifesteal;
         this.mPassive = passive;
         this.mHP5 = HP5;
         this.mMP5 = MP5;
@@ -154,24 +157,6 @@ public class Item
     public void setCost(int cost)
     {
         this.mCost = cost;
-    }
-
-    /**
-     * Get item type (physical/magical)
-     * @return the type
-     */
-    public String getType()
-    {
-        return mType;
-    }
-
-    /**
-     * Set type
-     * @param type the type to set
-     */
-    public void setType(String type)
-    {
-        this.mType = type;
     }
 
     /**
@@ -247,21 +232,39 @@ public class Item
     }
 
     /**
-     * Get power
-     * @return the power
+     * Get Physical power
+     * @return the physical power
      */
-    public int getPower()
+    public int getPhysicalPower()
     {
-        return mPower;
+        return mPhysicalPower;
     }
 
     /**
-     * Set power
-     * @param power the power to set
+     * Set Physical power
+     * @param power the magical power to set
      */
-    public void setPower(int power)
+    public void setPhyscialPower(int power)
     {
-        this.mPower = power;
+        this.mPhysicalPower = power;
+    }
+    
+    /**
+     * Get magical power
+     * @return the magical power
+     */
+    public int getMagicalPower()
+    {
+        return mMagicalPower;
+    }
+
+    /**
+     * Set Magical power
+     * @param power the Magical power to set
+     */
+    public void setMagicalPower(int power)
+    {
+        this.mMagicalPower = power;
     }
 
     /**
@@ -355,28 +358,46 @@ public class Item
     }
 
     /**
-     * Get lifesteal
-     * @return the lifesteal
+     * Get physical lifesteal
+     * @return the physical lifesteal
      */
-    public double getLifesteal()
+    public double getPhysicalLifesteal()
     {
-        return mLifesteal;
+        return mPhysicalLifesteal;
+    }
+
+    /**
+     * Set physical lifesteal
+     * @param lifesteal the physical lifesteal to set
+     */
+    public void setPhysicalLifesteal(double lifesteal)
+    {
+        this.mPhysicalLifesteal = lifesteal;
+    }
+    
+    /**
+     * Get magical lifesteal
+     * @return the magical lifesteal
+     */
+    public double getMagicalLifesteal()
+    {
+        return mMagicalLifesteal;
     }
 
     /**
      * Set lifesteal
      * @param lifesteal the lifesteal to set
      */
-    public void setLifesteal(double lifesteal)
+    public void setMagicalLifesteal(double lifesteal)
     {
-        this.mLifesteal = lifesteal;
+        this.mMagicalLifesteal = lifesteal;
     }
 
     /**
      * Active/passive item status
      * @return the passive
      */
-    public boolean isPassive()
+    public String getPassive()
     {
         return mPassive;
     }
@@ -385,7 +406,7 @@ public class Item
      * Set item passive status
      * @param passive the passive to set
      */
-    public void setPassive(boolean passive)
+    public void setPassive(String passive)
     {
         this.mPassive = passive;
     }
@@ -394,7 +415,7 @@ public class Item
      * Get HP5
      * @return the hP5
      */
-    public double getHP5()
+    public int getHP5()
     {
         return mHP5;
     }
@@ -403,7 +424,7 @@ public class Item
      * Set HP5
      * @param hP5 the hP5 to set
      */
-    public void setHP5(double hP5)
+    public void setHP5(int hP5)
     {
         mHP5 = hP5;
     }
@@ -412,7 +433,7 @@ public class Item
      * Get MP5
      * @return the mP5
      */
-    public double getMP5()
+    public int getMP5()
     {
         return mMP5;
     }
@@ -421,7 +442,7 @@ public class Item
      * Set MP5
      * @param mP5 the mP5 to set
      */
-    public void setMP5(double mP5)
+    public void setMP5(int mP5)
     {
         mMP5 = mP5;
     }
@@ -447,93 +468,115 @@ public class Item
     /* (non-Javadoc)
      * @see java.lang.Object#hashCode()
      */
-    @Override
-    public int hashCode()
-    {
-        final int prime = 31;
-        int result = 1;
-        long temp;
-        temp = Double.doubleToLongBits(mHP5);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(mMP5);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(mAttackSpeed);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + mCooldownReduction;
-        result = prime * result + mCost;
-        temp = Double.doubleToLongBits(mCriticalChance);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + mCrowdControlReduction;
-        result = prime * result + mFlatPenetration;
-        result = prime * result + mHealth;
-        result = prime * result + mId;
-        temp = Double.doubleToLongBits(mLifesteal);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + mMagicalProtection;
-        result = prime * result + mMana;
-        result = prime * result + ((mName == null) ? 0 : mName.hashCode());
-        result = prime * result + (mPassive ? 1231 : 1237);
-        temp = Double.doubleToLongBits(mPercentPenetration);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + mPhysicalProtection;
-        result = prime * result + mPower;
-        result = prime * result + ((mType == null) ? 0 : mType.hashCode());
-        return result;
-    }
+	
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#equals(java.lang.Object)
-     */
-    @Override
-    public boolean equals(Object obj)
-    {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        Item other = (Item) obj;
-        if (Double.doubleToLongBits(mHP5) != Double.doubleToLongBits(other.mHP5)) return false;
-        if (Double.doubleToLongBits(mMP5) != Double.doubleToLongBits(other.mMP5)) return false;
-        if (Double.doubleToLongBits(mAttackSpeed) != Double.doubleToLongBits(other.mAttackSpeed)) return false;
-        if (mCooldownReduction != other.mCooldownReduction) return false;
-        if (mCost != other.mCost) return false;
-        if (Double.doubleToLongBits(mCriticalChance) != Double.doubleToLongBits(other.mCriticalChance)) return false;
-        if (mCrowdControlReduction != other.mCrowdControlReduction) return false;
-        if (mFlatPenetration != other.mFlatPenetration) return false;
-        if (mHealth != other.mHealth) return false;
-        if (mId != other.mId) return false;
-        if (Double.doubleToLongBits(mLifesteal) != Double.doubleToLongBits(other.mLifesteal)) return false;
-        if (mMagicalProtection != other.mMagicalProtection) return false;
-        if (mMana != other.mMana) return false;
-        if (mName == null)
-        {
-            if (other.mName != null) return false;
-        }
-        else if (!mName.equals(other.mName)) return false;
-        if (mPassive != other.mPassive) return false;
-        if (Double.doubleToLongBits(mPercentPenetration) != Double.doubleToLongBits(other.mPercentPenetration))
-            return false;
-        if (mPhysicalProtection != other.mPhysicalProtection) return false;
-        if (mPower != other.mPower) return false;
-        if (mType == null)
-        {
-            if (other.mType != null) return false;
-        }
-        else if (!mType.equals(other.mType)) return false;
-        return true;
-    }
+	@Override
+	public String toString()
+	{
+		return "Item [mId=" + mId + ", mName=" + mName + ", mCost=" + mCost + ", mHealth="
+				+ mHealth + ", mMana=" + mMana + ", mPhysicalProtection=" + mPhysicalProtection
+				+ ", mMagicalProtection=" + mMagicalProtection + ", mPhysicalPower=" + mPhysicalPower
+				+ ", mMagicalPower=" + mMagicalPower + ", mAttackSpeed=" + mAttackSpeed + ", mPercentPenetration="
+				+ mPercentPenetration + ", mFlatPenetration=" + mFlatPenetration + ", mCriticalChance="
+				+ mCriticalChance + ", mCooldownReduction=" + mCooldownReduction + ", mPhysicalLifesteal="
+				+ mPhysicalLifesteal + ", mMagicalLifesteal=" + mMagicalLifesteal + ", mPassive=" + mPassive + ", mHP5="
+				+ mHP5 + ", mMP5=" + mMP5 + ", mCrowdControlReduction=" + mCrowdControlReduction + "]";
+	}
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
-    @Override
-    public String toString()
-    {
-        return "Item [id=" + mId + ", name=" + mName + ", cost=" + mCost + ", type=" + mType + ", health=" + mHealth
-                + ", mana=" + mMana + ", physicalProtection=" + mPhysicalProtection + ", magicalProtection="
-                + mMagicalProtection + ", power=" + mPower + ", attackSpeed=" + mAttackSpeed + ", percentPenetration="
-                + mPercentPenetration + ", flatPenetration=" + mFlatPenetration + ", criticalChance=" + mCriticalChance
-                + ", cooldownReduction=" + mCooldownReduction + ", lifesteal=" + mLifesteal + ", passive=" + mPassive
-                + ", HP5=" + mHP5 + ", MP5=" + mMP5 + ", crowdControlReduction=" + mCrowdControlReduction + "]";
-    }
+	@Override
+	public int hashCode()
+	{
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(mAttackSpeed);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + mCooldownReduction;
+		result = prime * result + mCost;
+		temp = Double.doubleToLongBits(mCriticalChance);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + mCrowdControlReduction;
+		result = prime * result + mFlatPenetration;
+		result = prime * result + mHP5;
+		result = prime * result + mHealth;
+		result = prime * result + mId;
+		result = prime * result + mMP5;
+		temp = Double.doubleToLongBits(mMagicalLifesteal);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + mMagicalPower;
+		result = prime * result + mMagicalProtection;
+		result = prime * result + mMana;
+		result = prime * result + ((mName == null) ? 0 : mName.hashCode());
+		result = prime * result + ((mPassive == null) ? 0 : mPassive.hashCode());
+		temp = Double.doubleToLongBits(mPercentPenetration);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(mPhysicalLifesteal);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + mPhysicalPower;
+		result = prime * result + mPhysicalProtection;
+		return result;
+	}
 
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Item other = (Item) obj;
+		if (Double.doubleToLongBits(mAttackSpeed) != Double.doubleToLongBits(other.mAttackSpeed))
+			return false;
+		if (mCooldownReduction != other.mCooldownReduction)
+			return false;
+		if (mCost != other.mCost)
+			return false;
+		if (Double.doubleToLongBits(mCriticalChance) != Double.doubleToLongBits(other.mCriticalChance))
+			return false;
+		if (mCrowdControlReduction != other.mCrowdControlReduction)
+			return false;
+		if (mFlatPenetration != other.mFlatPenetration)
+			return false;
+		if (mHP5 != other.mHP5)
+			return false;
+		if (mHealth != other.mHealth)
+			return false;
+		if (mId != other.mId)
+			return false;
+		if (mMP5 != other.mMP5)
+			return false;
+		if (Double.doubleToLongBits(mMagicalLifesteal) != Double.doubleToLongBits(other.mMagicalLifesteal))
+			return false;
+		if (mMagicalPower != other.mMagicalPower)
+			return false;
+		if (mMagicalProtection != other.mMagicalProtection)
+			return false;
+		if (mMana != other.mMana)
+			return false;
+		if (mName == null)
+		{
+			if (other.mName != null)
+				return false;
+		} else if (!mName.equals(other.mName))
+			return false;
+		if (mPassive == null)
+		{
+			if (other.mPassive != null)
+				return false;
+		} else if (!mPassive.equals(other.mPassive))
+			return false;
+		if (Double.doubleToLongBits(mPercentPenetration) != Double.doubleToLongBits(other.mPercentPenetration))
+			return false;
+		if (Double.doubleToLongBits(mPhysicalLifesteal) != Double.doubleToLongBits(other.mPhysicalLifesteal))
+			return false;
+		if (mPhysicalPower != other.mPhysicalPower)
+			return false;
+		if (mPhysicalProtection != other.mPhysicalProtection)
+			return false;
+		return true;
+	}
+	
+	
 }

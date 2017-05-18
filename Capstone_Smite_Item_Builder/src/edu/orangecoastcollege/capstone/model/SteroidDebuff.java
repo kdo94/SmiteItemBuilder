@@ -1,7 +1,6 @@
 
 package edu.orangecoastcollege.capstone.model;
 
-import javafx.scene.image.Image;
 
 /**
  * SteroidDebuff represents a beneficial or
@@ -14,14 +13,15 @@ import javafx.scene.image.Image;
 public class SteroidDebuff
 {
     private int mId;
-    private double mDuration;
-    private int mPower;
+    private int mDuration;
+    private int mPhysicalPower;
+    private int mMagicalPower;
     private double mMovementSpeed;
-    private int mLifesteal;
     private int mProtections;
-    private double mHP5;
-    private double mMP5;
+    private int mHP5;
+    private int mMP5;
     private int mPenetration;
+    
 
     /**
      * No-arg constructor
@@ -32,7 +32,8 @@ public class SteroidDebuff
      * arg constructor for steroiddebuff
      * @param id            - id
      * @param duration      - duraction in sec
-     * @param power         - power inc
+     * @param physicalPower         - power inc
+     * @param magicalPower
      * @param movementSpeed - movement inc
      * @param lifesteal     - life absorb
      * @param protections   - protection
@@ -41,20 +42,20 @@ public class SteroidDebuff
      * @param penetration   - penetration
      */
     public SteroidDebuff(int id,
-                         double duration,
-                         int power,
+                         int duration,
+                         int physicalPower,
+                         int magicalPower,
                          double movementSpeed,
-                         int lifesteal,
                          int protections,
-                         double HP5,
-                         double MP5,
+                         int HP5,
+                         int MP5,
                          int penetration)
     {
         this.mId = id;
         this.mDuration = duration;
-        this.mPower = power;
+        this.mPhysicalPower = physicalPower;
+        this.mMagicalPower = magicalPower;
         this.mMovementSpeed = movementSpeed;
-        this.mLifesteal = lifesteal;
         this.mProtections = protections;
         this.mHP5 = HP5;
         this.mMP5 = MP5;
@@ -83,7 +84,7 @@ public class SteroidDebuff
      * Get duration of steroid/debuff
      * @return the duration
      */
-    public double getDuration()
+    public int getDuration()
     {
         return mDuration;
     }
@@ -92,27 +93,45 @@ public class SteroidDebuff
      * Set duraction of steroid/debuff
      * @param duration the duration to set
      */
-    public void setDuration(double duration)
+    public void setDuration(int duration)
     {
         this.mDuration = duration;
     }
 
     /**
-     * Get power
+     * Get physical power
      * @return the power
      */
-    public int getPower()
+    public int getPhysicalPower()
     {
-        return mPower;
+        return mPhysicalPower;
     }
 
     /**
-     * Set power
-     * @param power the power to set
+     * Set physical power
+     * @param power the physical power to set
      */
-    public void setPower(int power)
+    public void setPhysicalPower(int power)
     {
-        this.mPower = power;
+        this.mPhysicalPower = power;
+    }
+    
+    /**
+     * Get magical power
+     * @return the magical power
+     */
+    public int getMagicalPower()
+    {
+        return mMagicalPower;
+    }
+
+    /**
+     * Set magical power
+     * @param power the magical power to set
+     */
+    public void setMagicalPower(int power)
+    {
+        this.mMagicalPower = power;
     }
 
     /**
@@ -131,24 +150,6 @@ public class SteroidDebuff
     public void setMovementSpeed(double movementSpeed)
     {
         this.mMovementSpeed = movementSpeed;
-    }
-
-    /**
-     * Get lifesteal
-     * @return the lifesteal
-     */
-    public int getLifesteal()
-    {
-        return mLifesteal;
-    }
-
-    /**
-     * Set lifesteal
-     * @param lifesteal the lifesteal to set
-     */
-    public void setLifesteal(int lifesteal)
-    {
-        this.mLifesteal = lifesteal;
     }
 
     /**
@@ -173,7 +174,7 @@ public class SteroidDebuff
      * Get HP5 health regen
      * @return the hP5
      */
-    public double getHP5()
+    public int getHP5()
     {
         return mHP5;
     }
@@ -182,7 +183,7 @@ public class SteroidDebuff
      * Set hp5 health regen
      * @param hP5 the hP5 to set
      */
-    public void setHP5(double hP5)
+    public void setHP5(int hP5)
     {
         mHP5 = hP5;
     }
@@ -191,7 +192,7 @@ public class SteroidDebuff
      * Get MP5 mana regen
      * @return the mP5
      */
-    public double getMP5()
+    public int getMP5()
     {
         return mMP5;
     }
@@ -200,7 +201,7 @@ public class SteroidDebuff
      * Set MP5 mana regen
      * @param mP5 the mP5 to set
      */
-    public void setMP5(double mP5)
+    public void setMP5(int mP5)
     {
         mMP5 = mP5;
     }
@@ -223,63 +224,70 @@ public class SteroidDebuff
         this.mPenetration = penetration;
     }
 
+	@Override
+	public int hashCode()
+	{
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + mDuration;
+		long temp;
+		temp = Double.doubleToLongBits(mHP5);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + mId;
+		temp = Double.doubleToLongBits(mMP5);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + mMagicalPower;
+		temp = Double.doubleToLongBits(mMovementSpeed);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + mPenetration;
+		result = prime * result + mPhysicalPower;
+		result = prime * result + mProtections;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SteroidDebuff other = (SteroidDebuff) obj;
+		if (mDuration != other.mDuration)
+			return false;
+		if (Double.doubleToLongBits(mHP5) != Double.doubleToLongBits(other.mHP5))
+			return false;
+		if (mId != other.mId)
+			return false;
+		if (Double.doubleToLongBits(mMP5) != Double.doubleToLongBits(other.mMP5))
+			return false;
+		if (mMagicalPower != other.mMagicalPower)
+			return false;
+		if (Double.doubleToLongBits(mMovementSpeed) != Double.doubleToLongBits(other.mMovementSpeed))
+			return false;
+		if (mPenetration != other.mPenetration)
+			return false;
+		if (mPhysicalPower != other.mPhysicalPower)
+			return false;
+		if (mProtections != other.mProtections)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "SteroidDebuff [mId=" + mId + ", mDuration=" + mDuration + ", mPhysicalPower=" + mPhysicalPower
+				+ ", mMagicalPower=" + mMagicalPower + ", mMovementSpeed=" + mMovementSpeed + ", mProtections=" 
+				+ mProtections + ", mHP5=" + mHP5 + ", mMP5=" + mMP5+ ", mPenetration=" + mPenetration + "]";
+	}
+
     /* (non-Javadoc)
      * @see java.lang.Object#hashCode()
      */
-    @Override
-    public int hashCode()
-    {
-        final int prime = 31;
-        int result = 1;
-        long temp;
-        temp = Double.doubleToLongBits(mHP5);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(mMP5);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(mDuration);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + mId;
-        result = prime * result + mLifesteal;
-        temp = Double.doubleToLongBits(mMovementSpeed);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + mPenetration;
-        result = prime * result + mPower;
-        result = prime * result + mProtections;
-        return result;
-    }
-
-    /* (non-Javadoc)
-     * @see java.lang.Object#equals(java.lang.Object)
-     */
-    @Override
-    public boolean equals(Object obj)
-    {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        SteroidDebuff other = (SteroidDebuff) obj;
-        if (Double.doubleToLongBits(mHP5) != Double.doubleToLongBits(other.mHP5)) return false;
-        if (Double.doubleToLongBits(mMP5) != Double.doubleToLongBits(other.mMP5)) return false;
-        if (Double.doubleToLongBits(mDuration) != Double.doubleToLongBits(other.mDuration)) return false;
-        if (mId != other.mId) return false;
-        if (mLifesteal != other.mLifesteal) return false;
-        if (Double.doubleToLongBits(mMovementSpeed) != Double.doubleToLongBits(other.mMovementSpeed)) return false;
-        if (mPenetration != other.mPenetration) return false;
-        if (mPower != other.mPower) return false;
-        if (mProtections != other.mProtections) return false;
-        return true;
-    }
-
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
-    @Override
-    public String toString()
-    {
-        return "SteroidDebuff [id=" + mId + ", duration=" + mDuration + ", power=" + mPower + ", movementSpeed="
-                + mMovementSpeed + ", lifesteal=" + mLifesteal + ", protections=" + mProtections + ", HP5=" + mHP5
-                + ", MP5=" + mMP5 + ", penetration=" + mPenetration + "]";
-    }
+    
 
 
 
