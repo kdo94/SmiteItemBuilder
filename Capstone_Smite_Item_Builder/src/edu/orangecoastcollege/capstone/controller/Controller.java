@@ -454,4 +454,85 @@ public class Controller
 	{
 		return theOne.mAllBuildsList;
 	}
+	
+	/**
+	 * Add god to database and observable list
+	 * @param values
+	 */
+	public void addGod(String [] values)
+	{
+		int id;
+		try {
+			id = theOne.mGodsDB.createRecord(Arrays.copyOfRange(GOD_FIELD_NAMES, 1, GOD_FIELD_NAMES.length), values);
+			
+			God newGod = new God(id,
+					values[0],
+					values[1],
+					values[2],
+					Integer.parseInt(values[3]),
+					Integer.parseInt(values[4]),
+					Integer.parseInt(values[5]),
+					Integer.parseInt(values[6]),
+					Integer.parseInt(values[7]),
+					Double.parseDouble(values[8]),
+					Integer.parseInt(values[9]),
+					Integer.parseInt(values[10]),
+					Double.parseDouble(values[11]),
+					Double.parseDouble(values[12]),
+					Integer.parseInt(values[13]),
+					Integer.parseInt(values[14]),
+					Double.parseDouble(values[15]),
+					values[16],
+					values[17]);
+			
+			theOne.mAllGodsList.add(newGod);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+	/**
+	 * Add item to database and observable list
+	 * @param values
+	 */
+	public void addItem(String [] values)
+	{
+		int id;
+		try {
+			id = theOne.mGodsDB.createRecord(Arrays.copyOfRange(ITEMS_FIELD_NAMES, 1, ITEMS_FIELD_NAMES.length), values);
+			
+			Item newItem = new Item(id,
+					values[0],
+					Integer.parseInt(values[1]),
+					Integer.parseInt(values[2]),
+					Integer.parseInt(values[3]),
+					Integer.parseInt(values[4]),
+					Integer.parseInt(values[5]),
+					Integer.parseInt(values[6]),
+					Integer.parseInt(values[7]),
+					Double.parseDouble(values[8]),
+					Double.parseDouble(values[9]),
+					Integer.parseInt(values[10]),
+					Double.parseDouble(values[11]),
+					Integer.parseInt(values[12]),
+					Double.parseDouble(values[13]),
+					Double.parseDouble(values[14]),
+					values[15],
+					Integer.parseInt(values[16]),
+					Integer.parseInt(values[17]),
+					Integer.parseInt(values[18]));
+			
+			theOne.mAllItemsList.add(newItem);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+	
 }

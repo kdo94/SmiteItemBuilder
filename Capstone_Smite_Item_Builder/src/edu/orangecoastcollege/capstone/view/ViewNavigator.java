@@ -10,6 +10,8 @@ public class ViewNavigator {
 	public static final String BUILDS_SCENE = "BuildsScene.fxml";
 	public static final String ALL_ITEMS_SCENE = "AllItemsScene.fxml";
 	public static final String MAIN_SCENE = "MainScene.fxml";
+	public static final String ADD_GOD_SCENE = "AddGodScene.fxml";
+	public static final String ADD_ITEM_SCENE = "AddItemScene.fxml";
 
 	public static Stage mainStage;
 

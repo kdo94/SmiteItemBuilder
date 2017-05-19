@@ -1,17 +1,29 @@
 
 package edu.orangecoastcollege.capstone.view;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
+import edu.orangecoastcollege.capstone.controller.Controller;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 
 /**
+ * Scene for adding a god to database and application
  * @author ptang10
  *
  */
 public class AddGodScene
 {
+	private static Controller controller = Controller.getInstance();
+	private static String FIELD_ERROR = "Missing Field Input";
+	
     @FXML
     private TextField godNameTF;
 
@@ -62,4 +74,137 @@ public class AddGodScene
 
     @FXML
     private ComboBox<String> godTypeCB;
+
+    @FXML
+    private TextField godHealthScalingTF;
+    
+    @FXML
+    private Label addGodStatusL;
+    
+    @FXML
+    private Button godSubmitBtn;
+    
+    @FXML
+    private Button godCancelBtn;
+    
+    
+    /**
+     * Event handler for submit button when adding a god
+     * @return
+     */
+    @FXML
+    public Object addGod()
+    {
+    	boolean okay = true;
+    	ArrayList<TextField> tfList = new ArrayList<>(Arrays.asList(godNameTF, 
+    			godBaseHealthTF, godBasePhysicalProtectTF, godBaseMagicalProtectTF, 
+    			godBaseManaTF, godBaseAttackSpeedTF, godBaseHP5TF, godBaseMP5TF, 
+    			godPhysicalProtectionScaling, godMagicalProtectionScaling, 
+    			godBaseMovementSpeedTF, godBaseDamageTF, godDamageScalingTF, 
+    			godPantheonTF, godHealthScalingTF));
+    	
+    	for(TextField tf: tfList)
+    	{
+    		if(tf.getText() == null || tf.getText().isEmpty())
+    		{
+    			addGodStatusL.setText(FIELD_ERROR);
+    			addGodStatusL.setTextFill(Color.RED);
+    			addGodStatusL.setVisible(true);
+    			okay = false;
+    			return this;
+    		}
+    	}
+    	
+    	
+    	if(godLoredTA.getText() == null || godLoredTA.getText().isEmpty())
+    	{
+			addGodStatusL.setText("Lore is missing");
+			addGodStatusL.setTextFill(Color.RED);
+			addGodStatusL.setVisible(true);
+			okay = false;
+			return this;
+    	}
+    	
+    	String cb = godClassCB.getSelectionModel().getSelectedItem();
+    	if(cb == null || cb.isEmpty())
+    	{
+			addGodStatusL.setText("God Class is missing");
+			addGodStatusL.setTextFill(Color.RED);
+			addGodStatusL.setVisible(true);
+			okay = false; 
+			return this;
+    	}
+    	
+    	cb = godTypeCB.getSelectionModel().getSelectedItem();
+    	if(cb == null || cb.isEmpty())
+    	{
+			addGodStatusL.setText("God Type is missing");
+			addGodStatusL.setTextFill(Color.RED);
+			addGodStatusL.setVisible(true);
+			okay = false;
+			return this;
+    	}
+    	
+        if(okay)
+        {
+        	String [] values = new String[]{godNameTF.getText(),
+        			godClassCB.getSelectionModel().getSelectedItem(),
+        			godTypeCB.getSelectionModel().getSelectedItem(),
+        			godBaseHealthTF.getText(),
+        			godHealthScalingTF.getText(),
+        			godBasePhysicalProtectTF.getText(),
+        			godBaseMagicalProtectTF.getText(),
+        			godBaseManaTF.getText(),
+        			godBaseAttackSpeedTF.getText(),
+        			godBaseHP5TF.getText(),
+        			godBaseMP5TF.getText(),
+        			godPhysicalProtectionScaling.getText(),
+        			godMagicalProtectionScaling.getText(),
+        			godBaseMovementSpeedTF.getText(),
+        			godBaseDamageTF.getText(),
+        			godDamageScalingTF.getText(),
+        			godPantheonTF.getText(),
+        			godLoredTA.getText()};
+
+            controller.addGod(values);
+            
+        	for(TextField tf: tfList)
+        		tf.clear();
+        	
+        	godClassCB.getSelectionModel().clearSelection();
+        	godTypeCB.getSelectionModel().clearSelection();
+        	godLoredTA.clear();
+			addGodStatusL.setText("Add God");
+			addGodStatusL.setTextFill(Color.BLACK);
+			
+			//TODO scene navigator
+//			ViewNavigator.loadScene("All Gods", ViewNavigator.ALL_GODS_SCENE);
+        }    	
+    	
+    	return this;
+    }
+    
+    @FXML
+    public Object cancel()
+    {
+    	ArrayList<TextField> tfList = new ArrayList<>(Arrays.asList(godNameTF, 
+    			godBaseHealthTF, godBasePhysicalProtectTF, godBaseMagicalProtectTF, 
+    			godBaseManaTF, godBaseAttackSpeedTF, godBaseHP5TF, godBaseMP5TF, 
+    			godPhysicalProtectionScaling, godMagicalProtectionScaling, 
+    			godBaseMovementSpeedTF, godBaseDamageTF, godDamageScalingTF, 
+    			godPantheonTF, godHealthScalingTF));
+    	for(TextField tf: tfList)
+    		tf.clear();
+    	
+    	godClassCB.getSelectionModel().clearSelection();
+    	godTypeCB.getSelectionModel().clearSelection();
+    	godLoredTA.clear();
+		addGodStatusL.setText("Add God");
+		addGodStatusL.setTextFill(Color.BLACK);
+		
+		//TODO scene navigator
+//		ViewNavigator.loadScene("All Gods", ViewNavigator.ALL_GODS_SCENE);
+		
+		return this;
+    }
 }

@@ -13,25 +13,25 @@ package edu.orangecoastcollege.capstone.model;
 public class Item
 {
     private int mId;
-    private String mName;
-    private int mCost;
-    private int mHealth;
-    private int mMana;
-    private int mPhysicalProtection;
-    private int mMagicalProtection;
-    private int mPhysicalPower;
-    private int mMagicalPower;
-    private double mAttackSpeed;
-    private double mPercentPenetration;
-    private int mFlatPenetration;
-    private double mCriticalChance;
-    private int mCooldownReduction;
-    private double mPhysicalLifesteal;
-    private double mMagicalLifesteal;
-    private String mPassive;
-    private int mHP5;
-    private int mMP5;
-    private int mCrowdControlReduction;
+    private String mName;//0
+    private int mCost;//1
+    private int mHealth;//2
+    private int mMana;//3
+    private int mPhysicalProtection;//4
+    private int mMagicalProtection;//5
+    private int mPhysicalPower;//6
+    private int mMagicalPower;//7
+    private double mAttackSpeed;//8
+    private double mPercentPenetration;//9
+    private int mFlatPenetration;//10
+    private double mCriticalChance;//11
+    private int mCooldownReduction;//12
+    private double mPhysicalLifesteal;//13
+    private double mMagicalLifesteal;//14
+    private String mPassive;//15
+    private int mHP5;//16
+    private int mMP5;//17
+    private int mCrowdControlReduction;//18
 
     /**
      * No Arg-constructor for item

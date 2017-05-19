@@ -1,7 +1,5 @@
 package edu.orangecoastcollege.capstone.model;
 
-import javafx.scene.image.Image;
-
 /**
  * God class is an entity class representing a God (character)
  * in the game SMITE.  The God class contains all info on
@@ -12,25 +10,25 @@ import javafx.scene.image.Image;
  */
 public class God
 {
-    private int mId;
-    private String mName;
-    private String mGodClass;
-    private String mType;
-    private int mBaseHealth;
-    private int mHealthScaling;
-    private int mBasePProtection;
-    private int mBaseMProtection;
-    private int mBaseMana;
-    private double mBaseAttackSpeed;
-    private int mBaseHP5;
-    private int mBaseMP5;
-    private double mPhysicalProtectScaling;
-    private double mMagicalProtectScaling;
-    private int mBaseMovementSpeed;
-    private int mBaseDamage;
-    private double mDamageScaling;
-    private String mPantheon;
-    private String mLore;
+    private int mId;	//
+    private String mName;//0
+    private String mGodClass;//1
+    private String mType;//2
+    private int mBaseHealth;//3
+    private int mHealthScaling;//4
+    private int mBasePProtection;//5
+    private int mBaseMProtection;//6
+    private int mBaseMana;//7
+    private double mBaseAttackSpeed;//8
+    private int mBaseHP5;//9
+    private int mBaseMP5;//10
+    private double mPhysicalProtectScaling;//11
+    private double mMagicalProtectScaling;//12
+    private int mBaseMovementSpeed;//13
+    private int mBaseDamage;//14
+    private double mDamageScaling;//15
+    private String mPantheon;//16
+    private String mLore;//17
 
     /**
      * Default no-arg constructor
