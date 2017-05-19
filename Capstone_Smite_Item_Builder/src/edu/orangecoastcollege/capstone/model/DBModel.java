@@ -156,7 +156,7 @@ public class DBModel {
 		try(Connection connection = connectToDB();
 				Statement stmt = connection.createStatement())
 		{
-			//System.out.println(insertSQL);
+			System.out.println(insertSQL);
 			stmt.executeUpdate(insertSQL.toString());	 
 			return stmt.getGeneratedKeys().getInt(1);
 		}
