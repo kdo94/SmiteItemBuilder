@@ -17,6 +17,7 @@ import javafx.scene.paint.Color;
 /**
  * Scene for adding a god to database and application
  * includes all attributes from user input
+ *
  * @author ptang10
  *
  */
