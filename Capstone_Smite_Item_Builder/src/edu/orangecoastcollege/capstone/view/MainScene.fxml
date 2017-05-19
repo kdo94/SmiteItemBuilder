@@ -17,6 +17,7 @@
             <Label text="God:" />
             <ComboBox fx:id="allGodsCB" prefWidth="150.0" />
             <Button fx:id="viewAllGodsButton" mnemonicParsing="false" text="View all Gods" />
+            <Button fx:id="loreButton" mnemonicParsing="false" text="Lore" />
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
@@ -113,7 +114,18 @@
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
             <TextArea fx:id="statsTextArea" prefHeight="200.0" prefWidth="200.0" promptText="Stats go here" />
-            <Button fx:id="statsButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" text="Stats" />
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="35.0">
+               <children>
+                  <Button fx:id="godStatsButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" text="God Stats" />
+                  <Button fx:id="abilityStatsButton" mnemonicParsing="false" text="Ability Stats" />
+               </children>
+            </VBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="85.0" prefWidth="380.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Save Build" />
+                  <Button mnemonicParsing="false" text="View All Builds" />
+               </children>
+            </HBox>
          </children>
       </HBox>
    </children>

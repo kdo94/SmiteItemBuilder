@@ -2,7 +2,6 @@ package edu.orangecoastcollege.capstone.controller;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,7 +16,6 @@ import edu.orangecoastcollege.capstone.model.Relic;
 import edu.orangecoastcollege.capstone.model.SteroidDebuff;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.image.Image;
 
 public class Controller
 {
