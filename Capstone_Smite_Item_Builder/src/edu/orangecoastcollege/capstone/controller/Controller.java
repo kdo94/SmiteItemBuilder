@@ -616,4 +616,97 @@ public class Controller
 		return godTypes;
 	}
 	
+	public ObservableList<String> getGodNames()
+	{
+		ObservableList<String> godNames = FXCollections.observableArrayList();
+		for(God god : theOne.mAllGodsList)
+			if(!godNames.contains(god.getName()))
+				godNames.add(god.getName());
+		FXCollections.sort(godNames);
+		return godNames;
+	}
+	
+	public ObservableList<String> getItemNames()
+	{
+		ObservableList<String> itemNames = FXCollections.observableArrayList();
+		for(Item item : theOne.mAllItemsList)
+			if(!itemNames.contains(item.getName()))
+				itemNames.add(item.getName());
+		FXCollections.sort(itemNames);
+		return itemNames;
+	}
+	
+	public void addGodToBuild(God god)
+	{
+		theOne.mCurrentBuild.setGod(god);
+	}
+	
+	public void addItem1ToBuild(Item item)
+	{
+		theOne.mCurrentBuild.setItem1(item);
+	}
+	
+	public void addItem2ToBuild(Item item)
+	{
+		theOne.mCurrentBuild.setItem2(item);
+	}
+	
+	public void addItem3ToBuild(Item item)
+	{
+		theOne.mCurrentBuild.setItem3(item);
+	}
+	
+	public void addItem4ToBuild(Item item)
+	{
+		theOne.mCurrentBuild.setItem4(item);
+	}
+	
+	public void addItem5ToBuild(Item item)
+	{
+		theOne.mCurrentBuild.setItem5(item);
+	}
+	
+	public void addItem6ToBuild(Item item)
+	{
+		theOne.mCurrentBuild.setItem6(item);
+	}
+	
+	public void addRelic1ToBuild(Relic relic)
+	{
+		theOne.mCurrentBuild.setRelic1(relic);
+	}
+	
+	public void addRelic2ToBuild(Relic relic)
+	{
+		theOne.mCurrentBuild.setRelic2(relic);
+	}
+	
+	public void nameBuild(String name)
+	{
+		theOne.mCurrentBuild.setName(name);
+	}
+	
+	public boolean saveCurrentBuild()
+	{
+		String[] values = {theOne.mCurrentBuild.getName(),
+							String.valueOf(theOne.mCurrentBuild.getItem1().getId()),
+							String.valueOf(theOne.mCurrentBuild.getItem2().getId()),
+							String.valueOf(theOne.mCurrentBuild.getItem3().getId()),
+							String.valueOf(theOne.mCurrentBuild.getItem4().getId()),
+							String.valueOf(theOne.mCurrentBuild.getItem5().getId()),
+							String.valueOf(theOne.mCurrentBuild.getItem6().getId()),
+							String.valueOf(theOne.mCurrentBuild.getRelic1().getId()),
+							String.valueOf(theOne.mCurrentBuild.getRelic2().getId())};
+		try
+		{
+			theOne.mBuildsDB.createRecord(Arrays.copyOfRange(BUILDS_FIELD_NAMES, 1, BUILDS_FIELD_NAMES.length), values);
+			return true;
+		} 
+		catch (SQLException e)
+		{
+			// TODO Auto-generated catch block
+			return false;
+		}
+	}
+
 }
