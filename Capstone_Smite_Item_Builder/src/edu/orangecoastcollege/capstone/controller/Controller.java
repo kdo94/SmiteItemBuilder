@@ -207,6 +207,9 @@ public class Controller
 				theOne.initializeAbilitiesFromFile();
 				
 				theOne.mBuildsDB = new DBModel(DB_NAME, BUILDS_TABLE_NAME, BUILDS_FIELD_NAMES, BUILDS_FIELD_TYPES);
+				theOne.mAllGodsList.remove(0);
+				theOne.mAllItemsList.remove(0);
+				theOne.mAllRelicsList.remove(0);
 			} 
 			catch (SQLException e)
 			{
@@ -630,6 +633,16 @@ public class Controller
 				itemNames.add(item.getName());
 		FXCollections.sort(itemNames);
 		return itemNames;
+	}
+	
+	public ObservableList<String> getRelicNames()
+	{
+		ObservableList<String> relicNames = FXCollections.observableArrayList();
+		for(Relic relic : theOne.mAllRelicsList)
+			if(!relicNames.contains(relic.getName()))
+				relicNames.add(relic.getName());
+		FXCollections.sort(relicNames);
+		return relicNames;
 	}
 	
 	public void addGodToBuild(God god)
