@@ -100,8 +100,10 @@ public class AbilitiesStatsScene {
 		Abilities currentAbilities = new Abilities();
 		
 		Build currentBuild = controller.getCurrentBuild();
-		God currentGod = currentBuild.getGod();
+		God currentGod = currentAbilities.getGod();
 		double levelFromSlider = abilitiesStatsLevelSL.getValue();
+		double godDamage = currentGod.getBaseDamage() + 
+						   currentGod.getDamageScaling() * levelFromSlider;
 		int intBuffer = 0;
 		double doubleBuffer = 0;
 		
@@ -120,25 +122,25 @@ public class AbilitiesStatsScene {
 		
 		intBuffer = currentAbilities.getDamage1();
 		doubleBuffer = currentAbilities.getScaling1();
-		intBuffer = (int)(intBuffer + doubleBuffer * levelFromSlider);
+		intBuffer = (int)(intBuffer + doubleBuffer * godDamage);
 		abilityStatDamage1L.setText(String.valueOf(intBuffer));
 		abilityStatDamageScaling1L.setText(String.valueOf(doubleBuffer));
 		
 		intBuffer = currentAbilities.getDamage2();
 		doubleBuffer = currentAbilities.getScaling2();
-		intBuffer = (int)(intBuffer + doubleBuffer * levelFromSlider);
+		intBuffer = (int)(intBuffer + doubleBuffer * godDamage);
 		abilityStatDamage2L.setText(String.valueOf(intBuffer));
 		abilityStatDamageScaling2L.setText(String.valueOf(doubleBuffer));
 		
 		intBuffer = currentAbilities.getDamage3();
 		doubleBuffer = currentAbilities.getScaling3();
-		intBuffer = (int)(intBuffer + doubleBuffer * levelFromSlider);
+		intBuffer = (int)(intBuffer + doubleBuffer * godDamage);
 		abilityStatDamage3L.setText(String.valueOf(intBuffer));
 		abilityStatDamageScaling3L.setText(String.valueOf(doubleBuffer));
 		
 		intBuffer = currentAbilities.getUltimateDamage();
 		doubleBuffer = currentAbilities.getUltimateScaling();
-		intBuffer = (int)(intBuffer + doubleBuffer * levelFromSlider);
+		intBuffer = (int)(intBuffer + doubleBuffer * godDamage);
 		abilityStatDamage4L.setText(String.valueOf(intBuffer));
 		abilityStatDamageScaling4L.setText(String.valueOf(doubleBuffer));
 		
