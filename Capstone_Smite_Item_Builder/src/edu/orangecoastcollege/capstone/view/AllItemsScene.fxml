@@ -119,12 +119,12 @@
                <children>
                   <TextArea prefHeight="200.0" prefWidth="200.0" text="Item &#10;Description &#10;Goes &#10;Here&#10;" />
                   <TextField id="costTF" fx:id="costTF" promptText="Cost" />
-                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                  <VBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
                      <children>
-                        <Button id="sellButton" fx:id="sellButton" mnemonicParsing="false" onAction="#sellItem" text="Sell" />
-                        <Button id="purchaseButton" fx:id="purchaseButton" mnemonicParsing="false" text="Purchase" />
+                        <Button id="purchaseButton" fx:id="purchaseButton" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="Purchase" />
+                        <Button id="sellButton" fx:id="sellButton" mnemonicParsing="false" onAction="#sellItem" prefWidth="100.0" text="Cancel" />
                      </children>
-                  </HBox>
+                  </VBox>
                </children>
             </VBox>
          </children>

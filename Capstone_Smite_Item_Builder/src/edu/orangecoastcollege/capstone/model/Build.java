@@ -42,6 +42,7 @@ public class Build
      * @param relic2    - relic 2
      */
     public Build(int id,
+    		String name,
                  God god,
                  Item item1,
                  Item item2,

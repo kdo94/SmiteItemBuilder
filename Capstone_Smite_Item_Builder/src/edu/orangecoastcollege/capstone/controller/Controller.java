@@ -16,7 +16,6 @@ import edu.orangecoastcollege.capstone.model.Relic;
 import edu.orangecoastcollege.capstone.model.SteroidDebuff;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import sun.awt.SunHints.Value;
 
 public class Controller
 {
@@ -207,17 +206,28 @@ public class Controller
 				theOne.initializeAbilitiesFromFile();
 				
 				theOne.mBuildsDB = new DBModel(DB_NAME, BUILDS_TABLE_NAME, BUILDS_FIELD_NAMES, BUILDS_FIELD_TYPES);
+				//theOne.mCurrentBuild = theOne.mBuildsDB.getRecord(1);
+				/*theOne.mCurrentBuild.setName("filler");
+				theOne.mCurrentBuild.setGod(theOne.mAllGodsList.get(0));
+				theOne.mCurrentBuild.setItem1(theOne.mAllItemsList.get(0));
+				theOne.mCurrentBuild.setItem2(theOne.mAllItemsList.get(0));
+				theOne.mCurrentBuild.setItem3(theOne.mAllItemsList.get(0));
+				theOne.mCurrentBuild.setItem4(theOne.mAllItemsList.get(0));
+				theOne.mCurrentBuild.setItem5(theOne.mAllItemsList.get(0));
+				theOne.mCurrentBuild.setItem6(theOne.mAllItemsList.get(0));
+				theOne.mCurrentBuild.setRelic1(theOne.mAllRelicsList.get(0));
+				theOne.mCurrentBuild.setRelic2(theOne.mAllRelicsList.get(0));
+				theOne.saveCurrentBuild();*/
 				theOne.mAllGodsList.remove(0);
 				theOne.mAllItemsList.remove(0);
 				theOne.mAllRelicsList.remove(0);
 			} 
 			catch (SQLException e)
 			{
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
+		//theOne.saveCurrentBuild();
 		return theOne;
 	}
 	
@@ -619,6 +629,16 @@ public class Controller
 		return godTypes;
 	}
 	
+	public ObservableList<String> getDistinctPantheons()
+	{
+		ObservableList<String> godPantheons = FXCollections.observableArrayList();
+		for(God god : theOne.mAllGodsList)
+			if(!godPantheons.contains(god.getPantheon()))
+				godPantheons.add(god.getPantheon());
+		FXCollections.sort(godPantheons);
+		return godPantheons;
+	}
+	
 	public ObservableList<String> getGodNames()
 	{
 		ObservableList<String> godNames = FXCollections.observableArrayList();
@@ -649,70 +669,33 @@ public class Controller
 		return relicNames;
 	}
 	
-	public void addGodToBuild(God god)
-	{
-		theOne.mCurrentBuild.setGod(god);
-	}
-	
-	public void addItem1ToBuild(Item item)
-	{
-		theOne.mCurrentBuild.setItem1(item);
-	}
-	
-	public void addItem2ToBuild(Item item)
-	{
-		theOne.mCurrentBuild.setItem2(item);
-	}
-	
-	public void addItem3ToBuild(Item item)
-	{
-		theOne.mCurrentBuild.setItem3(item);
-	}
-	
-	public void addItem4ToBuild(Item item)
-	{
-		theOne.mCurrentBuild.setItem4(item);
-	}
-	
-	public void addItem5ToBuild(Item item)
-	{
-		theOne.mCurrentBuild.setItem5(item);
-	}
-	
-	public void addItem6ToBuild(Item item)
-	{
-		theOne.mCurrentBuild.setItem6(item);
-	}
-	
-	public void addRelic1ToBuild(Relic relic)
-	{
-		theOne.mCurrentBuild.setRelic1(relic);
-	}
-	
-	public void addRelic2ToBuild(Relic relic)
-	{
-		theOne.mCurrentBuild.setRelic2(relic);
-	}
-	
-	public void nameBuild(String name)
-	{
-		theOne.mCurrentBuild.setName(name);
-	}
-	
 	public boolean saveCurrentBuild()
 	{
-		String[] values = {theOne.mCurrentBuild.getName(),
-							String.valueOf(theOne.mCurrentBuild.getItem1().getId()),
-							String.valueOf(theOne.mCurrentBuild.getItem2().getId()),
-							String.valueOf(theOne.mCurrentBuild.getItem3().getId()),
-							String.valueOf(theOne.mCurrentBuild.getItem4().getId()),
-							String.valueOf(theOne.mCurrentBuild.getItem5().getId()),
-							String.valueOf(theOne.mCurrentBuild.getItem6().getId()),
-							String.valueOf(theOne.mCurrentBuild.getRelic1().getId()),
-							String.valueOf(theOne.mCurrentBuild.getRelic2().getId())};
 		try
 		{
-			theOne.mBuildsDB.createRecord(Arrays.copyOfRange(BUILDS_FIELD_NAMES, 1, BUILDS_FIELD_NAMES.length), values);
+			String[] values = {theOne.mCurrentBuild.getName(),
+					String.valueOf(theOne.mCurrentBuild.getGod().getId()),
+					String.valueOf(theOne.mCurrentBuild.getItem1().getId()),
+					String.valueOf(theOne.mCurrentBuild.getItem2().getId()),
+					String.valueOf(theOne.mCurrentBuild.getItem3().getId()),
+					String.valueOf(theOne.mCurrentBuild.getItem4().getId()),
+					String.valueOf(theOne.mCurrentBuild.getItem5().getId()),
+					String.valueOf(theOne.mCurrentBuild.getItem6().getId()),
+					String.valueOf(theOne.mCurrentBuild.getRelic1().getId()),
+					String.valueOf(theOne.mCurrentBuild.getRelic2().getId())};
+			int id = theOne.mBuildsDB.createRecord(Arrays.copyOfRange(BUILDS_FIELD_NAMES, 1, BUILDS_FIELD_NAMES.length), values);
+			Build newBuild = new Build(id,
+										theOne.mCurrentBuild.getName(),
+										theOne.mCurrentBuild.getGod(),
+										theOne.mCurrentBuild.getItem1(),
+										theOne.mCurrentBuild.getItem2(),
+										theOne.mCurrentBuild.getItem3(),
+										theOne.mCurrentBuild.getItem4(),
+										theOne.mCurrentBuild.getItem5(),
+										theOne.mCurrentBuild.getItem6(),
+										theOne.mCurrentBuild.getRelic1(),
+										theOne.mCurrentBuild.getRelic2());
+			theOne.mAllBuildsList.add(newBuild);
 			return true;
 		} 
 		catch (SQLException e)

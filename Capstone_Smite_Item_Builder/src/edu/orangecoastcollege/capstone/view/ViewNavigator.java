@@ -15,6 +15,9 @@ public class ViewNavigator {
 	public static final String GOD_LORE_SCENE = "GodLoreScene.fxml";
 	public static final String GOD_STATS_SCENE = "GodStatsScene.fxml";
 	public static final String ABILITIES_STATS_SCENE = "AbilitiesStatsScene.fxml";
+	public static final String ALL_GODS_SCENE = "AllGodsScene.fxml";
+	public static final String ALL_RELICS_SCENE = "AllRelicsScene.fxml";
+	public static final String ALL_BUILDS_SCENE = "BuildsScene.fxml";
 
 	public static Stage mainStage;
 

@@ -4,9 +4,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import edu.orangecoastcollege.capstone.controller.Controller;
-import edu.orangecoastcollege.capstone.model.God;
-import edu.orangecoastcollege.capstone.model.Item;
-import edu.orangecoastcollege.capstone.model.Relic;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -72,4 +69,40 @@ public class MainScene implements Initializable
 		relic1CB.setItems(controller.getItemNames());
 		relic2CB.setItems(controller.getItemNames());
 	}
+    
+    @FXML
+    public Object viewLore()
+    {
+    	ViewNavigator.loadScene(controller.getCurrentBuild().getGod().getName() + 
+    							" 's Lore", ViewNavigator.GOD_LORE_SCENE);
+    	return this;
+    }
+    
+    @FXML
+    public Object viewAllItems()
+    {
+    	ViewNavigator.loadScene("All Items List", ViewNavigator.ALL_ITEMS_SCENE);
+    	return this;
+    }
+    
+    @FXML
+    public Object viewAllGods()
+    {
+    	ViewNavigator.loadScene("All Gods List", ViewNavigator.ALL_GODS_SCENE);
+    	return this;
+    }
+    
+    @FXML
+    public Object viewAllRelics()
+    {
+    	ViewNavigator.loadScene("All Relics List", ViewNavigator.ALL_RELICS_SCENE);
+    	return this;
+    }
+    
+    @FXML
+    public Object viewAllBuilds()
+    {
+    	ViewNavigator.loadScene("All Builds List", ViewNavigator.ALL_BUILDS_SCENE);
+    	return this;
+    }
 }
