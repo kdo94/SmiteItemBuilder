@@ -96,10 +96,8 @@ public class AbilitiesStatsScene {
 	@FXML
 	public void scaleAbilityStats()
 	{
-		//TODO where do abilities come from?
-		Abilities currentAbilities = new Abilities();
-		
 		Build currentBuild = controller.getCurrentBuild();
+		Abilities currentAbilities = controller.getAbilities(currentBuild.getGod());
 		God currentGod = currentAbilities.getGod();
 		double levelFromSlider = abilitiesStatsLevelSL.getValue();
 		double godDamage = currentGod.getBaseDamage() + 
@@ -146,6 +144,10 @@ public class AbilitiesStatsScene {
 		
 	}
 	
+	/**
+	 * Returns user to prev menu
+	 * @return
+	 */
     @FXML
     public Object back()
     {

@@ -553,7 +553,11 @@ public class Controller
 		this.mCurrentBuild = currentBuild;
 	}
 	
-	
+	/**
+	 * Get abilities from god
+	 * @param god
+	 * @return
+	 */
 	public Abilities getAbilities(God god)
 	{
 		try
