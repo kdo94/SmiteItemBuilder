@@ -1,4 +1,5 @@
 God's Name,Pantheon,God Class,Damage Type,HP,Per lvl.,MP,Per lvl., Speed,Per lvl., Range,Per lvl., Attack/sec,Per lvl.,Damage,Per lvl., Progression, Prot. Phys,Per lvl., Prot. Mag,Per lvl.,HP5,Per lvl., MP5,Per lvl.,Lore
+Filler,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Agni,Hindu,Mage,Magical,360,71,255,45,350,0,55,0,1,0.01,35,1.5,N/A,11,2.6,30,0,7,0.47,5,0.37,Sample Lore
 Ah Muzen Cab,Mayan,Hunter,Physical,450,73,230,40,365,0,55,0,0.95,0.017,38,2.2,N/A,12,3,30,0.9,7,0.71,4,0.38,Sample Lore
 Ah Puch,Mayan,Mage,Magical,400,75,265,55,365,0,55,0,0.86,0.01,37,1.5,N/A,9,2.7,30,0,6,0.45,5,0.42,Sample Lore

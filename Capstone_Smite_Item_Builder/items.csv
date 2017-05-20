@@ -1,4 +1,5 @@
 Type,Tree,Item Name,0,%Pen,AS%,Phys Pw,PhysLS%,Crit%,Mag Pw,MagLS%,Pen,Phys Prot,Mag Prot,Health,HP5,CCR%,MS%,CDR%,Mana,MP5,Cost,Passive
+,,Filler,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 T3 Phys,Acorn,Acorn of Yggdrasil,0,0,0,50,0,0,0,0,0,0,0,0,0,0,20,0,0,0,1600,Any time Ratatoskr uses an ability that successfully hits any target? he is healed
 0,Boots,Warrior Tabi,0,0,0,40,0,0,0,0,0,0,0,0,0,0,18,0,0,0,1550,None
 0,Boots,Ninja Tabi,0,0,20,20,0,0,0,0,0,0,0,0,0,0,18,0,100,0,1500,None
@@ -65,7 +66,7 @@ T3 Def,Breastplat,Hide of the Nemean Lion,0,0,0,0,0,0,0,0,0,80,0,0,0,0,0,0,200,2
 0,Ancient B,Winged Blade,0,0,10,0,0,0,0,0,0,0,0,300,0,20,10,0,0,0,1850,When hit by a Slow? you are immune to Slows and your movement speed is increased by 20% for 4s. Only occurs once every 30 seconds.
 0,Ancient B,Relic Dagger,0,0,10,0,0,0,0,0,0,0,0,200,0,0,10,10,0,0,1850,Your relics receive 20% Cooldown Reduction.
 0,Ancient B,Hastened Fatalis,0,0,20,0,0,0,0,0,10,0,0,0,0,0,10,0,0,0,2150,When a Basic Attack hits a target? the attacking movement speed Debuff is removed from you for 1s.
-0,Ancient B,Witchblade,0,0,15,0,0,0,0,0,0,0,0,200,0,0,10,0,0,0,2050,"Enemies hit by your basic attacks are cursed? receiving 15% Reduced healing? stacking up to 3 times and lasting 5s. AURA - All enemies within 55 units have their Attack Speed reduced by 20%."
+0,Ancient B,Witchblade,0,0,15,0,0,0,0,0,0,0,0,200,0,0,10,0,0,0,2050,Enemies hit by your basic attacks are cursed? receiving 15% Reduced healing? stacking up to 3 times and lasting 5s. AURA - All enemies within 55 units have their Attack Speed reduced by 20%.
 0,Emerald,Shield of Regrowth,0,0,0,0,0,0,0,0,0,0,0,200,10,0,0,20,0,10,2100,After healing yourself from an ability? you gain +40% movement speed for 4 seconds. This cannot occur more than once every 10 seconds.
 0,Emerald,Mail of Renewal,0,0,0,0,0,0,0,0,0,0,0,400,10,0,0,10,0,0,2250,You gain 15% of your maximum Health and Mana over the next 5 seconds when you get a kill or assist against an enemy god or Objective.
 0,Emerald,Gauntlet of Thebes,0,0,0,0,0,0,0,0,0,0,0,400,15,0,0,0,0,0,2150,Increases the Magical and Physical Protections of allies within 70 units by 20.
