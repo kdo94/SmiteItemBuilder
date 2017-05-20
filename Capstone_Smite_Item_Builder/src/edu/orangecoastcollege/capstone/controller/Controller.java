@@ -16,6 +16,7 @@ import edu.orangecoastcollege.capstone.model.Relic;
 import edu.orangecoastcollege.capstone.model.SteroidDebuff;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import sun.awt.SunHints.Value;
 
 public class Controller
 {
@@ -553,6 +554,62 @@ public class Controller
 	}
 	
 	
+	public Abilities getAbilities(God god)
+	{
+		try
+		{
+			ArrayList<ArrayList<String>> data = theOne.mAbilitiesDB.getAllRecords();
+			for(ArrayList<String> values : data)	
+			{
+				if(values.get(1).equals(god.getId()))
+				{
+					int id = Integer.parseInt(values.get(0));
+                    String name1 = values.get(2);
+                    int damage1 = Integer.parseInt(values.get(3));
+                    double scaling1 = Double.parseDouble(values.get(4));
+                    String name2 = values.get(5);
+                    int damage2 = Integer.parseInt(values.get(6));
+                    double scaling2 = Double.parseDouble(values.get(7));
+                    String name3 = values.get(8);
+                    int damage3 = Integer.parseInt(values.get(9));
+                    double scaling3 = Double.parseDouble(values.get(10));
+                    String ultimateName = values.get(11);
+                    int ultimateDamage = Integer.parseInt(values.get(11));
+                    double ultimateScaling = Double.parseDouble(values.get(0));
+                    Abilities godAbilities = new Abilities(id, god, name1, damage1, scaling1,
+                    										name2, damage2, scaling2,
+                    										name3, damage3, scaling3,
+                    										ultimateName, ultimateDamage, ultimateScaling);
+                    return godAbilities;
+				}
+			}
+		} 
+		catch (SQLException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
+	public ObservableList<String> getDistinctClasses()
+	{
+		ObservableList<String> godClasses = FXCollections.observableArrayList();
+		for(God god : theOne.mAllGodsList)
+			if(!godClasses.contains(god.getClass()))
+				godClasses.add(god.getGodClass());
+		FXCollections.sort(godClasses);
+		return godClasses;
+	}
+	
+	public ObservableList<String> getDistinctTypes()
+	{
+		ObservableList<String> godTypes = FXCollections.observableArrayList();
+		for(God god : theOne.mAllGodsList)
+			if(!godTypes.contains(god.getType()))
+				godTypes.add(god.getType());
+		FXCollections.sort(godTypes);
+		return godTypes;
+	}
 	
 }
