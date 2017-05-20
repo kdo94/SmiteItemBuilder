@@ -89,6 +89,8 @@ public class Controller
 	private ObservableList<SteroidDebuff> mAllSteroidsDebuffsList;
 	private ObservableList<Build> mAllBuildsList;
 	
+	private Build mCurrentBuild;
+	
 	private Controller()
 	{
 	}
@@ -531,6 +533,26 @@ public class Controller
 		}
 
 	}
+
+	/**
+	 * Get current build
+	 * 
+	 * @return the currentBuild
+	 */
+	public Build getCurrentBuild() {
+		return mCurrentBuild;
+	}
+
+	/**
+	 * Set current build
+	 * 
+	 * @param currentBuild the currentBuild to set
+	 */
+	public void setCurrentBuild(Build currentBuild) {
+		this.mCurrentBuild = currentBuild;
+	}
+	
+	
 	
 	
 }
