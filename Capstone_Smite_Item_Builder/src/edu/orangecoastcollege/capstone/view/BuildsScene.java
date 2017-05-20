@@ -14,7 +14,7 @@ import javafx.scene.control.ListView;
 public class BuildsScene implements Initializable
 {
 
-	Controller controller = Controller.getInstance();
+	private static Controller controller = Controller.getInstance();
     @FXML
     private Button backButton;
 

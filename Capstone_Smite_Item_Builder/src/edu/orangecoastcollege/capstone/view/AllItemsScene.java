@@ -1,5 +1,6 @@
 package edu.orangecoastcollege.capstone.view;
 
+import edu.orangecoastcollege.capstone.controller.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -7,6 +8,7 @@ import javafx.scene.control.TextField;
 
 public class AllItemsScene
 {
+	private static Controller controller = Controller.getInstance();
 	@FXML
 	private CheckBox allItemsCheckBox;
 	@FXML

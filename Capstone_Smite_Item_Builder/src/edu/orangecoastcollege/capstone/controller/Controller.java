@@ -700,7 +700,6 @@ public class Controller
 		} 
 		catch (SQLException e)
 		{
-			// TODO Auto-generated catch block
 			return false;
 		}
 	}

@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
 
 public class AllGodsScene implements Initializable
 {
-		Controller controller = Controller.getInstance();
+		private static Controller controller = Controller.getInstance();
 		@FXML
 	    private ComboBox<String> pantheonCB;
 
@@ -32,7 +32,6 @@ public class AllGodsScene implements Initializable
 	@Override
 	public void initialize(URL location, ResourceBundle resources)
 	{
-		// TODO Auto-generated method stub
 		pantheonCB.setItems(controller.getDistinctPantheons());
 		classCB.setItems(controller.getDistinctClasses());
 		allGodsGridView.setItems(controller.getAllGods());

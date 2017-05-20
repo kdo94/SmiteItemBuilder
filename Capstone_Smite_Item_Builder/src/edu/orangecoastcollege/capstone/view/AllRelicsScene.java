@@ -15,7 +15,7 @@ import javafx.scene.control.TextField;
 public class AllRelicsScene implements Initializable
 {
 
-	Controller controller = Controller.getInstance();
+	private static Controller controller = Controller.getInstance();
 	@FXML
     private TextField relicSearchTF;
 
