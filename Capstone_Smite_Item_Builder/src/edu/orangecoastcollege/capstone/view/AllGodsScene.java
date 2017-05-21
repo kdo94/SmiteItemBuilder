@@ -72,5 +72,13 @@ public class AllGodsScene implements Initializable
 			ViewNavigator.loadScene("Add God", ViewNavigator.ADD_GOD_SCENE);
 			return this;
 		}
+		
+		@FXML
+		public Object addSelectedGod()
+		{
+			controller.addGodToCurrentBuild(allGodsListView.getSelectionModel().getSelectedItem().getName());
+			ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
+			return this;
+		}
 
 }

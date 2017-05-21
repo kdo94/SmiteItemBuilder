@@ -795,22 +795,21 @@ public class Controller
 	
 	public ObservableList<Item> filterItems(boolean power, boolean attackSpeed, boolean lifesteal, boolean penetration,
 											boolean physical, boolean magical, boolean health, boolean hp5,
-											boolean aura, boolean movement, boolean cooldown, boolean mana,
-											boolean mp5)
+											boolean aura, boolean cooldown, boolean mana, boolean mp5)
 	{
 		ObservableList<Item> filteredItems = FXCollections.observableArrayList();
 		for(Item item : theOne.mAllItemsList)
-			if(power && (item.getPhysicalPower() > 0 || item.getMagicalPower() > 0) &&
-					(attackSpeed && item.getAttackSpeed() > 0) && 
-					(lifesteal && (item.getMagicalLifesteal() > 0 || item.getPhysicalLifesteal() > 0)) && 
-					(penetration && item.getFlatPenetration() > 0) && 
-					(physical && item.getPhysicalProtection() > 0) && 
-					(magical && item.getMagicalProtection() > 0) && 
-					(health && item.getHealth() > 0) && 
-					(hp5 && item.getHP5() > 0) && 
-					(aura && item.getPassive().toLowerCase().contains("aura")) && 
-					(cooldown && item.getCooldownReduction() > 0) && 
-					(mana && item.getMana() > 0) && 
+			if(power && (item.getPhysicalPower() > 0 || item.getMagicalPower() > 0) ||
+					(attackSpeed && item.getAttackSpeed() > 0) || 
+					(lifesteal && (item.getMagicalLifesteal() > 0 || item.getPhysicalLifesteal() > 0)) || 
+					(penetration && item.getFlatPenetration() > 0) || 
+					(physical && item.getPhysicalProtection() > 0) || 
+					(magical && item.getMagicalProtection() > 0) || 
+					(health && item.getHealth() > 0) || 
+					(hp5 && item.getHP5() > 0) || 
+					(aura && item.getPassive().toLowerCase().contains("aura")) || 
+					(cooldown && item.getCooldownReduction() > 0) || 
+					(mana && item.getMana() > 0) || 
 					(mp5 && item.getMP5() > 0))
 				filteredItems.add(item);
 		return filteredItems;

@@ -44,7 +44,7 @@
       <HBox alignment="TOP_RIGHT" spacing="25.0">
          <children>
             <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#loadMainScene" text="Cancel" />
-            <Button fx:id="selectButton" mnemonicParsing="false" text="Select">
+            <Button fx:id="selectButton" mnemonicParsing="false" onAction="#addSelectedGod" text="Select">
                <HBox.margin>
                   <Insets right="50.0" />
                </HBox.margin>

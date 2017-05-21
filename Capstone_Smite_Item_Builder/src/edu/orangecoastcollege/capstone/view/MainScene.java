@@ -68,6 +68,7 @@ public class MainScene implements Initializable
     {
     	if(!(controller.getCurrentBuild() == null))
     	{
+    		
     		currentBuild = controller.getCurrentBuild();
     		allGodsCB.getSelectionModel().select(currentBuild.getGod().getName());
     		if(currentBuild.getItem1() != null)
@@ -87,11 +88,14 @@ public class MainScene implements Initializable
     		if(currentBuild.getRelic2() != null)
     			item1CB.getSelectionModel().select(currentBuild.getRelic2().getName());
     	}
+    	else
+    	{
+    		loreButton.setDisable(true);
+        	godStatsButton.setDisable(true);
+        	abilityStatsButton.setDisable(true);
+        	saveBuildButton.setDisable(true);
+    	}
     	
-    	loreButton.setDisable(true);
-    	godStatsButton.setDisable(true);
-    	abilityStatsButton.setDisable(true);
-    	saveBuildButton.setDisable(true);
 		allGodsCB.setItems(controller.getGodNames());
 		item1CB.setItems(controller.getItemNames());
 		item2CB.setItems(controller.getItemNames());

@@ -39,7 +39,6 @@
                <children>
                   <Label text="Utility" />
                   <CheckBox id="auraCheckBox" fx:id="auraCheckBox" mnemonicParsing="false" onAction="#filter" text="Aura" />
-                  <CheckBox id="movementCheckBox" fx:id="movementCheckBox" mnemonicParsing="false" onAction="#filter" text="Movement" />
                   <CheckBox id="cooldownCheckBox" fx:id="cooldownCheckBox" mnemonicParsing="false" onAction="#filter" text="Cooldown %" />
                   <CheckBox id="manaCheckBox" fx:id="manaCheckBox" mnemonicParsing="false" onAction="#filter" text="Mana" />
                   <CheckBox id="mp5CheckBox" fx:id="mp5CheckBox" mnemonicParsing="false" onAction="#filter" text="MP5" />

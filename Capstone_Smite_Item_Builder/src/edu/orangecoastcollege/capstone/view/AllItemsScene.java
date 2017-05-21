@@ -103,13 +103,12 @@ public class AllItemsScene implements Initializable
 		boolean health = healthCheckBox.isSelected();
 		boolean hp5 = hp5CheckBox.isSelected();
 		boolean aura = auraCheckBox.isSelected();
-		boolean movement = movementCheckBox.isSelected();
 		boolean cooldown = cooldownCheckBox.isSelected();
 		boolean mana = manaCheckBox.isSelected();
 		boolean mp5 = mp5CheckBox.isSelected();
 		allItemsListView.setItems(controller.filterItems(power, attackSpeed, lifesteal, 
 									penetration, physical, magical, health, hp5, aura, 
-									movement, cooldown, mana, mp5));
+									cooldown, mana, mp5));
 		return this;
 	}
 	
