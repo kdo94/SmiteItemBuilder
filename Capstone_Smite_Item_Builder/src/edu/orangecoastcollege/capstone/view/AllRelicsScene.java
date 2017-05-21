@@ -36,7 +36,13 @@ public class AllRelicsScene implements Initializable
 	{
 		// TODO Auto-generated method stub
 		allRelicsLV.setItems(controller.getAllRelics());
-		
+	}
+	
+	@FXML
+	public Object loadMainScene()
+	{
+		ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
+		return this;
 	}
 	
 }

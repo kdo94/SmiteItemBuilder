@@ -15,7 +15,7 @@
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
          <children>
             <Label text="God:" />
-            <ComboBox fx:id="allGodsCB" prefWidth="150.0" />
+            <ComboBox fx:id="allGodsCB" onAction="#addGodToBuild" prefWidth="150.0" />
             <Button fx:id="viewAllGodsButton" mnemonicParsing="false" onAction="#viewAllGods" text="View all Gods" />
             <Button fx:id="loreButton" mnemonicParsing="false" onAction="#viewLore" text="Lore" />
          </children>
@@ -24,7 +24,7 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <ComboBox fx:id="item1CB" prefWidth="150.0" />
+                  <ComboBox fx:id="item1CB" onAction="#addItem1ToBuild" prefWidth="150.0" />
                   <ImageView fx:id="item1ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
@@ -34,7 +34,7 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <ComboBox fx:id="item2CB" prefWidth="150.0" />
+                  <ComboBox fx:id="item2CB" onAction="#addItem2ToBuild" prefWidth="150.0" />
                   <ImageView fx:id="item2ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
@@ -44,7 +44,7 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <ComboBox fx:id="item3CB" prefWidth="150.0" />
+                  <ComboBox fx:id="item3CB" onAction="#addItem3ToBuild" prefWidth="150.0" />
                   <ImageView fx:id="item3ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
@@ -54,7 +54,7 @@
             </VBox>
             <VBox layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <ComboBox fx:id="item4CB" prefWidth="150.0" />
+                  <ComboBox fx:id="item4CB" onAction="#addItem4ToBuild" prefWidth="150.0" />
                   <ImageView fx:id="item4ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
@@ -64,7 +64,7 @@
             </VBox>
             <VBox layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <ComboBox fx:id="item5CB" prefWidth="150.0" />
+                  <ComboBox fx:id="item5CB" onAction="#addItem5ToBuild" prefWidth="150.0" />
                   <ImageView fx:id="item5ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
@@ -74,7 +74,7 @@
             </VBox>
             <VBox layoutX="310.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <ComboBox fx:id="item6CB" prefWidth="150.0" />
+                  <ComboBox fx:id="item6CB" onAction="#addItem6ToBuild" prefWidth="150.0" />
                   <ImageView fx:id="item6ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
@@ -91,7 +91,7 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <ComboBox fx:id="relic1CB" prefWidth="150.0" />
+                  <ComboBox fx:id="relic1CB" onAction="#addRelic1ToBuild" prefWidth="150.0" />
                   <ImageView fx:id="relic1ImageView" fitWidth="100.0" onMouseClicked="#viewAllRelics" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
@@ -101,7 +101,7 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <ComboBox fx:id="relic2CB" prefWidth="150.0" />
+                  <ComboBox fx:id="relic2CB" onAction="#addRelic2ToBuild" prefWidth="150.0" />
                   <ImageView fx:id="relic2ImageView" fitWidth="100.0" onMouseClicked="#viewAllRelics" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
@@ -116,14 +116,14 @@
             <TextArea fx:id="statsTextArea" prefHeight="200.0" prefWidth="200.0" promptText="Stats go here" />
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="35.0">
                <children>
-                  <Button fx:id="godStatsButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" text="God Stats" />
-                  <Button fx:id="abilityStatsButton" mnemonicParsing="false" text="Ability Stats" />
+                  <Button fx:id="godStatsButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#viewGodStats" text="God Stats" />
+                  <Button fx:id="abilityStatsButton" mnemonicParsing="false" onAction="#viewAbilityStats" text="Ability Stats" />
                </children>
             </VBox>
             <HBox alignment="BOTTOM_RIGHT" prefHeight="85.0" prefWidth="380.0" spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" text="Save Build" />
-                  <Button mnemonicParsing="false" onAction="#viewAllBuilds" text="View All Builds" />
+                  <Button fx:id="saveBuildButton" mnemonicParsing="false" onAction="#saveBuild" text="Save Build" />
+                  <Button fx:id="viewALlBuildsButton" mnemonicParsing="false" onAction="#viewAllBuilds" text="View All Builds" />
                </children>
             </HBox>
          </children>

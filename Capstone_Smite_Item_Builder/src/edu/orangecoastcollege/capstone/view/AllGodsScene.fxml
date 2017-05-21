@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.controlsfx.control.GridView?>
 
-<VBox prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.capstone.view.AllGodsScene">
    <children>
       <GridPane>
         <columnConstraints>
@@ -31,9 +31,9 @@
             <Label text="God Name:" />
             <Label text="Pantheon:" GridPane.rowIndex="1" />
             <Label text="Class: " GridPane.rowIndex="2" />
-            <ComboBox fx:id="pantheonCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ComboBox fx:id="classCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField promptText="Ex: Anubis" GridPane.columnIndex="1" />
+            <ComboBox fx:id="pantheonCB" onAction="#filter" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="classCB" onAction="#filter" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="godNameTF" onAction="#filter" onKeyReleased="#filter" promptText="Ex: Anubis" GridPane.columnIndex="1" />
          </children>
       </GridPane>
       <GridView fx:id="allGodsGridView" prefHeight="350.0">
@@ -41,9 +41,9 @@
             <Insets />
          </VBox.margin>
       </GridView>
-      <HBox alignment="TOP_RIGHT" spacing="50.0">
+      <HBox alignment="TOP_RIGHT" spacing="25.0">
          <children>
-            <Button fx:id="cancelButton" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#loadMainScene" text="Cancel" />
             <Button fx:id="selectButton" mnemonicParsing="false" text="Select">
                <HBox.margin>
                   <Insets right="50.0" />

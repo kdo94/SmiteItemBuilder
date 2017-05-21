@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.util.Callback;
 
 public class BuildsScene implements Initializable
 {
@@ -30,14 +31,15 @@ public class BuildsScene implements Initializable
     @Override
 	public void initialize(URL location, ResourceBundle resources)
     {
+    	System.out.println(controller.getCurrentBuild());
     	allBuildsListView.setItems(controller.getAllBuilds());
-    	/*allBuildsListView.setCellFactory(new Callback<ListView<Build>, ListCell<Build>>()
+    	allBuildsListView.setCellFactory(new Callback<ListView<Build>, ListCell<Build>>()
     			{
     				public ListCell<Build> call(ListView<Build> allBuildsListView)
     				{
     					return new BuildCell();
     				}
-    			});*/
+    			});
     }
     
     static class BuildCell extends ListCell<Build>
@@ -48,5 +50,12 @@ public class BuildsScene implements Initializable
     		super.updateItem(build, empty);
     		
     	}
+    }
+    
+    @FXML
+    public Object loadMainScene()
+    {
+    	ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
+    	return this;
     }
 }

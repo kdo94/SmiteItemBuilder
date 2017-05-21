@@ -29,7 +29,12 @@ public class GodLoreScene {
     @FXML
     private TextArea loreDescriptionTA;
     
-    
+    @FXML
+    public Object loadMainScene()
+    {
+    	ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
+    	return this;
+    }
     
     
     

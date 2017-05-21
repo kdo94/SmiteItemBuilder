@@ -153,8 +153,7 @@ public class AbilitiesStatsScene {
     {
     	abilitiesStatsLevelSL.setValue(1);
 		
-		//TODO scene navigator
-//		ViewNavigator.loadScene("All Gods", ViewNavigator.ALL_GODS_SCENE);
+    	ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
 		
 		return this;
     }

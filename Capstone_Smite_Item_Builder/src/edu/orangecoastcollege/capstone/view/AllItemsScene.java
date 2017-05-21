@@ -48,7 +48,7 @@ public class AllItemsScene
 	@FXML
 	private Button clearButton;
 	@FXML
-	private Button sellButton;
+	private Button cancelButton;
 	@FXML
 	private Button purchaseButton;
 	
@@ -58,8 +58,9 @@ public class AllItemsScene
 		return this;
 	}
 	
-	@FXML Object sellItem()
+	@FXML Object loadMainScene()
 	{
+		ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
 		return this;
 	}
 	

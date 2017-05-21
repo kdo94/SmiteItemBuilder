@@ -122,7 +122,7 @@
                   <VBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
                      <children>
                         <Button id="purchaseButton" fx:id="purchaseButton" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="Purchase" />
-                        <Button id="sellButton" fx:id="sellButton" mnemonicParsing="false" onAction="#sellItem" prefWidth="100.0" text="Cancel" />
+                        <Button id="sellButton" fx:id="cancelButton" mnemonicParsing="false" onAction="#loadMainScene" prefWidth="100.0" text="Cancel" />
                      </children>
                   </VBox>
                </children>

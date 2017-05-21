@@ -227,7 +227,6 @@ public class Controller
 				e.printStackTrace();
 			}
 		}
-		//theOne.saveCurrentBuild();
 		return theOne;
 	}
 	
@@ -269,12 +268,10 @@ public class Controller
 		} 
 		catch (SQLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		catch (FileNotFoundException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return recordsCreated;
@@ -319,12 +316,10 @@ public class Controller
 		} 
 		catch (SQLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		catch (FileNotFoundException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return recordsCreated;
@@ -353,12 +348,10 @@ public class Controller
 		} 
 		catch (SQLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		catch (FileNotFoundException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return recordsCreated;
@@ -399,12 +392,10 @@ public class Controller
 		} 
 		catch (SQLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		catch (FileNotFoundException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return recordsCreated;
@@ -438,12 +429,10 @@ public class Controller
 		} 
 		catch (SQLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		catch (FileNotFoundException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return recordsCreated;
@@ -502,7 +491,6 @@ public class Controller
 			theOne.mAllGodsList.add(newGod);
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -541,8 +529,9 @@ public class Controller
 			
 			theOne.mAllItemsList.add(newItem);
 			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		} 
+		catch (SQLException e) 
+		{
 			e.printStackTrace();
 		}
 
@@ -603,7 +592,6 @@ public class Controller
 		} 
 		catch (SQLException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
@@ -613,7 +601,7 @@ public class Controller
 	{
 		ObservableList<String> godClasses = FXCollections.observableArrayList();
 		for(God god : theOne.mAllGodsList)
-			if(!godClasses.contains(god.getClass()))
+			if(!godClasses.contains(god.getGodClass()))
 				godClasses.add(god.getGodClass());
 		FXCollections.sort(godClasses);
 		return godClasses;
@@ -704,4 +692,79 @@ public class Controller
 		}
 	}
 
+	public ObservableList<God> filterGods(String name,String pantheon, String godClass)
+	{
+		ObservableList<God> filteredGodList = FXCollections.observableArrayList();
+		for(God god : theOne.mAllGodsList)
+			if((name == null || god.getName().toLowerCase().contains(name.toLowerCase())) && 
+					(pantheon == null || god.getPantheon().equals(pantheon)) && 
+					(godClass == null || god.getGodClass().equals(godClass)))
+				filteredGodList.add(god);
+		return filteredGodList;
+	}
+	
+	public void addGodToCurrentBuild(String name)
+	{
+		theOne.mCurrentBuild = new Build();
+		for(God god : theOne.mAllGodsList)
+			if(god.getName().equals(name))
+				theOne.mCurrentBuild.setGod(god);
+	}
+	
+	public void addItem1ToCurrentBuild(String name)
+	{
+		for(Item item : theOne.mAllItemsList)
+			if(item.getName().equals(name))
+				theOne.mCurrentBuild.setItem1(item);
+	}
+	
+	public void addItem2ToCurrentBuild(String name)
+	{
+		for(Item item : theOne.mAllItemsList)
+			if(item.getName().equals(name))
+				theOne.mCurrentBuild.setItem2(item);
+	}
+	
+	public void addItem3ToCurrentBuild(String name)
+	{
+		for(Item item : theOne.mAllItemsList)
+			if(item.getName().equals(name))
+				theOne.mCurrentBuild.setItem1(item);
+	}
+	
+	public void addItem4ToCurrentBuild(String name)
+	{
+		for(Item item : theOne.mAllItemsList)
+			if(item.getName().equals(name))
+				theOne.mCurrentBuild.setItem4(item);
+	}
+	
+	public void addItem5ToCurrentBuild(String name)
+	{
+		for(Item item : theOne.mAllItemsList)
+			if(item.getName().equals(name))
+				theOne.mCurrentBuild.setItem5(item);
+	}
+	
+	public void addItem6ToCurrentBuild(String name)
+	{
+		for(Item item : theOne.mAllItemsList)
+			if(item.getName().equals(name))
+				theOne.mCurrentBuild.setItem6(item);
+	}
+	
+	public void addRelic1ToCurrentBuild(String name)
+	{
+		for(Relic relic : theOne.mAllRelicsList)
+			if(relic.getName().equals(name))
+				theOne.mCurrentBuild.setRelic1(relic);
+	}
+	
+	public void addRelic2ToCurrentBuild(String name)
+	{
+		for(Relic relic : theOne.mAllRelicsList)
+			if(relic.getName().equals(name))
+				theOne.mCurrentBuild.setRelic2(relic);
+	}
+	
 }
