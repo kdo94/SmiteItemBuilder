@@ -5,9 +5,8 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-
-import org.controlsfx.control.GridView;
 
 import edu.orangecoastcollege.capstone.controller.Controller;
 import edu.orangecoastcollege.capstone.model.God;
@@ -23,7 +22,7 @@ public class AllGodsScene implements Initializable
 	    private ComboBox<String> classCB;
 
 	    @FXML
-	    private GridView<God> allGodsGridView;
+	    private ListView<God> allGodsListView;
 
 	    @FXML
 	    private Button cancelButton;
@@ -37,10 +36,10 @@ public class AllGodsScene implements Initializable
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1)
 		{
-			// TODO Auto-generated method stub
+			selectButton.setDisable(true);
 			pantheonCB.setItems(controller.getDistinctPantheons());
 			classCB.setItems(controller.getDistinctClasses());
-			allGodsGridView.setItems(controller.getAllGods());
+			allGodsListView.setItems(controller.getAllGods());
 		}
 		
 		@FXML
@@ -56,8 +55,22 @@ public class AllGodsScene implements Initializable
 	    	String name = godNameTF.getText();
 	    	String pantheon = pantheonCB.getSelectionModel().getSelectedItem();
 	    	String godClass = classCB.getSelectionModel().getSelectedItem();
-	    	allGodsGridView.setItems(controller.filterGods(name, pantheon, godClass));
+	    	allGodsListView.setItems(controller.filterGods(name, pantheon, godClass));
 	    	return this;
 	    }
+		
+		@FXML
+		public Object selectGod()
+		{
+			selectButton.setDisable(false);
+			return this;
+		}
+		
+		@FXML
+		public Object loadAddGodScene()
+		{
+			ViewNavigator.loadScene("Add God", ViewNavigator.ADD_GOD_SCENE);
+			return this;
+		}
 
 }

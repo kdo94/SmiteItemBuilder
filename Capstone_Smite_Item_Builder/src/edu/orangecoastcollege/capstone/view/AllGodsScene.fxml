@@ -4,17 +4,17 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import org.controlsfx.control.GridView?>
 
-<VBox prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.capstone.view.AllGodsScene">
+<VBox prefHeight="480.0" prefWidth="720.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.capstone.view.AllGodsScene">
    <children>
-      <GridPane>
+      <GridPane hgap="10.0" vgap="10.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -34,13 +34,13 @@
             <ComboBox fx:id="pantheonCB" onAction="#filter" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <ComboBox fx:id="classCB" onAction="#filter" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="godNameTF" onAction="#filter" onKeyReleased="#filter" promptText="Ex: Anubis" GridPane.columnIndex="1" />
+            <Button fx:id="addGodButton" alignment="CENTER" mnemonicParsing="false" onAction="#loadAddGodScene" text="Add God" GridPane.columnIndex="4" GridPane.rowIndex="1" />
          </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
       </GridPane>
-      <GridView fx:id="allGodsGridView" prefHeight="350.0">
-         <VBox.margin>
-            <Insets />
-         </VBox.margin>
-      </GridView>
+      <ListView fx:id="allGodsListView" onMouseClicked="#selectGod" prefHeight="355.0" prefWidth="720.0" />
       <HBox alignment="TOP_RIGHT" spacing="25.0">
          <children>
             <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#loadMainScene" text="Cancel" />
@@ -58,4 +58,7 @@
    <opaqueInsets>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
 </VBox>

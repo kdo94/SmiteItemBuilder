@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -10,7 +12,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import org.controlsfx.control.GridView?>
 
 <BorderPane prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.capstone.view.AllItemsScene">
    <left>
@@ -19,39 +20,36 @@
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
                   <Label text="Offensive" />
-                  <CheckBox id="powerCheckBox" fx:id="powerCheckBox" mnemonicParsing="false" text="Power" />
-                  <CheckBox id="attackSpeedCheckBox" fx:id="attackSpeedCheckBox" mnemonicParsing="false" text="Attack Speed" />
-                  <CheckBox id="lifestealCheckBox" fx:id="lifestealCheckBox" mnemonicParsing="false" text="Lifesteal" />
-                  <CheckBox id="penCheckBox" fx:id="penetrationCheckBox" mnemonicParsing="false" text="Penetration" />
+                  <CheckBox id="powerCheckBox" fx:id="powerCheckBox" mnemonicParsing="false" onAction="#filter" text="Power" />
+                  <CheckBox id="attackSpeedCheckBox" fx:id="attackSpeedCheckBox" mnemonicParsing="false" onAction="#filter" text="Attack Speed" />
+                  <CheckBox id="lifestealCheckBox" fx:id="lifestealCheckBox" mnemonicParsing="false" onAction="#filter" text="Lifesteal" />
+                  <CheckBox id="penCheckBox" fx:id="penetrationCheckBox" mnemonicParsing="false" onAction="#filter" text="Penetration" />
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
                   <Label text="Defensive" />
-                  <CheckBox id="physicalCheckBox" fx:id="physicalCheckBox" mnemonicParsing="false" text="Physical" />
-                  <CheckBox id="magicalCheckBox" fx:id="magicalCheckBox" mnemonicParsing="false" text="Magical" />
-                  <CheckBox id="healthCheckBox" fx:id="healthCheckBox" mnemonicParsing="false" text="Health" />
-                  <CheckBox id="hp5CheckBox" fx:id="hp5CheckBox" mnemonicParsing="false" text="HP5" />
+                  <CheckBox id="physicalCheckBox" fx:id="physicalCheckBox" mnemonicParsing="false" onAction="#filter" text="Physical" />
+                  <CheckBox id="magicalCheckBox" fx:id="magicalCheckBox" mnemonicParsing="false" onAction="#filter" text="Magical" />
+                  <CheckBox id="healthCheckBox" fx:id="healthCheckBox" mnemonicParsing="false" onAction="#filter" text="Health" />
+                  <CheckBox id="hp5CheckBox" fx:id="hp5CheckBox" mnemonicParsing="false" onAction="#filter" text="HP5" />
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
                   <Label text="Utility" />
-                  <CheckBox id="auraCheckBox" fx:id="auraCheckBox" mnemonicParsing="false" text="Aura" />
-                  <CheckBox id="movementCheckBox" fx:id="movementCheckBox" mnemonicParsing="false" text="Movement" />
-                  <CheckBox id="cooldownCheckBox" fx:id="cooldownCheckBox" mnemonicParsing="false" text="Cooldown %" />
-                  <CheckBox id="manaCheckBox" fx:id="manaCheckBox" mnemonicParsing="false" text="Mana" />
-                  <CheckBox id="mp5CheckBox" fx:id="mp5CheckBox" mnemonicParsing="false" text="MP5" />
+                  <CheckBox id="auraCheckBox" fx:id="auraCheckBox" mnemonicParsing="false" onAction="#filter" text="Aura" />
+                  <CheckBox id="movementCheckBox" fx:id="movementCheckBox" mnemonicParsing="false" onAction="#filter" text="Movement" />
+                  <CheckBox id="cooldownCheckBox" fx:id="cooldownCheckBox" mnemonicParsing="false" onAction="#filter" text="Cooldown %" />
+                  <CheckBox id="manaCheckBox" fx:id="manaCheckBox" mnemonicParsing="false" onAction="#filter" text="Mana" />
+                  <CheckBox id="mp5CheckBox" fx:id="mp5CheckBox" mnemonicParsing="false" onAction="#filter" text="MP5" />
                </children>
             </VBox>
          </children>
       </VBox>
    </left>
-   <center>
-      <GridView BorderPane.alignment="CENTER" />
-   </center>
    <top>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="55.0" prefWidth="690.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <TextField id="descSearchTF" fx:id="descTF" promptText="Enter Item Description..." />
             <Button id="clearButton" fx:id="clearButton" mnemonicParsing="false" onAction="#clear" text="Clear" />
@@ -61,7 +59,7 @@
    <bottom>
       <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
                <children>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -95,7 +93,7 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
                <children>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -115,9 +113,10 @@
    <right>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <TextArea prefHeight="200.0" prefWidth="200.0" text="Item &#10;Description &#10;Goes &#10;Here&#10;" />
+                  <Button fx:id="addItemButton" alignment="CENTER" mnemonicParsing="false" onAction="#loadAddItemScene" prefWidth="100.0" text="Add Item" />
+                  <TextArea minHeight="-Infinity" prefHeight="200.0" prefWidth="200.0" text="Item &#10;Description &#10;Goes &#10;Here&#10;" />
                   <TextField id="costTF" fx:id="costTF" promptText="Cost" />
                   <VBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
                      <children>
@@ -130,4 +129,10 @@
          </children>
       </VBox>
    </right>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+   <center>
+      <ListView fx:id="allItemsListView" onMouseClicked="#selectItem" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>

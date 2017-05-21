@@ -31,7 +31,6 @@ public class BuildsScene implements Initializable
     @Override
 	public void initialize(URL location, ResourceBundle resources)
     {
-    	System.out.println(controller.getCurrentBuild());
     	allBuildsListView.setItems(controller.getAllBuilds());
     	allBuildsListView.setCellFactory(new Callback<ListView<Build>, ListCell<Build>>()
     			{
