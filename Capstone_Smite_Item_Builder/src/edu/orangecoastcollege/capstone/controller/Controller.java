@@ -767,4 +767,9 @@ public class Controller
 				theOne.mCurrentBuild.setRelic2(relic);
 	}
 	
+	public God getGod()
+	{
+		return theOne.mCurrentBuild.getGod();
+	}
+	
 }
