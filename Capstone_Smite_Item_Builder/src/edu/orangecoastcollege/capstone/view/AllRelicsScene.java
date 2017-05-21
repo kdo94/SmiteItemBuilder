@@ -34,7 +34,7 @@ public class AllRelicsScene implements Initializable
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1)
 	{
-		// TODO Auto-generated method stub
+		selectButton.setDisable(true);
 		allRelicsLV.setItems(controller.getAllRelics());
 	}
 	
@@ -42,6 +42,24 @@ public class AllRelicsScene implements Initializable
 	public Object loadMainScene()
 	{
 		ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
+		return this;
+	}
+	
+	@FXML
+	public Object selectRelic()
+	{
+		selectButton.setDisable(false);
+		return this;
+	}
+	
+	@FXML
+	public Object addRelicToBuild()
+	{
+		int id = MainScene.itemNumber;
+		if(id == 1)
+			controller.addRelic1ToCurrentBuild(allRelicsLV.getSelectionModel().getSelectedItem().getName());
+		else if(id == 2)
+			controller.addRelic2ToCurrentBuild(allRelicsLV.getSelectionModel().getSelectedItem().getName());
 		return this;
 	}
 	

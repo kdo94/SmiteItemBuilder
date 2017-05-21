@@ -68,9 +68,11 @@ public class AllItemsScene implements Initializable
 		return this;
 	}
 	
-	@FXML Object purchaseItem()
+	@FXML 
+	public Object purchaseItem()
 	{
 		int num = MainScene.itemNumber;
+		System.out.println(num + "item scene");
 		if(num == 1)
 			controller.addItem1ToCurrentBuild(allItemsListView.getSelectionModel().getSelectedItem().getName());
 		else if(num == 2)

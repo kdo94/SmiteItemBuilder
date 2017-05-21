@@ -68,25 +68,24 @@ public class MainScene implements Initializable
     {
     	if(controller.getCurrentBuild() != null)
     	{
-    		System.out.println(currentBuild);
     		currentBuild = controller.getCurrentBuild();
     		allGodsCB.getSelectionModel().select(currentBuild.getGod().getName());
     		if(currentBuild.getItem1() != null)
     			item1CB.getSelectionModel().select(currentBuild.getItem1().getName());
     		if(currentBuild.getItem2() != null)
-    			item1CB.getSelectionModel().select(currentBuild.getItem2().getName());
+    			item2CB.getSelectionModel().select(currentBuild.getItem2().getName());
     		if(currentBuild.getItem3() != null)
-    			item1CB.getSelectionModel().select(currentBuild.getItem3().getName());
+    			item3CB.getSelectionModel().select(currentBuild.getItem3().getName());
     		if(currentBuild.getItem4() != null)
-    			item1CB.getSelectionModel().select(currentBuild.getItem4().getName());
+    			item4CB.getSelectionModel().select(currentBuild.getItem4().getName());
     		if(currentBuild.getItem5() != null)
-    			item1CB.getSelectionModel().select(currentBuild.getItem5().getName());
+    			item5CB.getSelectionModel().select(currentBuild.getItem5().getName());
     		if(currentBuild.getItem6() != null)
-    			item1CB.getSelectionModel().select(currentBuild.getItem6().getName());
+    			item6CB.getSelectionModel().select(currentBuild.getItem6().getName());
     		if(currentBuild.getRelic1() != null)
-    			item1CB.getSelectionModel().select(currentBuild.getRelic1().getName());
+    			relic1CB.getSelectionModel().select(currentBuild.getRelic1().getName());
     		if(currentBuild.getRelic2() != null)
-    			item1CB.getSelectionModel().select(currentBuild.getRelic2().getName());
+    			relic2CB.getSelectionModel().select(currentBuild.getRelic2().getName());
     	}
     	else
     	{
@@ -136,8 +135,8 @@ public class MainScene implements Initializable
     @FXML
     void viewAllItems(MouseEvent event)
     {
-    	String temp = event.getPickResult().getIntersectedNode().getId();
-    	System.out.println(temp);
+    	String id = event.getPickResult().getIntersectedNode().getId();
+    	itemNumber = Integer.parseInt(id); 	
     	ViewNavigator.loadScene("All Items List", ViewNavigator.ALL_ITEMS_SCENE);
     }
     
@@ -151,8 +150,8 @@ public class MainScene implements Initializable
     @FXML
     void viewAllRelics(MouseEvent event)
     {
-    	String temp = event.getPickResult().getIntersectedNode().getId();
-    	System.out.println(temp);
+    	String id = event.getPickResult().getIntersectedNode().getId();
+    	itemNumber = Integer.parseInt(id); 	
     	ViewNavigator.loadScene("All Relics List", ViewNavigator.ALL_RELICS_SCENE);
     }
     
