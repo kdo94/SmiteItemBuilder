@@ -27,7 +27,7 @@ Chiron,Greek,Hunter,Physical,460,75,225,40,380,0,55,0,1,0.011,35,2.35,N/A,12,2.8
 Chronos,Greek,Mage,Magical,370,70,240,42,360,0,55,0,1,0.008,36,1.5,N/A,11,2.9,30,0,7,0.48,4,0.44,Sample Lore
 Cupid,Roman,Hunter,Physical,445,72,230,39,365,0,55,0,0.95,0.018,35,2.3,N/A,11,3,30,0.9,8,0.67,5,0.35,Sample Lore
 Erlang Shen,Chinese,Warrior,Physical ,475,82,220,35,375,0,12,0,1,0.008,38,2,.75/.75/.75/1.1/.9 speed? 4th hit AOE,17,3,30,0.9,8,0.6,5,0.3,Sample Lore
-Fafnir,Norse,Guardian ,Magical,495,90,200,40,365,0,12,0,0.9,0.012,37,1.55,1/1/1/1x dmg & swing,21,3.4,30,0.9,5,0.54,5,0.45,Sample Lore
+Fafnir,Norse,Guardian,Magical,495,90,200,40,365,0,12,0,0.9,0.012,37,1.55,1/1/1/1x dmg & swing,21,3.4,30,0.9,5,0.54,5,0.45,Sample Lore
 Fenrir,Norse,Assassin,Physical,455,78,230,35,370,0,12,0,1,0.017,38,2.3,N/A,14,3,30,0.9,8,0.73,4,0.26,Sample Lore
 Freya,Norse,Mage,Magical,405,80,220,37,375,0,12,0,0.95,0.02,36,1.5,N/A,14,2.8,30,0.9,7,0.52,5,0.39,Sample Lore
 Ganesha,Hindu,Guardian,Magical,495,95,200,40,360,0,12,0,1,0.012,38,1.55,1/.5/.5/1.5/.5x dmg & swing time,20,3.2,30,0.9,6,0.67,5,0.42,Sample Lore
@@ -73,7 +73,7 @@ Sol,Norse,Mage,Magical,400,75,300,57,370,0,55,0,1,0.018,34,1.45,N/A,9,2.6,30,0,6
 Sun Wukong,Chinese,Warrior,Physical,470,82,205,35,375,0,12,0,1,0.009,39,2,1/.75/1/1.25x dmg,18,3,30,0.9,8,0.8,4,0.38,Sample Lore
 Susano,Japanese,Assassin,Physical,435,76,225,38,365,0,12,0,1,0.022,38,2.2,1/1/1.25x dmg/swing,14,2.9,30,0.9,9,0.7,4,0.27,Sample Lore
 Sylvanus,Greek,Guardian,Magical,510,90,190,34,360,0,40,0,0.85,0.006,35,1.5,N/A,19,3,30,0.9,8,0.8,5,0.4,Sample Lore
-Terra,Greek,Guardian ,Magical,500,95,200,35,365,0,12,0,0.9,0.014,38,1.55,1-1-1-1x dmg & swing time,20,3.2,30,0.9,8,0.8,5,0.4,Sample Lore
+Terra,Greek,Guardian,Magical,500,95,200,35,365,0,12,0,0.9,0.014,38,1.55,1-1-1-1x dmg & swing time,20,3.2,30,0.9,8,0.8,5,0.4,Sample Lore
 Thanatos,Greek,Assassin,Physical,390,75,240,38,370,0,12,0,1,0.017,39,2.3,1/.75/1.5x dmg/swing/final AoE,14,2.9,30,0.9,8,0.67,4,0.38,Sample Lore
 The Morrigan,Celtic,Mage,Magical,400,75,250,38,365,0,55,0,0.87,0.01,34,2.4,1/1/1x dmg and swg time; 3rd attack hits all enemy in 10 units of target,12,3,30,0,10,0.7,5,0.4,Sample Lore
 Thor,Norse,Assassin,Physical,475,76,240,38,370,0,12,0,1,0.015,39,2.4,N/A,14,2.9,30,0.9,9,0.69,4,0.29,Sample Lore

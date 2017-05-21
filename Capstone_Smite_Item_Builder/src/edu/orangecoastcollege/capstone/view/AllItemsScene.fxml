@@ -119,7 +119,7 @@
                   <TextField id="costTF" fx:id="costTF" promptText="Cost" />
                   <VBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
                      <children>
-                        <Button id="purchaseButton" fx:id="purchaseButton" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="Purchase" />
+                        <Button id="purchaseButton" fx:id="purchaseButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#purchaseItem" prefWidth="100.0" text="Purchase" />
                         <Button id="sellButton" fx:id="cancelButton" mnemonicParsing="false" onAction="#loadMainScene" prefWidth="100.0" text="Cancel" />
                      </children>
                   </VBox>

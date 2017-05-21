@@ -70,6 +70,20 @@ public class AllItemsScene implements Initializable
 	
 	@FXML Object purchaseItem()
 	{
+		int num = MainScene.itemNumber;
+		if(num == 1)
+			controller.addItem1ToCurrentBuild(allItemsListView.getSelectionModel().getSelectedItem().getName());
+		else if(num == 2)
+			controller.addItem2ToCurrentBuild(allItemsListView.getSelectionModel().getSelectedItem().getName());
+		else if(num == 3)
+			controller.addItem3ToCurrentBuild(allItemsListView.getSelectionModel().getSelectedItem().getName());
+		else if(num == 4)
+			controller.addItem4ToCurrentBuild(allItemsListView.getSelectionModel().getSelectedItem().getName());
+		else if(num == 5)
+			controller.addItem5ToCurrentBuild(allItemsListView.getSelectionModel().getSelectedItem().getName());
+		else if(num == 6)
+			controller.addItem6ToCurrentBuild(allItemsListView.getSelectionModel().getSelectedItem().getName());
+		ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
 		return this;
 	}
 	
@@ -81,13 +95,14 @@ public class AllItemsScene implements Initializable
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1)
 	{
-		// TODO Auto-generated method stub
+		purchaseButton.setDisable(true);
 		allItemsListView.setItems(controller.getAllItems());
 	}
 	
 	@FXML
 	public Object selectItem()
 	{
+		purchaseButton.setDisable(false);
 		return this;
 	}
 	

@@ -5,17 +5,17 @@ import java.util.ResourceBundle;
 
 import edu.orangecoastcollege.capstone.controller.Controller;
 import edu.orangecoastcollege.capstone.model.Build;
-import edu.orangecoastcollege.capstone.model.God;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.MouseEvent;
 
 public class MainScene implements Initializable 
 {
 	private static Controller controller = Controller.getInstance();
+	protected static int itemNumber;
     @FXML
     private ComboBox<String> allGodsCB;
 
@@ -66,9 +66,9 @@ public class MainScene implements Initializable
     @Override
 	public void initialize(URL location, ResourceBundle resources) 
     {
-    	if(!(controller.getCurrentBuild() == null))
+    	if(controller.getCurrentBuild() != null)
     	{
-    		
+    		System.out.println(currentBuild);
     		currentBuild = controller.getCurrentBuild();
     		allGodsCB.getSelectionModel().select(currentBuild.getGod().getName());
     		if(currentBuild.getItem1() != null)
@@ -134,10 +134,11 @@ public class MainScene implements Initializable
     }
     
     @FXML
-    public Object viewAllItems()
+    void viewAllItems(MouseEvent event)
     {
+    	String temp = event.getPickResult().getIntersectedNode().getId();
+    	System.out.println(temp);
     	ViewNavigator.loadScene("All Items List", ViewNavigator.ALL_ITEMS_SCENE);
-    	return this;
     }
     
     @FXML
@@ -148,10 +149,11 @@ public class MainScene implements Initializable
     }
     
     @FXML
-    public Object viewAllRelics()
+    void viewAllRelics(MouseEvent event)
     {
+    	String temp = event.getPickResult().getIntersectedNode().getId();
+    	System.out.println(temp);
     	ViewNavigator.loadScene("All Relics List", ViewNavigator.ALL_RELICS_SCENE);
-    	return this;
     }
     
     @FXML
@@ -245,6 +247,5 @@ public class MainScene implements Initializable
     	return this;
     }
     
-
     
 }

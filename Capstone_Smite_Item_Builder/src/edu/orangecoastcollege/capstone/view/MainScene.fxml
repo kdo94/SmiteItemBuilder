@@ -25,7 +25,7 @@
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
                   <ComboBox fx:id="item1CB" onAction="#addItem1ToBuild" prefWidth="150.0" />
-                  <ImageView fx:id="item1ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
+                  <ImageView id="1" fx:id="item1ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
                      </image>
@@ -35,7 +35,7 @@
             <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <ComboBox fx:id="item2CB" onAction="#addItem2ToBuild" prefWidth="150.0" />
-                  <ImageView fx:id="item2ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
+                  <ImageView id="2" fx:id="item2ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
                      </image>
@@ -45,7 +45,7 @@
             <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <ComboBox fx:id="item3CB" onAction="#addItem3ToBuild" prefWidth="150.0" />
-                  <ImageView fx:id="item3ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
+                  <ImageView id="3" fx:id="item3ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
                      </image>
@@ -55,7 +55,7 @@
             <VBox layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <ComboBox fx:id="item4CB" onAction="#addItem4ToBuild" prefWidth="150.0" />
-                  <ImageView fx:id="item4ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
+                  <ImageView id="4" fx:id="item4ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
                      </image>
@@ -65,7 +65,7 @@
             <VBox layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <ComboBox fx:id="item5CB" onAction="#addItem5ToBuild" prefWidth="150.0" />
-                  <ImageView fx:id="item5ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
+                  <ImageView id="5" fx:id="item5ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
                      </image>
@@ -75,7 +75,7 @@
             <VBox layoutX="310.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <ComboBox fx:id="item6CB" onAction="#addItem6ToBuild" prefWidth="150.0" />
-                  <ImageView fx:id="item6ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
+                  <ImageView id="6" fx:id="item6ImageView" fitWidth="100.0" onMouseClicked="#viewAllItems" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
                      </image>
@@ -92,7 +92,7 @@
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
                   <ComboBox fx:id="relic1CB" onAction="#addRelic1ToBuild" prefWidth="150.0" />
-                  <ImageView fx:id="relic1ImageView" fitWidth="100.0" onMouseClicked="#viewAllRelics" pickOnBounds="true" preserveRatio="true">
+                  <ImageView id="1" fx:id="relic1ImageView" fitWidth="100.0" onMouseClicked="#viewAllRelics" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
                      </image>
@@ -102,7 +102,7 @@
             <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <ComboBox fx:id="relic2CB" onAction="#addRelic2ToBuild" prefWidth="150.0" />
-                  <ImageView fx:id="relic2ImageView" fitWidth="100.0" onMouseClicked="#viewAllRelics" pickOnBounds="true" preserveRatio="true">
+                  <ImageView id="2" fx:id="relic2ImageView" fitWidth="100.0" onMouseClicked="#viewAllRelics" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../res/TempItem_PH.png" />
                      </image>
