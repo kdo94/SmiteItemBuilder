@@ -5,10 +5,12 @@ import java.util.ResourceBundle;
 
 import edu.orangecoastcollege.capstone.controller.Controller;
 import edu.orangecoastcollege.capstone.model.Build;
+import edu.orangecoastcollege.capstone.model.God;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
 public class MainScene implements Initializable 
@@ -115,6 +117,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    
+ 
+    
+    
     @FXML
     public Object viewLore()
     {
@@ -175,7 +181,7 @@ public class MainScene implements Initializable
     @FXML
     public Object addItem2ToBuild()
     {
-    	String itemName = item1CB.getSelectionModel().getSelectedItem();
+    	String itemName = item2CB.getSelectionModel().getSelectedItem();
     	controller.addItem2ToCurrentBuild(itemName);
     	return this;
     }
@@ -183,7 +189,7 @@ public class MainScene implements Initializable
     @FXML
     public Object addItem3ToBuild()
     {
-    	String itemName = item1CB.getSelectionModel().getSelectedItem();
+    	String itemName = item3CB.getSelectionModel().getSelectedItem();
     	controller.addItem3ToCurrentBuild(itemName);
     	return this;
     }
@@ -191,7 +197,7 @@ public class MainScene implements Initializable
     @FXML
     public Object addItem4ToBuild()
     {
-    	String itemName = item1CB.getSelectionModel().getSelectedItem();
+    	String itemName = item4CB.getSelectionModel().getSelectedItem();
     	controller.addItem4ToCurrentBuild(itemName);
     	return this;
     }
@@ -199,7 +205,7 @@ public class MainScene implements Initializable
     @FXML
     public Object addItem5ToBuild()
     {
-    	String itemName = item1CB.getSelectionModel().getSelectedItem();
+    	String itemName = item5CB.getSelectionModel().getSelectedItem();
     	controller.addItem5ToCurrentBuild(itemName);
     	return this;
     }
@@ -207,7 +213,7 @@ public class MainScene implements Initializable
     @FXML
     public Object addItem6ToBuild()
     {
-    	String itemName = item1CB.getSelectionModel().getSelectedItem();
+    	String itemName = item6CB.getSelectionModel().getSelectedItem();
     	controller.addItem6ToCurrentBuild(itemName);
     	return this;
     }
@@ -223,7 +229,7 @@ public class MainScene implements Initializable
     @FXML
     public Object addRelic2ToBuild()
     {
-    	String relicName = relic1CB.getSelectionModel().getSelectedItem();
+    	String relicName = relic2CB.getSelectionModel().getSelectedItem();
     	controller.addRelic2ToCurrentBuild(relicName);
     	return this;
     }
@@ -234,4 +240,7 @@ public class MainScene implements Initializable
     	System.out.println(controller.getCurrentBuild());
     	return this;
     }
+    
+
+    
 }

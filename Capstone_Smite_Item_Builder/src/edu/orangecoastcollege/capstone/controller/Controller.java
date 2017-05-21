@@ -76,6 +76,9 @@ public class Controller
 														"INTEGER", "INTEGER", "INTEGER", "INTEGER",
 														"INTEGER", "INTEGER"};
 	
+	private static final String[] GOD_CLASSES = {"Assassin", "Guardian", "Hunter", "Mage", "Warrior"};
+	private static final String[] GOD_TYPES = {"Magical", "Physical"};
+	
 	private DBModel mGodsDB;
 	private DBModel mItemsDB;
 	private DBModel mAbilitiesDB;
@@ -504,7 +507,7 @@ public class Controller
 	{
 		int id;
 		try {
-			id = theOne.mGodsDB.createRecord(Arrays.copyOfRange(ITEMS_FIELD_NAMES, 1, ITEMS_FIELD_NAMES.length), values);
+			id = theOne.mItemsDB.createRecord(Arrays.copyOfRange(ITEMS_FIELD_NAMES, 1, ITEMS_FIELD_NAMES.length), values);
 			
 			Item newItem = new Item(id,
 					values[0],
@@ -567,7 +570,7 @@ public class Controller
 			ArrayList<ArrayList<String>> data = theOne.mAbilitiesDB.getAllRecords();
 			for(ArrayList<String> values : data)	
 			{
-				if(values.get(1).equals(god.getId()))
+				if(values.get(1) != null && values.get(1).equals(String.valueOf(god.getId())))
 				{
 					int id = Integer.parseInt(values.get(0));
                     String name1 = values.get(2);
@@ -580,8 +583,8 @@ public class Controller
                     int damage3 = Integer.parseInt(values.get(9));
                     double scaling3 = Double.parseDouble(values.get(10));
                     String ultimateName = values.get(11);
-                    int ultimateDamage = Integer.parseInt(values.get(11));
-                    double ultimateScaling = Double.parseDouble(values.get(0));
+                    int ultimateDamage = Integer.parseInt(values.get(12));
+                    double ultimateScaling = Double.parseDouble(values.get(13));
                     Abilities godAbilities = new Abilities(id, god, name1, damage1, scaling1,
                     										name2, damage2, scaling2,
                     										name3, damage3, scaling3,
@@ -657,6 +660,24 @@ public class Controller
 		return relicNames;
 	}
 	
+	/**
+	 * Get god class names
+	 * @return
+	 */
+	public ObservableList<String> getGodClasses()
+	{
+		return FXCollections.observableArrayList(Arrays.asList(GOD_CLASSES));		
+	}
+	
+	/**
+	 * Get god type names
+	 * @return
+	 */
+	public ObservableList<String> getGodTypes()
+	{
+		return FXCollections.observableArrayList(Arrays.asList(GOD_TYPES));		
+	}
+	
 	public boolean saveCurrentBuild()
 	{
 		try
@@ -729,7 +750,7 @@ public class Controller
 	{
 		for(Item item : theOne.mAllItemsList)
 			if(item.getName().equals(name))
-				theOne.mCurrentBuild.setItem1(item);
+				theOne.mCurrentBuild.setItem3(item);
 	}
 	
 	public void addItem4ToCurrentBuild(String name)

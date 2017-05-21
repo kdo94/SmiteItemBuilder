@@ -161,6 +161,10 @@ public class AddItemScene
     	return this;
     }
     
+    /**
+     * Return user to view of all items
+     * @return
+     */
     @FXML
     public Object cancel()
     {
@@ -190,7 +194,6 @@ public class AddItemScene
 		addItemStatusL.setText("Add Item");
 		addItemStatusL.setTextFill(Color.BLACK);
 		
-		//TODO scene navigator
 		ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
 		
 		return this;

@@ -45,7 +45,7 @@
             </VBox>
             <HBox alignment="CENTER" prefHeight="139.0" prefWidth="350.0">
                <children>
-                  <Label fx:id="abilitiesStatsNameL" text="God Name">
+                  <Label fx:id="abilitiesStatsNameL" text="God">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -63,32 +63,32 @@
                <children>
                   <StackPane prefHeight="150.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="abilitiesStatsItem1" text="Item 1" wrapText="true" />
+                        <Label fx:id="abilitiesStatsItem1" wrapText="true" />
                      </children>
                   </StackPane>
                   <StackPane prefHeight="150.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="abilitiesStatsItem2" text="Item 2" wrapText="true" />
+                        <Label fx:id="abilitiesStatsItem2" wrapText="true" />
                      </children>
                   </StackPane>
                   <StackPane prefHeight="150.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="abilitiesStatsItem3" text="Item 3" wrapText="true" />
+                        <Label fx:id="abilitiesStatsItem3" wrapText="true" />
                      </children>
                   </StackPane>
                   <StackPane prefHeight="150.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="abilitiesStatsItem4" text="Item 4" wrapText="true" />
+                        <Label fx:id="abilitiesStatsItem4" wrapText="true" />
                      </children>
                   </StackPane>
                   <StackPane prefHeight="150.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="abilitiesStatsItem5" text="Item 5" wrapText="true" />
+                        <Label fx:id="abilitiesStatsItem5" wrapText="true" />
                      </children>
                   </StackPane>
                   <StackPane prefHeight="150.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="abilitiesStatsItem6" text="Item 6" wrapText="true" />
+                        <Label fx:id="abilitiesStatsItem6" wrapText="true" />
                      </children>
                   </StackPane>
                </children>

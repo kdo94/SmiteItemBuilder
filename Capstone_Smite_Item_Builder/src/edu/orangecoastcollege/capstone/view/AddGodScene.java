@@ -1,12 +1,14 @@
 
 package edu.orangecoastcollege.capstone.view;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
-
+import java.util.ResourceBundle;
 
 import edu.orangecoastcollege.capstone.controller.Controller;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -22,7 +24,7 @@ import javafx.scene.paint.Color;
  * @author ptang10
  *
  */
-public class AddGodScene
+public class AddGodScene implements Initializable
 {
 	private static Controller controller = Controller.getInstance();
 	private static String FIELD_ERROR = "Missing Field Input";
@@ -187,6 +189,10 @@ public class AddGodScene
     	return this;
     }
     
+    /**
+     * Return user to view all gods scene
+     * @return
+     */
     @FXML
     public Object cancel()
     {
@@ -210,4 +216,15 @@ public class AddGodScene
 		
 		return this;
     }
+
+    /**
+     * Initializes scene of add god
+     * @param location
+     * @param resources
+     */
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		godClassCB.setItems(controller.getGodClasses());
+		godTypeCB.setItems(controller.getGodTypes());
+	}
 }

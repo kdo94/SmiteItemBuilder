@@ -1,13 +1,16 @@
 
 package edu.orangecoastcollege.capstone.view;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.ResourceBundle;
 
 import edu.orangecoastcollege.capstone.controller.Controller;
 import edu.orangecoastcollege.capstone.model.Build;
 import edu.orangecoastcollege.capstone.model.God;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
@@ -22,7 +25,7 @@ import javafx.scene.paint.Color;
  * @author Pooty
  *
  */
-public class GodStatsScene {
+public class GodStatsScene implements Initializable {
     @FXML
     private Button godStatsBackBtn;
 
@@ -107,19 +110,53 @@ public class GodStatsScene {
 	@FXML
 	public void scaleGodStats()
 	{
+		setGodStats(godStatsLevelSL.getValue());
+	}
+	
+	/**
+	 * Returns user back to main screen
+	 * @return
+	 */
+    @FXML
+    public Object back()
+    {
+    	godStatsLevelSL.setValue(1);
+    	ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
+		
+		return this;
+    }
+    
+    /**
+     * Initialize all objects in godstatscene
+     */
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		setGodStats(1);
+	}
+    
+	/**
+	 * Sets stats in scene using level from slider and god from current build
+	 */
+	private void setGodStats(double level)
+	{
 		Build currentBuild = controller.getCurrentBuild();
 		God currentGod = currentBuild.getGod();
-		double levelFromSlider = godStatsLevelSL.getValue();
+		double levelFromSlider = level;
 		int intBuffer = 0;
-		double doubleBuffer = 0;
 		
 		godStatsNameL.setText(currentGod.getName());
-		godStatsItem1.setText(currentBuild.getItem1().getName());
-		godStatsItem2.setText(currentBuild.getItem2().getName());
-		godStatsItem3.setText(currentBuild.getItem3().getName());
-		godStatsItem4.setText(currentBuild.getItem4().getName());
-		godStatsItem5.setText(currentBuild.getItem5().getName());
-		godStatsItem6.setText(currentBuild.getItem6().getName());
+		if(currentBuild.getItem1() != null)
+			godStatsItem1.setText(currentBuild.getItem1().getName());
+		if(currentBuild.getItem2() != null)
+			godStatsItem2.setText(currentBuild.getItem2().getName());
+		if(currentBuild.getItem3() != null)
+			godStatsItem3.setText(currentBuild.getItem3().getName());
+		if(currentBuild.getItem4() != null)
+			godStatsItem4.setText(currentBuild.getItem4().getName());
+		if(currentBuild.getItem5() != null)
+			godStatsItem5.setText(currentBuild.getItem5().getName());
+		if(currentBuild.getItem6() != null)
+			godStatsItem6.setText(currentBuild.getItem6().getName());
 		
 		intBuffer = currentGod.getBaseHealth();
 		intBuffer = (int)(intBuffer + currentGod.getHealthScaling() * levelFromSlider);
@@ -148,17 +185,7 @@ public class GodStatsScene {
 		godStatsDamageScalingL.setText(String.valueOf(currentGod.getDamageScaling()));
 		godStatsClassL.setText(currentGod.getGodClass());
 		godStatsTypeL.setText(currentGod.getType());
-		godStatsPantheonL.setText(currentGod.getPantheon());
+		godStatsPantheonL.setText(currentGod.getPantheon());		
 	}
-	
-    @FXML
-    public Object back()
-    {
-    	godStatsLevelSL.setValue(1);
-		
-		//TODO scene navigator
-    	ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
-		
-		return this;
-    }
+    
 }
