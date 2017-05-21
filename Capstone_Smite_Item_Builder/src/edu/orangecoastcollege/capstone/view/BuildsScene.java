@@ -32,23 +32,6 @@ public class BuildsScene implements Initializable
 	public void initialize(URL location, ResourceBundle resources)
     {
     	allBuildsListView.setItems(controller.getAllBuilds());
-    	allBuildsListView.setCellFactory(new Callback<ListView<Build>, ListCell<Build>>()
-    			{
-    				public ListCell<Build> call(ListView<Build> allBuildsListView)
-    				{
-    					return new BuildCell();
-    				}
-    			});
-    }
-    
-    static class BuildCell extends ListCell<Build>
-    {
-    	@Override
-    	public void  updateItem(Build build, boolean empty)
-    	{
-    		super.updateItem(build, empty);
-    		
-    	}
     }
     
     @FXML

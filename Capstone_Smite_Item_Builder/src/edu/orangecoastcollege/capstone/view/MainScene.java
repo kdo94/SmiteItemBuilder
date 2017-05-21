@@ -242,7 +242,7 @@ public class MainScene implements Initializable
     @FXML
     public Object saveBuild()
     {
-    	System.out.println(controller.getCurrentBuild());
+    	controller.saveCurrentBuild();
     	return this;
     }
     
