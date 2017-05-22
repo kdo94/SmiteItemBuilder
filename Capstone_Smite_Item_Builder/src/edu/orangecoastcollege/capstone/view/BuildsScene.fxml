@@ -9,11 +9,11 @@
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" spacing="15.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.capstone.view.BuildsScene">
    <children>
       <Button fx:id="backButton" mnemonicParsing="false" onAction="#loadMainScene" text="Back" />
-      <ListView fx:id="allBuildsListView" prefHeight="400.0" prefWidth="600.0" />
+      <ListView fx:id="allBuildsListView" onMouseClicked="#selectBuild" prefHeight="400.0" prefWidth="600.0" />
       <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
          <children>
-            <Button fx:id="deleteBuildButton" mnemonicParsing="false" text="Delete Build" />
-            <Button fx:id="loadBuildButton" mnemonicParsing="false" text="Load Build" />
+            <Button fx:id="deleteBuildButton" mnemonicParsing="false" onAction="#deleteBuild" text="Delete Build" />
+            <Button fx:id="loadBuildButton" mnemonicParsing="false" onAction="#loadBuild" text="Load Build" />
          </children>
       </HBox>
    </children>

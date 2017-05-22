@@ -209,18 +209,44 @@ public class Controller
 				theOne.initializeAbilitiesFromFile();
 				
 				theOne.mBuildsDB = new DBModel(DB_NAME, BUILDS_TABLE_NAME, BUILDS_FIELD_NAMES, BUILDS_FIELD_TYPES);
-				//theOne.mCurrentBuild = theOne.mBuildsDB.getRecord(1);
-				/*theOne.mCurrentBuild.setName("filler");
-				theOne.mCurrentBuild.setGod(theOne.mAllGodsList.get(0));
-				theOne.mCurrentBuild.setItem1(theOne.mAllItemsList.get(0));
-				theOne.mCurrentBuild.setItem2(theOne.mAllItemsList.get(0));
-				theOne.mCurrentBuild.setItem3(theOne.mAllItemsList.get(0));
-				theOne.mCurrentBuild.setItem4(theOne.mAllItemsList.get(0));
-				theOne.mCurrentBuild.setItem5(theOne.mAllItemsList.get(0));
-				theOne.mCurrentBuild.setItem6(theOne.mAllItemsList.get(0));
-				theOne.mCurrentBuild.setRelic1(theOne.mAllRelicsList.get(0));
-				theOne.mCurrentBuild.setRelic2(theOne.mAllRelicsList.get(0));
-				theOne.saveCurrentBuild();*/
+				rs = theOne.mBuildsDB.getAllRecords();
+				for(ArrayList<String> data : rs)
+				{
+					int id = Integer.parseInt(data.get(0));
+					String name = data.get(1);
+					God god = new God();
+					for(God g : theOne.mAllGodsList)
+						if(g.getId() == Integer.parseInt(data.get(2)))
+							god = g;
+					Item item1 = new Item(), item2 = new Item(), item3 = new Item(),
+							item4 = new Item(), item5 = new Item(), item6 = new Item();
+					for(Item item : theOne.mAllItemsList)
+					{
+						int itemId = item.getId();
+						if(itemId == Integer.parseInt(data.get(3)))
+							item1 = item;
+						else if(itemId == Integer.parseInt(data.get(4)))
+							item2 = item;
+						else if(itemId == Integer.parseInt(data.get(5)))
+							item3 = item;
+						else if(itemId == Integer.parseInt(data.get(6)))
+							item4 = item;
+						else if(itemId == Integer.parseInt(data.get(7)))
+							item5 = item;
+						else if(itemId == Integer.parseInt(data.get(8)))
+							item6 = item;
+					}
+					Relic relic1 = new Relic(), relic2 = new Relic();
+					for(Relic relic : theOne.mAllRelicsList)
+					{
+						if(relic.getId() == Integer.parseInt(data.get(9)))
+							relic1 = relic;
+						else if(relic.getId() == Integer.parseInt(data.get(10)));
+					}
+					Build newBuild = new Build(id, name, god, item1, item2, item3, item4, item5, item6,
+												relic1, relic2);
+					theOne.mAllBuildsList.add(newBuild);
+				}
 				theOne.mAllGodsList.remove(0);
 				theOne.mAllItemsList.remove(0);
 				theOne.mAllRelicsList.remove(0);
@@ -799,20 +825,34 @@ public class Controller
 	{
 		ObservableList<Item> filteredItems = FXCollections.observableArrayList();
 		for(Item item : theOne.mAllItemsList)
-			if(power && (item.getPhysicalPower() > 0 || item.getMagicalPower() > 0) &&
-					(attackSpeed && item.getAttackSpeed() > 0) && 
-					(lifesteal && (item.getMagicalLifesteal() > 0 || item.getPhysicalLifesteal() > 0)) && 
-					(penetration && item.getFlatPenetration() > 0) &&
-					(physical && item.getPhysicalProtection() > 0) && 
-					(magical && item.getMagicalProtection() > 0) &&
-					(health && item.getHealth() > 0) &&
-					(hp5 && item.getHP5() > 0) &&
-					(aura && item.getPassive().toLowerCase().contains("aura")) && 
-					(cooldown && item.getCooldownReduction() > 0) &&
-					(mana && item.getMana() > 0) &&
+			if(power && (item.getPhysicalPower() > 0 || item.getMagicalPower() > 0) ||
+					(attackSpeed && item.getAttackSpeed() > 0) || 
+					(lifesteal && (item.getMagicalLifesteal() > 0 || item.getPhysicalLifesteal() > 0)) ||
+					(penetration && item.getFlatPenetration() > 0) ||
+					(physical && item.getPhysicalProtection() > 0) || 
+					(magical && item.getMagicalProtection() > 0) ||
+					(health && item.getHealth() > 0) ||
+					(hp5 && item.getHP5() > 0) ||
+					(aura && item.getPassive().toLowerCase().contains("aura")) ||
+					(cooldown && item.getCooldownReduction() > 0) ||
+					(mana && item.getMana() > 0) ||
 					(mp5 && item.getMP5() > 0))
 				filteredItems.add(item);
 		return filteredItems;
 	}
 	
+	public boolean deleteBuild(Build build)
+	{
+		try
+		{
+			theOne.mBuildsDB.deleteRecord(String.valueOf(build.getId()));
+			theOne.mAllBuildsList.remove(build);
+			return true;
+		} 
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+			return false;
+		}
+	}
 }

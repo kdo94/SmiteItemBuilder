@@ -11,17 +11,17 @@ package edu.orangecoastcollege.capstone.model;
  */
 public class Build
 {
-    private int mId;
-    private String mName;
-    private God mGod;
-    private Item mItem1;
-    private Item mItem2;
-    private Item mItem3;
-    private Item mItem4;
-    private Item mItem5;
-    private Item mItem6;
-    private Relic mRelic1;
-    private Relic mRelic2;
+    private int mId; //0
+    private String mName;// 1
+    private God mGod; // 2
+    private Item mItem1; // 3
+    private Item mItem2; // 4
+    private Item mItem3; // 5
+    private Item mItem4; // 6
+    private Item mItem5; // 7
+    private Item mItem6; // 8
+    private Relic mRelic1; // 9
+    private Relic mRelic2; // 10
 
     /**
      * No-arg constructor for build
