@@ -88,11 +88,6 @@ public class AllItemsScene implements Initializable
 		ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
 		return this;
 	}
-	
-	@FXML Object clear()
-	{
-		return this;
-	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1)
@@ -111,6 +106,7 @@ public class AllItemsScene implements Initializable
 	@FXML
 	public Object filter()
 	{
+		String itemName = descTF.getText();
 		boolean power = powerCheckBox.isSelected();
 		boolean attackSpeed = attackSpeedCheckBox.isSelected();
 		boolean lifesteal = lifestealCheckBox.isSelected();
@@ -123,7 +119,7 @@ public class AllItemsScene implements Initializable
 		boolean cooldown = cooldownCheckBox.isSelected();
 		boolean mana = manaCheckBox.isSelected();
 		boolean mp5 = mp5CheckBox.isSelected();
-		allItemsListView.setItems(controller.filterItems(power, attackSpeed, lifesteal, 
+		allItemsListView.setItems(controller.filterItems(itemName, power, attackSpeed, lifesteal, 
 									penetration, physical, magical, health, hp5, aura, 
 									cooldown, mana, mp5));
 		return this;
@@ -133,6 +129,26 @@ public class AllItemsScene implements Initializable
 	public Object loadAddItemScene()
 	{
 		ViewNavigator.loadScene("Add Item", ViewNavigator.ADD_ITEM_SCENE);
+		return this;
+	}
+	
+	@FXML
+	public Object clearEntry()
+	{
+		descTF.clear();
+		powerCheckBox.setSelected(false);
+		attackSpeedCheckBox.setSelected(false);
+		lifestealCheckBox.setSelected(false);
+		penetrationCheckBox.setSelected(false);
+		physicalCheckBox.setSelected(false);
+		magicalCheckBox.setSelected(false);
+		healthCheckBox.setSelected(false);
+		hp5CheckBox.setSelected(false);
+		auraCheckBox.setSelected(false);
+		cooldownCheckBox.setSelected(false);
+		manaCheckBox.setSelected(false);
+		mp5CheckBox.setSelected(false);
+		allItemsListView.setItems(controller.getAllItems());
 		return this;
 	}
 }

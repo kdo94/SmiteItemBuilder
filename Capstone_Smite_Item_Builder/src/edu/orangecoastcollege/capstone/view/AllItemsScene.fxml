@@ -50,8 +50,8 @@
    <top>
       <HBox alignment="CENTER" prefHeight="55.0" prefWidth="690.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField id="descSearchTF" fx:id="descTF" promptText="Enter Item Description..." />
-            <Button id="clearButton" fx:id="clearButton" mnemonicParsing="false" onAction="#clear" text="Clear" />
+            <TextField id="descSearchTF" fx:id="descTF" onAction="#filter" onKeyReleased="#filter" promptText="Enter Item Description..." />
+            <Button id="clearButton" fx:id="clearButton" mnemonicParsing="false" onAction="#clearEntry" text="Clear" />
          </children>
       </HBox>
    </top>

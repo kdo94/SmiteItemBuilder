@@ -819,13 +819,14 @@ public class Controller
 		return theOne.mCurrentBuild.getGod();
 	}
 	
-	public ObservableList<Item> filterItems(boolean power, boolean attackSpeed, boolean lifesteal, boolean penetration,
+	public ObservableList<Item> filterItems(String itemName, boolean power, boolean attackSpeed, boolean lifesteal, boolean penetration,
 											boolean physical, boolean magical, boolean health, boolean hp5,
 											boolean aura, boolean cooldown, boolean mana, boolean mp5)
 	{
 		ObservableList<Item> filteredItems = FXCollections.observableArrayList();
 		for(Item item : theOne.mAllItemsList)
-			if(power && (item.getPhysicalPower() > 0 || item.getMagicalPower() > 0) ||
+			if(item.getName().toLowerCase().contains(itemName.toLowerCase()) &&  
+					(power && (item.getPhysicalPower() > 0 || item.getMagicalPower() > 0)) ||
 					(attackSpeed && item.getAttackSpeed() > 0) || 
 					(lifesteal && (item.getMagicalLifesteal() > 0 || item.getPhysicalLifesteal() > 0)) ||
 					(penetration && item.getFlatPenetration() > 0) ||

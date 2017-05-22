@@ -42,6 +42,10 @@ public class AllGodsScene implements Initializable
 			allGodsListView.setItems(controller.getAllGods());
 		}
 		
+		/**
+		 * Loads the main scene
+		 * @return
+		 */
 		@FXML
 		public Object loadMainScene()
 		{
@@ -49,6 +53,11 @@ public class AllGodsScene implements Initializable
 			return this;
 		}
 		
+		/**
+		 * Filters the gods based on the name and selected combo boxes.
+		 * Updates the ListView of all filtered gods
+		 * @return
+		 */
 		@FXML
 	    public Object filter()
 	    {
@@ -59,6 +68,10 @@ public class AllGodsScene implements Initializable
 	    	return this;
 	    }
 		
+		/**
+		 * Selects the god in the list view and enables the button to add to the build
+		 * @return
+		 */
 		@FXML
 		public Object selectGod()
 		{
@@ -66,6 +79,10 @@ public class AllGodsScene implements Initializable
 			return this;
 		}
 		
+		/**
+		 * Loads the add god scene
+		 * @return
+		 */
 		@FXML
 		public Object loadAddGodScene()
 		{
@@ -73,6 +90,10 @@ public class AllGodsScene implements Initializable
 			return this;
 		}
 		
+		/**
+		 * Add the selected god to the currentBuild and loads up the Main Scene
+		 * @return Object
+		 */
 		@FXML
 		public Object addSelectedGod()
 		{
