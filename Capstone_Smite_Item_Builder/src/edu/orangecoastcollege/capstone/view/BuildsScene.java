@@ -10,6 +10,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 
+/**
+ * A scene that has all the builds in the database and allows for the addition or deletion of records.
+ * Each record has a God, 6 items, and 2 Relics
+ * @author Kevin Do
+ * @version 1.0
+ */
 public class BuildsScene implements Initializable
 {
 
@@ -34,6 +40,10 @@ public class BuildsScene implements Initializable
     	allBuildsListView.setItems(controller.getAllBuilds());
     }
     
+    /**
+     * Loads the main scene
+     * @return
+     */
     @FXML
     public Object loadMainScene()
     {
@@ -41,6 +51,10 @@ public class BuildsScene implements Initializable
     	return this;
     }
     
+    /**
+     * Sets the current build to the selected build and load the main scene
+     * @return
+     */
     @FXML
     public Object loadBuild()
     {
@@ -49,6 +63,10 @@ public class BuildsScene implements Initializable
     	return this;
     }
     
+    /**
+     * Enables the delete and load button.
+     * @return
+     */
     @FXML
     public Object selectBuild()
     {
@@ -57,6 +75,10 @@ public class BuildsScene implements Initializable
     	return this;
     }
     
+    /**
+     * Deletes the selected build in the listview and updates it
+     * @return
+     */
     @FXML
     public Object deleteBuild()
     {

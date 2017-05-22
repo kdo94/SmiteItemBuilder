@@ -12,6 +12,11 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 
+/**
+ * Main Scene of the Smite Item Builder application.
+ * @author kevin_000
+ *
+ */
 public class MainScene implements Initializable 
 {
 	private static Controller controller = Controller.getInstance();
@@ -63,6 +68,10 @@ public class MainScene implements Initializable
    
     private Build currentBuild;
 
+    /**
+     * Sets the current build if one exists. Enables the buttons if one exists and sets all comboboxes
+     * to the items in the build. Otherwise disable the buttons.
+     */
     @Override
 	public void initialize(URL location, ResourceBundle resources) 
     {
@@ -105,6 +114,10 @@ public class MainScene implements Initializable
 		relic2CB.setItems(controller.getRelicNames());
 	}
     
+    /**
+     * Loads the ViewGodStats Scene
+     * @return
+     */
     @FXML
     public Object viewGodStats()
     {
@@ -112,6 +125,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Loads the viewAbilityStatsScene
+     * @return
+     */
     @FXML
     public Object viewAbilityStats()
     {
@@ -119,18 +136,22 @@ public class MainScene implements Initializable
     	return this;
     }
     
-    
- 
-    
-    
+    /**
+     * Loads the lore scene for the selected god
+     * @return
+     */
     @FXML
     public Object viewLore()
     {
     	ViewNavigator.loadScene(controller.getCurrentBuild().getGod().getName() + 
-    							" 's Lore", ViewNavigator.GOD_LORE_SCENE);
+    							"'s Lore", ViewNavigator.GOD_LORE_SCENE);
     	return this;
     }
     
+    /**
+     * Loads the allItemsScene
+     * @param event
+     */
     @FXML
     void viewAllItems(MouseEvent event)
     {
@@ -139,6 +160,10 @@ public class MainScene implements Initializable
     	ViewNavigator.loadScene("All Items List", ViewNavigator.ALL_ITEMS_SCENE);
     }
     
+    /**
+     * Loads the allGodsScene
+     * @return
+     */
     @FXML
     public Object viewAllGods()
     {
@@ -146,6 +171,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Loads the AllRelicsScene
+     * @param event
+     */
     @FXML
     void viewAllRelics(MouseEvent event)
     {
@@ -154,6 +183,10 @@ public class MainScene implements Initializable
     	ViewNavigator.loadScene("All Relics List", ViewNavigator.ALL_RELICS_SCENE);
     }
     
+    /**
+     * Loads the viewAllBuildsScene
+     * @return
+     */
     @FXML
     public Object viewAllBuilds()
     {
@@ -161,6 +194,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Adds the god to the current build
+     * @return
+     */
     @FXML
     public Object addGodToBuild()
     {
@@ -174,6 +211,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Adds the item to the first item slot
+     * @return
+     */
     @FXML
     public Object addItem1ToBuild()
     {
@@ -182,6 +223,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Adds the item to the second item slot
+     * @return
+     */
     @FXML
     public Object addItem2ToBuild()
     {
@@ -190,6 +235,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Adds the item to the third item slot
+     * @return
+     */
     @FXML
     public Object addItem3ToBuild()
     {
@@ -198,6 +247,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Adds the item to the fourth item slot
+     * @return
+     */
     @FXML
     public Object addItem4ToBuild()
     {
@@ -206,6 +259,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Adds the item to the fifth item slot
+     * @return
+     */
     @FXML
     public Object addItem5ToBuild()
     {
@@ -214,6 +271,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /** Adds the item to the sixth item slot
+     * 
+     * @return
+     */
     @FXML
     public Object addItem6ToBuild()
     {
@@ -222,6 +283,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Adds the relic to the first relic slot
+     * @return
+     */
     @FXML
     public Object addRelic1ToBuild()
     {
@@ -230,6 +295,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Adds the relic to the second relic slot
+     * @return
+     */
     @FXML
     public Object addRelic2ToBuild()
     {
@@ -238,6 +307,10 @@ public class MainScene implements Initializable
     	return this;
     }
     
+    /**
+     * Adds the current build to the database
+     * @return
+     */
     @FXML
     public Object saveBuild()
     {

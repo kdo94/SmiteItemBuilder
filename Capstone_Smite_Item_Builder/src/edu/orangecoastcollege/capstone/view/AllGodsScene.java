@@ -12,6 +12,12 @@ import edu.orangecoastcollege.capstone.controller.Controller;
 import edu.orangecoastcollege.capstone.model.God;
 import javafx.fxml.Initializable;
 
+/**
+ * A scene that has all the Gods in the Free to Play game Smite by Hi-Rez Studios.
+ * Allows for the creation of gods, search of gods, and to add them to the current build.
+ * @author Kevin Do
+ * @version 1.0
+ */
 public class AllGodsScene implements Initializable
 {
 		private static Controller controller = Controller.getInstance();

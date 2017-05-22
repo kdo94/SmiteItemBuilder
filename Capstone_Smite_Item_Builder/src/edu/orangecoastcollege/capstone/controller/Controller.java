@@ -17,6 +17,12 @@ import edu.orangecoastcollege.capstone.model.SteroidDebuff;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+/**
+ * Controller for the SmiteItemBuilder
+ * @author Kevin Do
+ * @version 1.0
+ *
+ */
 public class Controller
 {
 	private static Controller theOne;
@@ -98,6 +104,11 @@ public class Controller
 	{
 	}
 	
+	/**
+	 * Instantiates the Gods, Items, Relics, Items, Abilities, SteroidsDebuffs, and Builds databases. 
+	 * Adds all the records to the ObservableLists for Builds, Gods, Items, Relics, and SteroidsDebuffs.
+	 * @return
+	 */
 	public static Controller getInstance()
 	{
 		if(theOne == null)
@@ -259,6 +270,10 @@ public class Controller
 		return theOne;
 	}
 	
+	/**
+	 * Adds all the gods in the Gods.csv file to the database.
+	 * @return number of records created
+	 */
 	public int initializeGodsFromFile()
 	{
 		int recordsCreated = 0;
@@ -306,6 +321,10 @@ public class Controller
 		return recordsCreated;
 	}
 	
+	/**
+	 * Loads all the records in the Items.csv to the database
+	 * @return returns number of records added
+	 */
 	public int initializeItemsFromFile()
 	{
 		int recordsCreated = 0;
@@ -354,6 +373,10 @@ public class Controller
 		return recordsCreated;
 	}
 	
+	/**
+	 * Loads all the records in the Relics.csv to the database
+	 * @return returns number of records added
+	 */
 	public int initializeRelicsFromFile()
 	{
 		int recordsCreated = 0;
@@ -386,6 +409,10 @@ public class Controller
 		return recordsCreated;
 	}
 	
+	/**
+	 * Loads all the records in the Relics.csv to the database
+	 * @return returns number of records added
+	 */
 	public int initializeAbilitiesFromFile()
 	{
 		int recordsCreated = 0;
@@ -430,6 +457,10 @@ public class Controller
 		return recordsCreated;
 	}
 	
+	/**
+	 * Loads all the records in the steroiddebuff.csv to the database
+	 * @return returns number of records added
+	 */
 	public int initializeSteroidsDebuffsFromFile()
 	{
 		int recordsCreated = 0;
@@ -467,21 +498,37 @@ public class Controller
 		return recordsCreated;
 	}
 	
+	/**
+	 * Returns all Gods in the database
+	 * @return List of all the gods
+	 */
 	public ObservableList<God> getAllGods()
 	{
 		return theOne.mAllGodsList;
 	}
 	
+	/**
+	 * Returns all Items in the database
+	 * @return List of all the items
+	 */
 	public ObservableList<Item> getAllItems()
 	{
 		return theOne.mAllItemsList;
 	}
 	
+	/**
+	 * Returns all Relics in the database
+	 * @return List of all the relics
+	 */
 	public ObservableList<Relic> getAllRelics()
 	{
 		return theOne.mAllRelicsList;
 	}
 	
+	/**
+	 * Returns all Builds in the database
+	 * @return List of all the builds
+	 */
 	public ObservableList<Build> getAllBuilds()
 	{
 		return theOne.mAllBuildsList;
@@ -626,6 +673,10 @@ public class Controller
 		return null;
 	}
 	
+	/**
+	 * Gets all the unique classes from all the Gods
+	 * @return List of all unique classes
+	 */
 	public ObservableList<String> getDistinctClasses()
 	{
 		ObservableList<String> godClasses = FXCollections.observableArrayList();
@@ -636,6 +687,10 @@ public class Controller
 		return godClasses;
 	}
 	
+	/**
+	 * Gets all the unique types from all the Gods
+	 * @return List of all unique types
+	 */
 	public ObservableList<String> getDistinctTypes()
 	{
 		ObservableList<String> godTypes = FXCollections.observableArrayList();
@@ -646,6 +701,10 @@ public class Controller
 		return godTypes;
 	}
 	
+	/**
+	 * Gets all the unique pantheons from all the Gods
+	 * @return List of all unique pantheons
+	 */
 	public ObservableList<String> getDistinctPantheons()
 	{
 		ObservableList<String> godPantheons = FXCollections.observableArrayList();
@@ -656,6 +715,10 @@ public class Controller
 		return godPantheons;
 	}
 	
+	/**
+	 * Gets all the unique names from all the Gods
+	 * @return List of all unique names
+	 */
 	public ObservableList<String> getGodNames()
 	{
 		ObservableList<String> godNames = FXCollections.observableArrayList();
@@ -666,6 +729,10 @@ public class Controller
 		return godNames;
 	}
 	
+	/**
+	 * Gets all the unique item names from all the Items
+	 * @return List of all unique item names
+	 */
 	public ObservableList<String> getItemNames()
 	{
 		ObservableList<String> itemNames = FXCollections.observableArrayList();
@@ -676,6 +743,10 @@ public class Controller
 		return itemNames;
 	}
 	
+	/**
+	 * Gets all the unique relic names from all the relics
+	 * @return List of all unique relics names
+	 */
 	public ObservableList<String> getRelicNames()
 	{
 		ObservableList<String> relicNames = FXCollections.observableArrayList();
@@ -704,6 +775,10 @@ public class Controller
 		return FXCollections.observableArrayList(Arrays.asList(GOD_TYPES));		
 	}
 	
+	/**
+	 * Adds the current build to the database
+	 * @return True if the record was successfullt created
+	 */
 	public boolean saveCurrentBuild()
 	{
 		try
@@ -739,6 +814,13 @@ public class Controller
 		}
 	}
 
+	/**
+	 * Gets a list of all the gods with the listed parameters
+	 * @param name Portion of the name to search
+	 * @param pantheon Pantheon of the god
+	 * @param godClass class of the god
+	 * @return List of all the Gods with the certain parameter
+	 */
 	public ObservableList<God> filterGods(String name,String pantheon, String godClass)
 	{
 		ObservableList<God> filteredGodList = FXCollections.observableArrayList();
@@ -750,6 +832,10 @@ public class Controller
 		return filteredGodList;
 	}
 	
+	/**
+	 * Sets the god of the current god
+	 * @param name name of the god to add
+	 */
 	public void addGodToCurrentBuild(String name)
 	{
 		theOne.mCurrentBuild = new Build();
@@ -758,6 +844,10 @@ public class Controller
 				theOne.mCurrentBuild.setGod(god);
 	}
 	
+	/**
+	 * Sets the first item slot to the item passed
+	 * @param name of the first item
+	 */
 	public void addItem1ToCurrentBuild(String name)
 	{
 		for(Item item : theOne.mAllItemsList)
@@ -765,6 +855,10 @@ public class Controller
 				theOne.mCurrentBuild.setItem1(item);
 	}
 	
+	/**
+	 * Sets the second item slot to the item passed
+	 * @param name of the second item
+	 */
 	public void addItem2ToCurrentBuild(String name)
 	{
 		for(Item item : theOne.mAllItemsList)
@@ -772,6 +866,10 @@ public class Controller
 				theOne.mCurrentBuild.setItem2(item);
 	}
 	
+	/**
+	 * Sets the third item slot to the item passed
+	 * @param name of the third item
+	 */
 	public void addItem3ToCurrentBuild(String name)
 	{
 		for(Item item : theOne.mAllItemsList)
@@ -779,6 +877,10 @@ public class Controller
 				theOne.mCurrentBuild.setItem3(item);
 	}
 	
+	/**
+	 * Sets the fourth item slot to the item passed
+	 * @param name of the fourth item
+	 */
 	public void addItem4ToCurrentBuild(String name)
 	{
 		for(Item item : theOne.mAllItemsList)
@@ -786,6 +888,10 @@ public class Controller
 				theOne.mCurrentBuild.setItem4(item);
 	}
 	
+	/**
+	 * Sets the fifth item slot to the item passed
+	 * @param name of the fifth item
+	 */
 	public void addItem5ToCurrentBuild(String name)
 	{
 		for(Item item : theOne.mAllItemsList)
@@ -793,6 +899,10 @@ public class Controller
 				theOne.mCurrentBuild.setItem5(item);
 	}
 	
+	/**
+	 * Sets the sixth item slot to the item passed
+	 * @param name of the sixth item
+	 */
 	public void addItem6ToCurrentBuild(String name)
 	{
 		for(Item item : theOne.mAllItemsList)
@@ -800,6 +910,10 @@ public class Controller
 				theOne.mCurrentBuild.setItem6(item);
 	}
 	
+	/**
+	 * Sets the first relic slot to the relic passed
+	 * @param name of the first relic
+	 */
 	public void addRelic1ToCurrentBuild(String name)
 	{
 		for(Relic relic : theOne.mAllRelicsList)
@@ -807,6 +921,10 @@ public class Controller
 				theOne.mCurrentBuild.setRelic1(relic);
 	}
 	
+	/**
+	 * Sets the second relic slot to the relic passed
+	 * @param name of the first second
+	 */
 	public void addRelic2ToCurrentBuild(String name)
 	{
 		for(Relic relic : theOne.mAllRelicsList)
@@ -814,11 +932,32 @@ public class Controller
 				theOne.mCurrentBuild.setRelic2(relic);
 	}
 	
+	/**
+	 * Gets the god from the current build
+	 * @return
+	 */
 	public God getGod()
 	{
 		return theOne.mCurrentBuild.getGod();
 	}
 	
+	/**
+	 * Gets a filtered list of all the items according to the passed parameters
+	 * @param itemName Name of the item
+	 * @param power 
+	 * @param attackSpeed 
+	 * @param lifesteal 
+	 * @param penetration 
+	 * @param physical 
+	 * @param magical
+	 * @param health
+	 * @param hp5
+	 * @param aura
+	 * @param cooldown
+	 * @param mana
+	 * @param mp5
+	 * @return Filtered list of all the items 
+	 */
 	public ObservableList<Item> filterItems(String itemName, boolean power, boolean attackSpeed, boolean lifesteal, boolean penetration,
 											boolean physical, boolean magical, boolean health, boolean hp5,
 											boolean aura, boolean cooldown, boolean mana, boolean mp5)
@@ -842,6 +981,11 @@ public class Controller
 		return filteredItems;
 	}
 	
+	/**
+	 * Deletes the build from the database
+	 * @param build Build to delete
+	 * @return True if successful
+	 */
 	public boolean deleteBuild(Build build)
 	{
 		try
@@ -855,5 +999,20 @@ public class Controller
 			e.printStackTrace();
 			return false;
 		}
+	}
+	
+	/**
+	 * Gets a list of all relics with the specified name and either an upgrade version
+	 * @param relicName Name of the relic
+	 * @param upgraded Whether the relic is upgraded or not
+	 * @return
+	 */
+	public ObservableList<Relic> filterRelics(String relicName, boolean upgraded)
+	{
+		ObservableList<Relic> filteredRelicList = FXCollections.observableArrayList();
+		for(Relic relic : theOne.mAllRelicsList)
+			if((upgraded == relic.isUpgraded()) && relic.getName().toLowerCase().contains(relicName.toLowerCase()))
+				filteredRelicList.add(relic);
+		return filteredRelicList;
 	}
 }

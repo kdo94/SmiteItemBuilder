@@ -12,6 +12,12 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
+/**
+ * A scene that has all the items in the Free to Play game Smite by Hi-Rez Studios.
+ * Allows for the creation of items, search of items, and to add them to the current build.
+ * @author Kevin Do
+ * @version 1.0
+ */
 public class AllItemsScene implements Initializable
 {
 	private static Controller controller = Controller.getInstance();
@@ -62,12 +68,20 @@ public class AllItemsScene implements Initializable
 	@FXML
 	private ListView<Item> allItemsListView;
 	
+	/**
+	 * Loads the main scene
+	 * @return
+	 */
 	@FXML Object loadMainScene()
 	{
 		ViewNavigator.loadScene("Smite Item Builder", ViewNavigator.MAIN_SCENE);
 		return this;
 	}
 	
+	/**
+	 * Adds the selected item to the current build and loads up the main scene
+	 * @return
+	 */
 	@FXML 
 	public Object purchaseItem()
 	{
@@ -96,6 +110,10 @@ public class AllItemsScene implements Initializable
 		allItemsListView.setItems(controller.getAllItems());
 	}
 	
+	/**
+	 * When an item is selected on the ListView, the purchase button is enabled
+	 * @return
+	 */
 	@FXML
 	public Object selectItem()
 	{
@@ -103,6 +121,11 @@ public class AllItemsScene implements Initializable
 		return this;
 	}
 	
+	/**
+	 * Checks all the checkboxes and textfield and filters the items based
+	 * on the parameters. Updates the ListView with the filtered items.
+	 * @return
+	 */
 	@FXML
 	public Object filter()
 	{
@@ -125,6 +148,10 @@ public class AllItemsScene implements Initializable
 		return this;
 	}
 	
+	/**
+	 * Loads the AddItemScene
+	 * @return
+	 */
 	@FXML
 	public Object loadAddItemScene()
 	{
@@ -132,6 +159,9 @@ public class AllItemsScene implements Initializable
 		return this;
 	}
 	
+	/**
+	 * Clears the text field, unchecks all the checkboxes, and resets the list view
+	 */
 	@FXML
 	public Object clearEntry()
 	{
