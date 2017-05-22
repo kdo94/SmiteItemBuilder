@@ -8,9 +8,7 @@ import edu.orangecoastcollege.capstone.model.Build;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.util.Callback;
 
 public class BuildsScene implements Initializable
 {
